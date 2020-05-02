@@ -1,5 +1,5 @@
 # KCC NMA Student Show 2020
- https://newmediaarts.github.io/NMAStudentShow2020/
+ https://newmediaarts.github.io/NMAStudentShow2020/dist/index.html
 
 ## Get Started
 
