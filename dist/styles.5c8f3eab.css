@@ -1,0 +1,154 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+p {
+  width: fit-content;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.container {
+  padding: 0 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+nav {
+  position: fixed;
+  top: 10vh;
+  right: 0;
+}
+nav button {
+  padding: 3rem;
+  border: none;
+  background: yellow;
+}
+
+#hero {
+  display: grid;
+  place-items: center;
+  background: black;
+  color: white;
+}
+#hero .hero-content h1 {
+  font-size: 5rem;
+}
+#hero .hero-content h3 {
+  font-size: 2rem;
+}
+@media (min-width: 1200px) {
+  #hero .hero-content {
+    position: relative;
+    top: 20%;
+    left: 20%;
+  }
+  #hero .hero-content h1 {
+    font-size: 6vw;
+  }
+  #hero .hero-content h3 {
+    font-size: 3vw;
+  }
+}
+
+#about {
+  padding: 15vh 0;
+}
+#about .container {
+  display: grid;
+  grid-gap: 100px;
+}
+#about .info-block h3 {
+  font-size: 3rem;
+}
+#about .info-block p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+@media (min-width: 1200px) {
+  #about .container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas: "first first first first second second second second" ". . third third third third . .";
+  }
+  #about .container .first {
+    grid-area: first;
+  }
+  #about .container .second {
+    grid-area: second;
+  }
+  #about .container .third {
+    grid-area: third;
+  }
+}
+
+#students {
+  padding: 15vh 0;
+}
+#students .container {
+  display: grid;
+  grid-gap: 50px;
+}
+#students .container h3 {
+  margin-bottom: 40px;
+}
+#students .container .students-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 20px;
+}
+#students .container .students-container .student .profile {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+@media (min-width: 1200px) {
+  #students .container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: ". . interface interface" "animation animation . .";
+    grid-row-gap: 150px;
+  }
+  #students .container .interface {
+    grid-area: interface;
+  }
+  #students .container .animation {
+    grid-area: animation;
+  }
+}
+
+#cave {
+  height: 60vh;
+  display: grid;
+  place-items: center;
+  font-size: 5rem;
+}
+
+/*# sourceMappingURL=/styles.5c8f3eab.css.map */

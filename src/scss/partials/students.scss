@@ -1,0 +1,44 @@
+#students {
+	padding: $section-padding;
+
+	.container {
+		display: grid;
+		grid-gap: 50px;
+
+		h3 {
+			margin-bottom: 40px;
+		}
+
+		.students-container {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+			grid-gap: 20px;
+
+			.student {
+				.profile {
+					height: 150px;
+					width: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+
+	@media (min-width: $breakpoint-medium) {
+		.container {
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-areas:
+				". . interface interface"
+				"animation animation . .";
+			grid-row-gap: 150px;
+
+			.interface {
+				grid-area: interface;
+			}
+
+			.animation {
+				grid-area: animation;
+			}
+		}
+	}
+}

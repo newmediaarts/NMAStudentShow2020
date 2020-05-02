@@ -1,0 +1,42 @@
+// CSS Reset
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	// Insert background gradient here
+	// background: rgb(2, 0, 36);
+	// background: linear-gradient(
+	// 	180deg,
+	// 	rgba(2, 0, 36, 1) 56%,
+	// 	rgba(63, 63, 163, 1) 77%,
+	// 	rgba(0, 212, 255, 1) 100%
+	// );
+}
+
+ul {
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: $color-dark-accent;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin: 0;
+}
+
+p {
+	width: fit-content;
+}

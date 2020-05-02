@@ -1,0 +1,19 @@
+// Colors
+$color-dark-accent: black;
+$color-light-accent: white;
+// Breakpoints
+$breakpoint-small: 768px;
+$breakpoint-medium: 1200px;
+$breakpoint-large: 1550px;
+$breakpoint4k: 2560px;
+// Spacing
+$section-padding: 15vh 0;
+
+// Imports
+@import "./partials/global";
+@import "./partials/helpers";
+@import "./partials/navigation.scss";
+@import "./partials/hero.scss";
+@import "./partials/about.scss";
+@import "./partials/students.scss";
+@import "./partials/cave.scss";
