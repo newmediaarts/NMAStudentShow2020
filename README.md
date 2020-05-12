@@ -6,6 +6,7 @@
 
 1. Install Dependencies `npm i`
 2. Run command `npm start` to run live server
+3. Run command `npm build` to build/bundle the site for production
 
 ## Creating and populating Students section
 
