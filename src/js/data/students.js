@@ -1,7 +1,7 @@
 export const interfaceStudents = [
     {
         name: 'Emily',
-        website: '/',
+        website: 'https://eafreeman.com',
         initialImage: 'https://placedog.net/500',
         hoveredImage: 'http://placekitten.com/g/200/300'
     },
