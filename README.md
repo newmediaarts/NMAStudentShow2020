@@ -12,3 +12,7 @@
 1. Go to the `students.js` file in `src/js/data`
 2. Edit the key value pair for each student accordingly
 3. Make sure the paths of image are relative to the `index.html` file
+
+## Creating your own branch
+
+1. `git checkout -b yourname`
