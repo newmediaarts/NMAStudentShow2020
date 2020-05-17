@@ -123,42 +123,11 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.animationStudents = exports.interfaceStudents = void 0;
-var interfaceStudents = [{
-  name: 'Emily',
-  website: 'https://eafreeman.com',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Tomy',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Koko',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Emily 2',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Tomy 2',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Koko 2',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}];
-exports.interfaceStudents = interfaceStudents;
+exports.interfaceStudents = exports.animationStudents = void 0;
 var animationStudents = [{
   name: 'Animator 1',
-  website: '/',
+  website: 'web',
+  // demoreel: 'demoreel',
   initialImage: 'https://placedog.net/500',
   hoveredImage: 'http://placekitten.com/g/200/300'
 }, {
@@ -188,24 +157,80 @@ var animationStudents = [{
   hoveredImage: 'http://placekitten.com/g/200/300'
 }];
 exports.animationStudents = animationStudents;
+var interfaceStudents = [{
+  name: 'Emily Freeman',
+  website: 'https://eafreeman.com',
+  initialImage: 'https://placedog.net/500',
+  hoveredImage: 'http://placekitten.com/g/200/300'
+}, {
+  name: 'Miyuki Sekiguchi',
+  website: '/',
+  initialImage: 'https://placedog.net/500',
+  hoveredImage: 'http://placekitten.com/g/200/300'
+}, {
+  name: 'Koko',
+  website: '/',
+  initialImage: 'https://placedog.net/500',
+  hoveredImage: 'http://placekitten.com/g/200/300'
+}, {
+  name: 'Emily 2',
+  website: '/',
+  initialImage: 'https://placedog.net/500',
+  hoveredImage: 'http://placekitten.com/g/200/300'
+}, {
+  name: 'Tomy 2',
+  website: '/',
+  initialImage: 'https://placedog.net/500',
+  hoveredImage: 'http://placekitten.com/g/200/300'
+}, {
+  name: 'Koko 2',
+  website: '/',
+  initialImage: 'https://placedog.net/500',
+  hoveredImage: 'http://placekitten.com/g/200/300'
+}];
+exports.interfaceStudents = interfaceStudents;
 },{}],"js/scripts.js":[function(require,module,exports) {
 "use strict";
 
 var _students = require("./data/students");
 
 // Dynamically Generate Students
-var interfaceParent = document.querySelector('.interface .students-container');
 var animationParent = document.querySelector('.animation .students-container');
+var interfaceParent = document.querySelector('.interface .students-container'); // function makeStudentElement({ name, website, initialImage, hoveredImage }) {
+//     return `<div class="student">
+//                 <a href="${website}">
+//                     <img class="profile" src="${initialImage}"></img>
+//                     <h3 class="name">${name}</h3>
+//                     <h4>${website}</h4>
+//                 </a>
+//             </div>`
+// };
+// TOMY'S EDITS_________________
 
 function makeStudentElement(_ref) {
   var name = _ref.name,
       website = _ref.website,
       initialImage = _ref.initialImage,
       hoveredImage = _ref.hoveredImage;
-  return "<div class=\"student\">\n                <a href=\"".concat(website, "\">\n                    <img class=\"profile\" src=\"").concat(initialImage, "\"></img>\n                    <h4>").concat(website, "</h4>\n                    <h3 class=\"name\">").concat(name, "</h3>\n                </a>\n            </div>");
+  return "<div class=\"student\">\n                <a href=\"".concat(website, "\">\n                    <img class=\"profile\" src=\"").concat(initialImage, "\"></img>\n                    <h3 class=\"name\">").concat(name, "</h3>\n                    <p>").concat(website, "</p>\n                 \n                </a>\n            </div>");
 }
 
-;
+; // function makeAnimStudentElement({ name, website, demoreel, initialImage, hoveredImage }) {
+//     return `<div class="student">
+//                 <a href="${website}">
+//                     <img class="profile" src="${initialImage}"></img>
+//                     <h3 class="name">${name}</h3>
+//                     <h4>${website}</h4>
+//                     <h4>${demoreel}</h4>
+//                 </a>
+//             </div>`
+// };
+// function createStudents(parent, students) {
+//     students.map(student => {
+//         parent.innerHTML += makeAnimStudentElement(student)
+//     })
+// };
+// END TOMY'S EDITS _______________________________
 
 function createStudents(parent, students) {
   students.map(function (student) {
@@ -217,8 +242,8 @@ function createStudents(parent, students) {
 createStudents(interfaceParent, _students.interfaceStudents);
 createStudents(animationParent, _students.animationStudents); // Handle Students Hover Effect
 
-var interfaceStudentsCollection = document.querySelectorAll('.interface .student');
 var animationStudentsCollection = document.querySelectorAll('.animation .student');
+var interfaceStudentsCollection = document.querySelectorAll('.interface .student');
 
 function handleImageHoverEffect(students, studentsArray) {
   students.forEach(function (student) {
@@ -269,7 +294,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56578" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51265" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

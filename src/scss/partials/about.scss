@@ -3,36 +3,95 @@
 
 	.container {
 		display: grid;
-		grid-gap: 100px;
+		grid-gap: 50px;
 	}
 
-	.info-block {
-		h3 {
-			font-size: 3rem;
-		}
+	// .info-block {
+	// 	h3 {
+	// 		font-size: 3rem;
+	// 	}
 
-		p {
-			font-size: 1.2rem;
-			line-height: 1.5;
-		}
+	// 	p {
+	// 		font-size: 1.2rem;
+	// 		line-height: 1.5;
+	// 	}
+	// }
+
+
+// (TOMY EDIT)________
+// TYPE
+.id_event h2, .anim_event h2{
+	margin-top: 0;
+	line-height: 1.1;
+}
+// BUTTON WIDTH 
+	.tickets{
+		width: 13.6rem;
 	}
 
-	@media (min-width: $breakpoint-medium) {
-		.container {
-			display: grid;
-			grid-template-columns: repeat(8, 1fr);
-			grid-template-areas:
-				"first first first first second second second second"
-				". . third third third third . .";
+	.rsvp{
+		width: 9.4rem;
+	}
 
-			.first {
-				grid-area: first;
+
+// GRID_____
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr );
+	grid-template-areas:
+		". event_about event_about event_about event_about ." 
+		". details details . . ."
+		". id_event id_event anim_event anim_event ."
+		". tickets . rsvp . .";
+
+	.event_about {
+		grid-area: event_about;
+	}
+	.details {
+		grid-area: details;
+		margin-top: 1rem;
+		margin-bottom: -2em;
+	}
+	.id_event {
+		grid-area: id_event;
+	}
+	.anim_event {
+		grid-area: anim_event;
+	}
+	.tickets {
+		grid-area: tickets;
+	}
+	.rsvp {
+		grid-area: rsvp;
+	}
+}
+	@media (max-width: $breakpoint-small){
+		.container{
+			padding-top: 10em;
+			display: block;
+			grid-gap: 10px;
+		
+			.details{
+				margin-top: 3rem;
+				margin-bottom: 1rem;
 			}
-			.second {
-				grid-area: second;
+
+			.id_event, .anim_event{
+				margin-bottom: 1rem;
+				h2{
+					font-size: 3rem;
+					// margin-top: 0;
+					margin-bottom:0;
+				}
 			}
-			.third {
-				grid-area: third;
+
+			.anim_event{
+				margin-top: 3rem;
+			}
+			
+			.tickets, .rsvp{
+				margin-top: 0;
 			}
 		}
 	}

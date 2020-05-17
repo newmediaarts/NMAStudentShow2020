@@ -1,0 +1,80 @@
+// Tomy Typography__________________________
+
+//TYPOGRAPHIC SCALE_______________________________________________________
+h1, h2, h3, h4, p, .small_text { 
+    margin: .5em 0;
+    color: $color-light-accent; 
+}  
+  
+h1, h2, h3{
+font-family: $heading-condensed-font-family; 
+text-transform: uppercase;
+}
+
+.small_text, .caption{
+    font-family: $heading-normal-font-family;
+    text-transform: uppercase;
+}
+
+h4, p{
+font-family: $bodyfont-family;
+}
+
+
+// _____
+
+h1 {
+font-size: 3em;
+line-height: 1;
+font-weight: 700;
+letter-spacing: .02em;
+}
+
+h2{
+margin-top: .5em;
+margin-bottom: 0;
+font-size: 3.5rem;
+line-height: 1.4;
+font-weight: 700;
+letter-spacing: .02em;
+}
+
+h3{
+    margin-top: .5em;
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    line-height: 1.4;
+    font-weight: 100;
+    letter-spacing: .02em;
+    color: $color-background-lightgray;
+    }
+
+h4 {
+    margin-top: 0;
+font-size: 2rem;
+line-height: 1.4;
+font-weight: 700;
+font-style: italic;
+margin-bottom: 1em;
+}
+
+.small_text{
+letter-spacing: .15em; 
+font-size: 1.3rem;
+font-weight: 700;
+margin-bottom: 0;
+}
+	
+p {
+font-size: 1.4rem;
+line-height: 1.5;
+font-weight: 100;
+font-style: normal;
+font-family: $bodyfont-family; 
+}
+
+.caption{
+    color: $color-background-lightgray;
+    font-size: .8rem;
+    letter-spacing: .07em; 
+}

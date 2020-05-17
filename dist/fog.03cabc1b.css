@@ -1,51 +1,56 @@
-/* HEADING*/
-h1, h2, h3 {
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, .small_text {
   margin: 0.5em 0;
-  font-weight: 100;
-  line-height: 1;
   color: white;
 }
 
-h1 {
+h1, .small_text {
   font-family: "Open Sans Condensed", "Bebas Neue", "Franklin Gothic Condensed", "Arial", sans-serif;
+  text-transform: uppercase;
 }
 
-h2, h3, p {
-  font-family: "Lora", serif;
+h1, h2 {
+  font-weight: 700;
+}
+
+h2, h3 {
+  font-family: "Cormorant Garamond", "Lora", serif;
+  text-transform: uppercase;
+}
+
+h3, .small_text {
+  font-weight: 100;
+  letter-spacing: 0.2em;
 }
 
 h1 {
-  font-size: 3em;
-  line-height: 1;
-  font-weight: 700;
-  color: white;
-  text-transform: uppercase;
+  font-size: 5rem;
+  margin-bottom: 0;
+  text-align: center;
+  margin-top: 0;
   letter-spacing: 0.02em;
 }
 
 h2 {
-  text-transform: none;
-  margin-top: 0.5em;
-  margin-bottom: 0.2em;
-  font-size: 2em;
-  line-height: 1.4;
-  font-weight: 700;
-  color: black;
+  font-size: 6rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  letter-spacing: 0.05em;
+  line-height: 1;
 }
 
 h3 {
-  font-size: 1.5em;
-  line-height: 1.4;
-  font-weight: 100;
-  text-transform: uppercase;
+  margin-top: 0;
+  font-size: 2rem;
   color: white;
-  letter-spacing: 0.2em;
 }
 
-p {
-  font-size: 1em;
-  font-weight: 100;
-  font-style: normal;
+.small_text {
+  font-size: 1.5em;
+  margin-bottom: 0;
 }
 
 img {
@@ -54,32 +59,86 @@ img {
 }
 
 #hero {
-  height: 100vh;
+  padding: 0;
+}
+#hero .hero-content .one-half h2, #hero .hero-content .one-half h3 {
+  text-align: left;
+}
+#hero .hero-content .save_date {
+  padding-bottom: 0;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 5rem;
+}
+#hero .hero-content .web_soon_text {
+  padding-top: 0;
+  color: #cacacae0;
+  margin-bottom: 5em;
+}
+#hero .container {
   display: grid;
   place-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: ". first first first first ." ". second second fourth fourth ." ". fifth fifth fifth fifth .";
 }
-#hero .hero-content h1 {
-  font-size: 5rem;
-  margin-bottom: 0;
-  text-align: center;
+#hero .container .first {
+  grid-area: first;
 }
-#hero .hero-content h3 {
-  margin-top: 0;
-  font-size: 2rem;
-  text-align: center;
+#hero .container .second {
+  grid-area: second;
 }
-@media (min-width: 1200px) {
-  #hero .hero-content {
-    position: relative;
-  }
-  #hero .hero-content h1 {
-    font-size: 10vw;
-  }
-  #hero .hero-content h3 {
-    font-size: 2.5vw;
-  }
+#hero .container .third {
+  grid-area: third;
+}
+#hero .container .fourth {
+  grid-area: fourth;
+}
+#hero .container .hero-content {
+  position: relative;
+}
+#hero .container .hero-content h1 {
+  font-size: 10vw;
+}
+#hero .container .hero-content h3 {
+  font-size: 2.5vw;
+}
+#hero .container .hero-content .row h3 {
+  font-size: 2vw;
 }
 
+@media (max-width: 767px) {
+  .hero-content .save_date {
+    margin-top: 5vh;
+    margin-bottom: 0;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .hero-content .small_text, .hero-content h3 {
+    font-size: 1.3rem;
+  }
+  .hero-content .row {
+    display: block;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    width: 51vw;
+  }
+  .hero-content .row .one-half {
+    margin: 5%;
+  }
+  .hero-content .row h2 {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .hero-content .row h3 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
 html {
   box-sizing: border-box;
 }
@@ -93,7 +152,7 @@ html {
 body {
   position: relative;
   margin: 0;
-  background: linear-gradient(358deg, #8fd4c2, #255c5c, black);
+  background: linear-gradient(358deg, black, #1c4646);
   background-size: 600% 600%;
   -webkit-animation: teal-background 200s ease infinite;
   -moz-animation: teal-background 200s ease infinite;
@@ -135,12 +194,14 @@ body {
   background-size: contain;
   background-position: center;
   animation: marquee 120s linear infinite;
+  opacity: 0.5;
 }
 .fog__img--second {
   background: url("https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-2.png") repeat-x;
   background-size: contain;
   background-position: center;
   animation: marquee 100s linear infinite;
+  opacity: 0.5;
 }
 
 @keyframes marquee {

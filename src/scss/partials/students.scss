@@ -5,18 +5,52 @@
 		display: grid;
 		grid-gap: 50px;
 
-		h3 {
-			margin-bottom: 40px;
+
+			// h4{
+		// 	margin-bottom: 40px;
+		// }
+
+// TYPE TOMY EDIT______
+
+		h3{
+			margin-bottom: $color-light-accent; 
 		}
+
+		.name {
+			font-family: $bodyfont-family;
+			text-transform: none;
+			font-size: 1.7rem;
+			line-height: 1.3;
+			text-align: center;
+			color: $color-light-accent; 
+		}
+
+		p{
+			text-align: center;
+			font-size: 1rem;
+			font-family: $heading-normal-font-family;
+		}
+
+		.anim-title-button{
+			display: flex;
+			justify-content: space-between;
+
+		}
+
+		button{
+			margin-bottom: .81rem;
+		}
+// ________________
 
 		.students-container {
 			display: grid;
 			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-			grid-gap: 20px;
+			grid-gap: 30px;
 
 			.student {
+				margin-top: 2rem;
 				.profile {
-					height: 150px;
+					height: 200px;
 					width: 100%;
 					object-fit: cover;
 				}
@@ -28,17 +62,30 @@
 		.container {
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-areas:
-				". . interface interface"
-				"animation animation . .";
+				". . animation animation"
+				"interface interface . .";
 			grid-row-gap: 150px;
-
-			.interface {
-				grid-area: interface;
-			}
 
 			.animation {
 				grid-area: animation;
 			}
+
+			.interface {
+				grid-area: interface;
+			}
 		}
+	}
+
+	@media (max-width: $breakpoint-mobile){
+		.container{
+			.anim-title-button{
+			display: block;
+			color: 3px solid $color-light-accent;
+			}
+
+			button{
+				margin-top: .5rem;
+			}
+		}	
 	}
 }
