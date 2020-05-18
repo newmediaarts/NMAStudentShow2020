@@ -1,7 +1,3 @@
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
 h1, h2, h3, .small_text {
   margin: 0.5em 0;
   color: white;
@@ -27,116 +23,118 @@ h3, .small_text {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 12vw;
   margin-bottom: 0;
   text-align: center;
   margin-top: 0;
   letter-spacing: 0.02em;
 }
 
+.subhead {
+  color: white;
+  margin-top: -0.6em;
+  text-align: center;
+  margin-bottom: 7vh;
+  font-size: 3.2vw;
+  font-weight: 300;
+}
+
 h2 {
-  font-size: 6rem;
+  font-size: 6vw;
   margin-bottom: 0;
   margin-top: 0;
   letter-spacing: 0.05em;
-  line-height: 1;
 }
 
 h3 {
   margin-top: 0;
-  font-size: 2rem;
+  font-size: 2vw;
   color: white;
+  font-weight: 700;
 }
 
 .small_text {
-  font-size: 1.5em;
+  font-size: 2vw;
   margin-bottom: 0;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
-#hero {
-  padding: 0;
-}
-#hero .hero-content .one-half h2, #hero .hero-content .one-half h3 {
-  text-align: left;
-}
-#hero .hero-content .save_date {
+.save_date {
+  margin-top: 6vh;
   padding-bottom: 0;
   font-style: italic;
   text-transform: uppercase;
   text-align: center;
-  font-size: 5rem;
-}
-#hero .hero-content .web_soon_text {
-  padding-top: 0;
-  color: #cacacae0;
-  margin-bottom: 5em;
-}
-#hero .container {
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-areas: ". first first first first ." ". second second fourth fourth ." ". fifth fifth fifth fifth .";
-}
-#hero .container .first {
-  grid-area: first;
-}
-#hero .container .second {
-  grid-area: second;
-}
-#hero .container .third {
-  grid-area: third;
-}
-#hero .container .fourth {
-  grid-area: fourth;
-}
-#hero .container .hero-content {
-  position: relative;
-}
-#hero .container .hero-content h1 {
-  font-size: 10vw;
-}
-#hero .container .hero-content h3 {
-  font-size: 2.5vw;
-}
-#hero .container .hero-content .row h3 {
-  font-size: 2vw;
+  font-size: 5vw;
 }
 
-@media (max-width: 767px) {
-  .hero-content .save_date {
-    margin-top: 5vh;
-    margin-bottom: 0;
-    font-style: italic;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 2.5rem;
-  }
-  .hero-content .small_text, .hero-content h3 {
-    font-size: 1.3rem;
-  }
-  .hero-content .row {
+.web_soon_text {
+  padding-top: 0;
+  color: #cacacae0;
+  text-align: center;
+}
+
+#hero {
+  padding: 2% 0;
+}
+#hero .full-height {
+  height: 100vh;
+}
+
+.container {
+  padding: 0 50px;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 0;
+  place-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: ". head head head head ." ". id_invite id_invite anim_invite anim_invite ." ". fifth fifth fifth fifth .";
+}
+.container .head {
+  grid-area: head;
+}
+.container .id_invite {
+  grid-area: id_invite;
+}
+.container .anim_invite {
+  grid-area: anim_invite;
+}
+.container .fifth {
+  grid-area: fifth;
+}
+
+@media (max-width: 768px) {
+  .container {
     display: block;
     margin: 0 auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
+  }
+  .container h2, .container h3, .container .small_text, .container .anim_invite, .container .id_invite {
     text-align: center;
-    width: 51vw;
   }
-  .hero-content .row .one-half {
-    margin: 5%;
+  .container h1 {
+    font-size: 15vw;
+    margin-bottom: 0;
   }
-  .hero-content .row h2 {
+  .container .subhead {
+    font-size: 4vw;
+  }
+  .container .small_text {
+    font-size: 1.3rem;
+  }
+  .container .anim_invite {
+    margin-top: 2em;
+  }
+  .container h2 {
     font-size: 4rem;
-    text-align: center;
   }
-  .hero-content .row h3 {
+  .container h3 {
     font-size: 1.4rem;
-    text-align: center;
+  }
+  .container .save_date {
+    font-size: 8vw;
+  }
+  .container .web_soon_text {
+    font-size: 4vw;
   }
 }
 html {
@@ -152,7 +150,8 @@ html {
 body {
   position: relative;
   margin: 0;
-  background: linear-gradient(358deg, black, #1c4646);
+  padding: 0;
+  background: linear-gradient(358deg, black, #1f4444);
   background-size: 600% 600%;
   -webkit-animation: teal-background 200s ease infinite;
   -moz-animation: teal-background 200s ease infinite;
@@ -172,9 +171,6 @@ body {
 
 .fog {
   position: relative;
-  margin: 0;
-  padding-top: 0;
-  margin-top: 0;
   height: 100vh;
   width: 100%;
 }
@@ -193,14 +189,14 @@ body {
   background: url("https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-1.png") repeat-x;
   background-size: contain;
   background-position: center;
-  animation: marquee 120s linear infinite;
+  animation: marquee 60s linear infinite;
   opacity: 0.5;
 }
 .fog__img--second {
   background: url("https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-2.png") repeat-x;
   background-size: contain;
   background-position: center;
-  animation: marquee 100s linear infinite;
+  animation: marquee 40s linear infinite;
   opacity: 0.5;
 }
 
