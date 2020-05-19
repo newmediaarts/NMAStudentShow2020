@@ -1,3 +1,7 @@
+// ******ANYTHING COMMENTED IN THIS SECTION WILL BE USED IN THE "COMING SOON" PAGE. NOT THE HERO SECTION FOR CHRIS*******
+
+
+
 // Colors
 $color-dark-accent: black;
 $color-light-accent: white;
@@ -6,13 +10,12 @@ $color-background-darkteal: #1f4444;
 $color-background-lightgray: #cacacae0;
 
 // Breakpoints
-$breakpoint-mobile: 767px;
 $breakpoint-small: 768px;
 $breakpoint-medium: 1200px;
 $breakpoint-large: 1550px;
 $breakpoint4k: 2560px;
 // Spacing
-$section-padding: 2% 0;
+$section-padding: 15vh 0;
 
 //TYPOGRAPHY
 $headingfont-family: 'Open Sans Condensed', 'Bebas Neue', 'Franklin Gothic Condensed', 'Arial', sans-serif;
@@ -52,12 +55,20 @@ h1 {
 }
 
 .subhead{
-  color: $color-light-accent;
-  margin-top: -.6em;
-  text-align: center;
-  margin-bottom: 7vh;
+  // margin-top: 0;
   font-size: 3.2vw;
-  font-weight: 300;
+  font-family: $bodyfont-family;
+  color:  $color-light-accent;
+  text-transform: none;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 4rem;
+  text-align: center;
+  margin-top: -.6em;
+  margin-bottom: 7vh;
+  letter-spacing: .03em; 
+  // font-size: 3.2vw;
+  // font-weight: 300;
 }
 
 h2 {
@@ -113,10 +124,20 @@ padding: $section-padding;
     place-items: center;
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas:
+      // ". . fuzzy fuzzy . ."
       ". head head head head ."
-      ". id_invite id_invite anim_invite anim_invite ."
-      ". fifth fifth fifth fifth .";
+      ". id_invite id_invite anim_invite anim_invite .";
+      // ". fifth fifth fifth fifth .";
   
+    // .fuzzy{
+    //   grid-area: fuzzy;
+      // width: 15em;
+      // height: auto;
+      // margin-bottom: -5.5em;
+      // margin-left: 4em;
+      // z-index: 100;
+      // transform: rotate(2deg);
+    // }  
     .head {
       grid-area: head;
     }
@@ -130,16 +151,28 @@ padding: $section-padding;
       grid-area: anim_invite;
     }
 
-    .fifth {
-      grid-area: fifth;
-    }
+    // .fifth {
+    //   grid-area: fifth;
+    // }
+}
+
+@media (min-width: $breakpoint-medium){
+  .fuzzy{
+    grid-area: fuzzy;
+    width: 14vw;
+    height: auto;
+    margin-bottom: -9.5vh;
+    margin-left: 4em;
+    z-index: 100;
+    transform: rotate(2deg);
+  }  
 }
 
 @media (max-width: $breakpoint-small){
   .container{
     display: block;
-    // place-items: center;
     margin: 0 auto;
+    
 
   h2, h3, .small_text, .anim_invite, .id_invite{
     text-align: center;
@@ -178,6 +211,16 @@ padding: $section-padding;
     .web_soon_text{
       font-size: 4vw;
     }
+
+    .fuzzy{
+      grid-area: fuzzy;
+      width: 15em;
+      height: auto;
+      margin-bottom: -5.5em;
+      margin-left: 4em;
+      z-index: 100;
+      transform: rotate(2deg);
+    } 
   }
 }  
 
@@ -222,7 +265,7 @@ body{
   
     &__container {
       position: absolute;
-  
+  background-color: black;
       height: 100%;
       width: 100%;
   

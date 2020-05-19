@@ -31,12 +31,17 @@ h1 {
 }
 
 .subhead {
-  color: white;
-  margin-top: -0.6em;
-  text-align: center;
-  margin-bottom: 7vh;
   font-size: 3.2vw;
-  font-weight: 300;
+  font-family: "Cormorant Garamond", "Lora", serif;
+  color: white;
+  text-transform: none;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 4rem;
+  text-align: center;
+  margin-top: -0.6em;
+  margin-bottom: 7vh;
+  letter-spacing: 0.03em;
 }
 
 h2 {
@@ -74,7 +79,7 @@ h3 {
 }
 
 #hero {
-  padding: 2% 0;
+  padding: 15vh 0;
 }
 #hero .full-height {
   height: 100vh;
@@ -88,7 +93,7 @@ h3 {
   grid-gap: 0;
   place-items: center;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-areas: ". head head head head ." ". id_invite id_invite anim_invite anim_invite ." ". fifth fifth fifth fifth .";
+  grid-template-areas: ". head head head head ." ". id_invite id_invite anim_invite anim_invite .";
 }
 .container .head {
   grid-area: head;
@@ -99,10 +104,18 @@ h3 {
 .container .anim_invite {
   grid-area: anim_invite;
 }
-.container .fifth {
-  grid-area: fifth;
-}
 
+@media (min-width: 1200px) {
+  .fuzzy {
+    grid-area: fuzzy;
+    width: 14vw;
+    height: auto;
+    margin-bottom: -9.5vh;
+    margin-left: 4em;
+    z-index: 100;
+    transform: rotate(2deg);
+  }
+}
 @media (max-width: 768px) {
   .container {
     display: block;
@@ -135,6 +148,15 @@ h3 {
   }
   .container .web_soon_text {
     font-size: 4vw;
+  }
+  .container .fuzzy {
+    grid-area: fuzzy;
+    width: 15em;
+    height: auto;
+    margin-bottom: -5.5em;
+    margin-left: 4em;
+    z-index: 100;
+    transform: rotate(2deg);
   }
 }
 html {
@@ -176,6 +198,7 @@ body {
 }
 .fog__container {
   position: absolute;
+  background-color: black;
   height: 100%;
   width: 100%;
   overflow: hidden;
