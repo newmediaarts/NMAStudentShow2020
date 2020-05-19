@@ -117,156 +117,79 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/data/students.js":[function(require,module,exports) {
-"use strict";
+})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.interfaceStudents = exports.animationStudents = void 0;
-var animationStudents = [{
-  name: 'Animator 1',
-  website: 'web',
-  // demoreel: 'demoreel',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Animator 2',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Animator 3',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Animator 4',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Animator 5',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Animator 6',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}];
-exports.animationStudents = animationStudents;
-var interfaceStudents = [{
-  name: 'Emily Freeman',
-  website: 'https://eafreeman.com',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Miyuki Sekiguchi',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Koko',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Emily 2',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Tomy 2',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Koko 2',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}];
-exports.interfaceStudents = interfaceStudents;
-},{}],"js/scripts.js":[function(require,module,exports) {
-"use strict";
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
 
-var _students = require("./data/students");
-
-// Dynamically Generate Students
-var animationParent = document.querySelector('.animation .students-container');
-var interfaceParent = document.querySelector('.interface .students-container'); // function makeStudentElement({ name, website, initialImage, hoveredImage }) {
-//     return `<div class="student">
-//                 <a href="${website}">
-//                     <img class="profile" src="${initialImage}"></img>
-//                     <h3 class="name">${name}</h3>
-//                     <h4>${website}</h4>
-//                 </a>
-//             </div>`
-// };
-// TOMY'S EDITS_________________
-
-function makeStudentElement(_ref) {
-  var name = _ref.name,
-      website = _ref.website,
-      initialImage = _ref.initialImage,
-      hoveredImage = _ref.hoveredImage;
-  return "<div class=\"student\">\n                <a href=\"".concat(website, "\">\n                    <img class=\"profile\" src=\"").concat(initialImage, "\"></img>\n                    <h3 class=\"name\">").concat(name, "</h3>\n                    <p>").concat(website, "</p>\n                 \n                </a>\n            </div>");
+  return bundleURL;
 }
 
-; // function makeAnimStudentElement({ name, website, demoreel, initialImage, hoveredImage }) {
-//     return `<div class="student">
-//                 <a href="${website}">
-//                     <img class="profile" src="${initialImage}"></img>
-//                     <h3 class="name">${name}</h3>
-//                     <h4>${website}</h4>
-//                     <h4>${demoreel}</h4>
-//                 </a>
-//             </div>`
-// };
-// function createStudents(parent, students) {
-//     students.map(student => {
-//         parent.innerHTML += makeAnimStudentElement(student)
-//     })
-// };
-// END TOMY'S EDITS _______________________________
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
 
-function createStudents(parent, students) {
-  students.map(function (student) {
-    parent.innerHTML += makeStudentElement(student);
-  });
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
 }
 
-;
-createStudents(interfaceParent, _students.interfaceStudents);
-createStudents(animationParent, _students.animationStudents); // Handle Students Hover Effect
-
-var animationStudentsCollection = document.querySelectorAll('.animation .student');
-var interfaceStudentsCollection = document.querySelectorAll('.interface .student');
-
-function handleImageHoverEffect(students, studentsArray) {
-  students.forEach(function (student) {
-    var studentImage = student.querySelector('img');
-    var studentName = student.querySelector('.name').innerText;
-    var _studentsArray$filter = studentsArray.filter(function (el) {
-      return el.name === studentName;
-    })[0],
-        hoveredImage = _studentsArray$filter.hoveredImage,
-        initialImage = _studentsArray$filter.initialImage;
-    student.addEventListener('mouseenter', function () {
-      return studentImage.src = hoveredImage;
-    });
-    student.addEventListener('mouseleave', function () {
-      return studentImage.src = initialImage;
-    });
-  });
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
 }
 
-;
-handleImageHoverEffect(interfaceStudentsCollection, _students.interfaceStudents);
-handleImageHoverEffect(animationStudentsCollection, _students.animationStudents);
-},{"./data/students":"js/data/students.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"nma_hero.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./img/background.jpg":[["background.004d778f.jpg","img/background.jpg"],"img/background.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -470,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/scripts.js"], null)
-//# sourceMappingURL=/scripts.cd665a19.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/nma_hero.3170e8b5.js.map

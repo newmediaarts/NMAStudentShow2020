@@ -82,6 +82,12 @@ nav button {
   background: yellow;
   color: black;
 }
+nav .chris_hero {
+  top: 20vh;
+  padding: 3rem;
+  border: none;
+  background: red;
+}
 
 #hero {
   padding: 15vh 0;

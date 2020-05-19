@@ -1,47 +1,17 @@
-h1, h2, h3, .small_text {
+h3, .small_text {
   margin: 0.5em 0;
   color: white;
-}
-
-h1, .small_text {
-  font-family: "Open Sans Condensed", "Bebas Neue", "Franklin Gothic Condensed", "Arial", sans-serif;
-  text-transform: uppercase;
-}
-
-h1, h2 {
-  font-weight: 700;
 }
 
 h2, h3 {
   font-family: "Cormorant Garamond", "Lora", serif;
   text-transform: uppercase;
+  color: white;
 }
 
 h3, .small_text {
   font-weight: 100;
   letter-spacing: 0.2em;
-}
-
-h1 {
-  font-size: 12vw;
-  margin-bottom: 0;
-  text-align: center;
-  margin-top: 0;
-  letter-spacing: 0.02em;
-}
-
-.subhead {
-  margin-top: 0;
-  font-size: 3.2vw;
-  font-family: "Cormorant Garamond", "Lora", serif;
-  color: white;
-  text-transform: none;
-  font-weight: 300;
-  margin-bottom: 4rem;
-  text-align: center;
-  margin-top: -0.6em;
-  margin-bottom: 7vh;
-  letter-spacing: 0.03em;
 }
 
 h2 {
@@ -61,25 +31,13 @@ h3 {
 .small_text {
   font-size: 2vw;
   margin-bottom: 0;
-}
-
-.save_date {
-  margin-top: 6vh;
-  padding-bottom: 0;
-  font-style: italic;
+  font-family: "Open Sans Condensed", "Bebas Neue", "Franklin Gothic Condensed", "Arial", sans-serif;
   text-transform: uppercase;
-  text-align: center;
-  font-size: 5vw;
-}
-
-.web_soon_text {
-  padding-top: 0;
-  color: #cacacae0;
-  text-align: center;
 }
 
 #hero {
-  padding: 15vh 0;
+  padding: 3vh 0;
+  position: relative;
 }
 #hero .full-height {
   height: 100vh;
@@ -87,16 +45,32 @@ h3 {
 
 .container {
   padding: 0 50px;
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
   display: grid;
   grid-gap: 0;
   place-items: center;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-areas: ". head head head head head ." ". id_invite id_invite line anim_invite anim_invite ." ". save_date_web save_date_web save_date_web save_date_web save_date_web .";
+  grid-template-areas: "fairy head head head head head ." ". id_invite id_invite line anim_invite anim_invite nessy_container";
+}
+.container .fairy {
+  grid-area: fairy;
+  width: 15vw;
+  height: auto;
+  visibility: visible;
+  z-index: 100;
+  margin-left: -4.5vw;
+  top: 10vh;
+  position: absolute;
 }
 .container .head {
   grid-area: head;
+  margin-bottom: 3em;
+}
+.container .head .title {
+  width: 100%;
+  height: auto;
+  z-index: 100;
 }
 .container .id_invite {
   grid-area: id_invite;
@@ -109,13 +83,19 @@ h3 {
 .container .anim_invite {
   grid-area: anim_invite;
 }
-.container .save_date_web {
-  grid-area: save_date_web;
+.container .nessy_container {
+  grid-area: nessy_container;
+}
+.container .nessy_container .nessy {
+  width: 30vw;
+  bottom: 0;
+  right: -15vw;
+  position: absolute;
 }
 
 @media (max-width: 768px) {
   #hero {
-    padding-top: 4rem;
+    padding-top: 4vh;
   }
 
   .container {
@@ -124,13 +104,6 @@ h3 {
   }
   .container h2, .container h3, .container .small_text, .container .anim_invite, .container .id_invite {
     text-align: center;
-  }
-  .container h1 {
-    font-size: 15vw;
-    margin-bottom: 0;
-  }
-  .container .subhead {
-    font-size: 4vw;
   }
   .container .small_text {
     font-size: 1.3rem;
@@ -152,10 +125,14 @@ h3 {
   }
   .container .line {
     grid-area: line;
-    height: 100%;
+    width: 48vw;
+    margin: 0 auto;
     padding-bottom: 2vh;
     border-right: 0;
     border-bottom: 1px solid white;
+  }
+  .container .nessy, .container .fairy {
+    visibility: hidden;
   }
 }
 html {
@@ -170,6 +147,8 @@ html {
 
 body {
   background-image: url(/background.004d778f.jpg);
+  background-repeat: none;
+  overflow: hidden;
 }
 
-/*# sourceMappingURL=/fog.03cabc1b.css.map */
+/*# sourceMappingURL=/nma_hero.3170e8b5.css.map */
