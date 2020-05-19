@@ -1,13 +1,24 @@
 // Colors
 $color-dark-accent: black;
 $color-light-accent: white;
+$color-background-teal:#8fd4c2;
+$color-background-darkteal: #1c4646;
+$color-background-lightgray: #bfc0be;
+
 // Breakpoints
+$breakpoint-mobile: 767px;
 $breakpoint-small: 768px;
 $breakpoint-medium: 1200px;
 $breakpoint-large: 1550px;
 $breakpoint4k: 2560px;
 // Spacing
 $section-padding: 15vh 0;
+
+
+//TYPOGRAPHY
+$heading-condensed-font-family: 'Open Sans Condensed', 'Bebas Neue', 'Franklin Gothic Condensed', 'Arial', sans-serif;
+$heading-normal-font-family: 'Open Sans', sans-serif;
+$bodyfont-family: 'Cormorant Garamond', 'Lora', serif;
 
 // Imports
 @import "./partials/global";
@@ -17,3 +28,9 @@ $section-padding: 15vh 0;
 @import "./partials/about.scss";
 @import "./partials/students.scss";
 @import "./partials/cave.scss";
+
+
+
+// Tomy's addtion
+@import "./partials/typography.scss";
+@import "./partials/quote.scss";

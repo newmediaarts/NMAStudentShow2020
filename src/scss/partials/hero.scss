@@ -1,31 +1,95 @@
 #hero {
-	display: grid;
-	place-items: center;
-	background: $color-dark-accent;
-	color: $color-light-accent;
-
-	.hero-content {
-		h1 {
-			font-size: 5rem;
-		}
-
-		h3 {
-			font-size: 2rem;
-		}
+	padding: $section-padding;
+	.container {
+		display: grid;
+		grid-gap: 50px;
+		display: block;
 	}
 
-	@media (min-width: $breakpoint-medium) {
 		.hero-content {
-			position: relative;
-			top: 20%;
-			left: 20%;
-
+		
 			h1 {
-				font-size: 6vw;
+				font-size: 12.5vw;
+				margin-bottom: 0;
+				text-align: center;
+				margin-top: 0;
 			}
-			h3 {
-				font-size: 3vw;
+		
+			h2 {
+				margin-top: 0;
+				font-size: 3.2vw;
+				font-family: $bodyfont-family;
+				color:  $color-light-accent;
+				text-transform: none;
+				font-weight: 500;
+				font-style: italic;
+				margin-bottom: 4rem;
+				text-align: center;
+			}  
+
+			p{
+				margin-bottom: 2rem;
+			};
+		}
+
+// GRID_____
+		.container {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr );
+			grid-template-areas:
+
+				". hero-content hero-content hero-content hero-content .";
+
+			.hero-content {
+				grid-area: hero-content;
 			}
 		}
+
+	@media (min-width: $breakpoint-medium){
+	
+		.hero-content {
+		
+			h1 {
+				font-size: 12.5rem;
+			}
+		
+			h2 {
+				font-size: 3.4rem;
+			}  
+
+			p{
+				margin-bottom: 2rem;
+			};
+		}
+
+	}
+
+
+	@media (max-width: $breakpoint-mobile){
+		.container{
+			grid-gap: 10px;
+			display: block;
+			padding-bottom: 10em;
+		}
+
+		.hero-content {
+		
+			h1 {
+				font-size: 19vw;
+				margin-bottom: 0;
+				text-align: center;
+				margin-top: 0;
+			}
+		
+			h2 {
+				margin-top: 0;
+				font-size: 8vw;
+				margin-bottom: 3rem;
+			}  
+			p{
+				margin-bottom: 2rem;
+			};
+		}
+
 	}
 }

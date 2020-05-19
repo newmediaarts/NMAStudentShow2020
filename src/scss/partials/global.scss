@@ -19,6 +19,39 @@ body {
 	// 	rgba(63, 63, 163, 1) 77%,
 	// 	rgba(0, 212, 255, 1) 100%
 	// );
+
+// Tomy added_____________
+// color-changing gradient background
+margin:0;
+  background: linear-gradient(358deg, $color-dark-accent, $color-background-darkteal);
+  background-size: 600% 600%;
+
+  -webkit-animation: teal-background 200s ease infinite;
+  -moz-animation: teal-background 200s ease infinite;
+  animation: teal-background 200s ease infinite;
+
+
+  @keyframes teal-background {
+	  0%{background-position:53% 0%}
+	  50%{background-position:48% 100%}
+	  100%{background-position:53% 0%}
+}
+
+
+	button {
+		padding: 1rem;
+		border: none;
+		background: $color-dark-accent;
+		font-family:$heading-condensed-font-family;
+		font-size: 20px;
+		font-weight: 700;
+		text-align: right;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		text-align: left;
+	}
+
+// _____________________
 }
 
 ul {
@@ -27,7 +60,7 @@ ul {
 
 a {
 	text-decoration: none;
-	color: $color-dark-accent;
+	color: $color-light-accent;
 }
 
 h1,

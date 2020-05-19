@@ -8,6 +8,9 @@
 2. Run command `npm start` to run live server
 3. Run command `npm build` to build/bundle the site for production
 
+Note: to export a build with relative paths:
+`parcel build src/index.html --public-url ./`
+
 ## Creating and populating Students section
 
 1. Go to the `students.js` file in `src/js/data`

@@ -1,0 +1,57 @@
+// Tomy's edits_________________
+#quote {	
+
+
+// type___
+        h4{
+            text-align: center;
+        }
+        .caption{
+            text-align: center;
+        }
+
+// GRID_____
+.container {
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr );
+    grid-template-areas:
+        ". bystander_quote bystander_quote bystander_quote bystander_quote ."
+        ". caption caption caption caption .";
+
+    .bystander_quote {
+        grid-area: bystander_quote;
+    }
+
+    .caption {
+        grid-area: caption;
+    }
+}
+	@media (max-width: $breakpoint-mobile){
+        .container {
+            padding-top: 1.5em;
+            padding-bottom:0;
+			display: grid;
+			grid-template-columns: repeat(6, 1fr );
+            grid-template-areas:
+                "bystander_quote bystander_quote bystander_quote bystander_quote bystander_quote bystander_quote"
+                "caption caption caption caption caption caption";
+
+
+
+                .bystander_quote {
+                    grid-area: bystander_quote;
+                }
+    
+                .caption {
+                    grid-area: caption;
+                }
+        h4{
+            font-size: 1.7rem;
+        }
+        .caption{
+            text-align: center;
+        }
+    }
+}
+}

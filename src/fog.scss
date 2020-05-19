@@ -1,11 +1,15 @@
+// ******ANYTHING COMMENTED IN THIS SECTION WILL BE USED IN THE "COMING SOON" PAGE. NOT THE HERO SECTION FOR CHRIS*******
+
+
+
 // Colors
 $color-dark-accent: black;
-$color-light-accent: white;
-$color-background-teal:#8fd4c2;
-$color-background-darkteal: #255c5c;
+$color-light-accent: rgba(255,255,255,.5);
+$color-background-teal:#1c4238;
+$color-background-darkteal: #1f4444;
+$color-background-lightgray: #cacacae0;
 
 // Breakpoints
-$breakpoint-mobile: 767px;
 $breakpoint-small: 768px;
 $breakpoint-medium: 1200px;
 $breakpoint-large: 1550px;
@@ -15,193 +19,337 @@ $section-padding: 15vh 0;
 
 //TYPOGRAPHY
 $headingfont-family: 'Open Sans Condensed', 'Bebas Neue', 'Franklin Gothic Condensed', 'Arial', sans-serif;
-$bodyfont-family: 'Lora', serif;
+$bodyfont-family: 'Cormorant Garamond', 'Lora', serif;
 
 
-/* HEADING*/
-h1, h2, h3 { 
-    margin: .5em 0;
-    font-weight: 100;
-   line-height: 1;
-    color: $color-light-accent; 
-  }  
-  
-  h1{
-    font-family: $headingfont-family; 
-  }
-  
-  h2, h3, p{
-    font-family: $bodyfont-family;
-  }
-  
-  h1 {
-    font-size: 3em;
-    line-height: 1;
-    font-weight: 700;
-    color:$color-light-accent;
-    text-transform: uppercase;
-    letter-spacing: .02em;
-  }
-  
-  h2{
-    text-transform: none;
-    margin-top: .5em;
-    margin-bottom:.2em;
-    font-size: 2em;
-    line-height: 1.4;
-    font-weight: 700;
-    color:$color-dark-accent; 
-  }
-  
-  h3 {
-
-    font-size: 1.5em;
-    line-height: 1.4;
-    font-weight: 100;
-    text-transform: uppercase;
-    color: $color-light-accent; 
-    letter-spacing: .2em;
-  }
-  
-  
-  
-  p {
-    font-size: 1em;
-  font-weight: 100;
-  font-style: normal;
-  }
-
-
-// img__________
-img{
-  width: 100%;
-  height: auto;
-}
-
-
-
-
-//   HERO______________
-
-#hero {
-    height: 100vh;
-	display: grid;
-	place-items: center;
-	// background: $color-dark-accent;
-
-
-	.hero-content {
-		h1 {
-            font-size: 5rem;
-            margin-bottom: 0;
-            text-align: center;
-		}
-
-		h3 {
-      margin-top: 0;
-            font-size: 2rem;
-            text-align: center;
-		}
-	}
-
-	@media (min-width: $breakpoint-medium) {
-		.hero-content {
-			position: relative;
-			// top: 20%;
-			// left: 20%;
-
-			h1 {
-				font-size: 10vw;
-			}
-			h3 {
-				font-size: 2.5vw;
-			}
-		}
-	}
-}
-
-
-// Base
+// Base (RESET) __________________________
 html {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
   
-  *, 
-  *:before, 
-  *:after {
-    box-sizing: inherit;
-  }
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
   
 body{
   position: relative;
   margin:0;
-    // animation for background color________________
+  padding: 0;
+}
 
-	background: linear-gradient(358deg, $color-background-teal, $color-background-darkteal, $color-dark-accent);
-	background-size: 600% 600%;
-
-	-webkit-animation: teal-background 200s ease infinite;
-	-moz-animation: teal-background 200s ease infinite;
-	animation: teal-background 200s ease infinite;
-
-  
-	@keyframes teal-background {
-		0%{background-position:53% 0%}
-		50%{background-position:48% 100%}
-		100%{background-position:53% 0%}
-  }
+// BASE COLORS 
+body {
+  color: black;
 }
 
 
-  // Fog
-.fog {
-    position: relative;
-  margin:0;
-  padding-top: 0;
-  margin-top: 0;
+// BASE TYPOGRAPHIC SCALE  _________________
+
+
+// HERO AND COMING SOON PAGE TYPE & STYLING ___________
+
+#hero {
+padding: $section-padding;
+  .full-height {
     height: 100vh;
+  }
+}
+
+// SIGHTINGS INVITE SPECIFIC
+.sightings {
+
+  h1, h2, h3, .small_text { 
+    margin: .5em 0;
+    // color: $color-light-accent; 
+  }  
+    
+  h1, .small_text{
+    font-family: $headingfont-family; 
+    text-transform: uppercase;
+  }
+  
+  h1, h2{
+    font-weight: 700;
+  }
+  
+  h2, h3{
+    font-family: $bodyfont-family;
+    text-transform: uppercase;
+  }
+  
+  h3, .small_text{
+    font-weight: 100;
+    letter-spacing: .2em; 
+  }
+  // _____
+  h1 {
+    font-size: 12vw;
+    margin-bottom: 0;
+    // text-align: center;
+    margin-top: 0;
+    letter-spacing: .02em;
+  }
+  
+  .subhead{
+    // margin-top: 0;
+    font-size: 3.2vw;
+    font-family: $bodyfont-family;
+    // color:  $color-light-accent;
+    text-transform: none;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 4rem;
+    // text-align: center;
+    margin-top: -.6em;
+    margin-bottom: 7vh;
+    letter-spacing: .03em; 
+    // font-size: 3.2vw;
+    // font-weight: 300;
+  }
+  
+  h2 {
+    font-size: 6vw;
+    margin-bottom: 0;
+    margin-top: 0;
+    letter-spacing: .05em;
+  }
+  
+  h3 {
+    margin-top: 0;
+    font-size: 2vw;
+    // color: $color-light-accent;
+    font-weight: 700;
+  }
+  
+  .small_text{
+    font-size: 2vw;
+    margin-bottom: 0;
+  }
+  
+  // "save the date" format
+  .save_date{
+  margin-top: 6vh;
+  padding-bottom: 0;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 5vw;
+  }
+  
+  .web_soon_text{
+  padding-top: 0;
+  color: $color-background-lightgray;
+  text-align: center;
+  } 
+
+.invite__container{
+  padding: 0 50px;
+  max-width: 1600px;
+  margin: 0 auto;
+    display: grid;
+    grid-gap: 0;
+    // place-items: center;
+    // justify-content: left;
+    // align-items: center;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      // ". . fuzzy fuzzy . ."
+      ". head head head head ."
+      ". id_invite id_invite anim_invite anim_invite .";
+      // ". fifth fifth fifth fifth .";
+  
+    // .fuzzy{
+    //   grid-area: fuzzy;
+      // width: 15em;
+      // height: auto;
+      // margin-bottom: -5.5em;
+      // margin-left: 4em;
+      // z-index: 100;
+      // transform: rotate(2deg);
+    // }  
+    .head {
+      grid-area: head;
+    }
+
+    .id_invite {
+      grid-area: id_invite;
+      padding-right: 3em;
+      position: relative;
+    }
+
+    .id_invite::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 10%;
+      right: 0;
+      height: 80%;
+      border-right: 1px solid rgba(255,255,255,.25);
+    }
+
+    .anim_invite {
+      padding-left: 3em;
+      grid-area: anim_invite;
+    }
+
+    // .fifth {
+    //   grid-area: fifth;
+    // }
+}
+
+@media (min-width: $breakpoint-medium){
+  .fuzzy{
+    grid-area: fuzzy;
+    width: 14vw;
+    height: auto;
+    margin-bottom: -9.5vh;
+    margin-left: 4em;
+    z-index: 100;
+    transform: rotate(2deg);
+  }  
+}
+
+@media (max-width: $breakpoint-small){
+  .invite__container{
+    display: block;
+    margin: 0 auto;
+    
+
+  h2, h3, .small_text, .anim_invite, .id_invite{
+    text-align: center;
+  }
+
+  h1{
+    font-size: 15vw;
+    margin-bottom: 0;
+  }
+
+  .subhead{
+    font-size: 4vw;
+  }
+
+  .small_text{
+    font-size: 1.3rem;
+  }
+
+  .id_invite{
+    padding: 0;
+  }
+
+  .id_invite::after {
+    display: none;
+  }
+
+  .anim_invite{
+    margin-top: 2em;
+    padding: 0;
+  }
+  
+  // type_______
+    h2{
+      font-size: 4rem;
+    }
+
+    h3{
+      font-size: 1.4rem;
+    }
+
+    .save_date{
+      font-size: 8vw;
+    }
+    
+    .web_soon_text{
+      font-size: 4vw;
+    }
+
+    .fuzzy{
+      grid-area: fuzzy;
+      width: 15em;
+      height: auto;
+      margin-bottom: -5.5em;
+      margin-left: 4em;
+      z-index: 100;
+      transform: rotate(2deg);
+    } 
+  }
+}  
+
+
+
+}
+
+  // FOG ANIMATION__________________________
+// ***********THE FOG IS CAUSING THE HORIZONTAL SCROLL-BAR THE FOG ALSO JERKS AT THE END OF THE SEQUENCE****************
+  .fog {
+    position: relative;
+    min-height: 100vh;
     width: 100%;
-    
+    overflow-x: hidden;
 
+    background: linear-gradient(-45deg, $color-dark-accent, $color-background-darkteal);
+    background-size: 400% 100%;
+    animation: fog-animated-gradient-background 12s ease infinite;
   
-    &__container {
-      position: absolute;
-      height: 100%;
+    .fog__container {
+      color: rgba(255, 255, 255, .75);
+      animation: fog-textcolorchange 6s linear infinite;
+      min-height: 100vh;
       width: 100%;
-  
-      overflow: hidden;
+      display: grid;
+      place-items: center;
     }
   
-    &__img {
+    .fog__container::before,
+    .fog__container::after {
+      content: "";
+      display: block;
       position: absolute;
-      height: 100vh;
-      width: 300vw;
-  
-      &--first {
-        background: url('https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-1.png') repeat-x;
-        background-size: contain;
-        background-position: center;
-        animation: marquee 120s linear infinite;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 200vw;
+      z-index: 200;
+    }
 
-      }
-  
-      &--second {
-        background: url('https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-2.png') repeat-x;
-        background-size: contain;
-        background-position: center;
-        animation: marquee 100s linear infinite;
- 
-      }
+    .fog__container::before  {
+      background: url('https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-1.png') repeat-x;
+      background-size: cover;
+      background-position: center;
+      animation: fog-cloud-marquee 6s linear infinite;
+      opacity: 0;
+    }
+
+    .fog__container::after {
+      background: url('https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-2.png') repeat-x;
+      background-size: cover;
+      background-position: center;
+      animation: fog-cloud-marquee 6s linear 3s infinite;
+      opacity: 0;
     }
   }
+
+  // Fog Animated Gradient Color Background
+  @keyframes fog-animated-gradient-background {
+    0%{background-position:0% 0%}
+    50%{background-position:100% 0%}
+    100%{background-position:0% 0%}
+  }
   
-  // Marquee
-  @keyframes marquee {
-    0% { transform: translate3d(0, 0, 0); }
-    100% { transform: translate3d(-200vw, 0, 0); }
+  // Fog Animated Cloud Marquee
+  @keyframes fog-cloud-marquee {
+    0% { transform: translate(0, 0); opacity: 0; }
+    50% { transform: translate(-50vw, 0); opacity: 1;}
+    100% { transform: translate(-100vw, 0); opacity: 0;}
   }
 
-  @media (max-width: $breakpoint-mobile){
-
-    
+  // Fog Animated Text Color Change
+  @keyframes fog-textcolorchange {
+    0% { color: rgba(255,255,255,.75);}
+    50% { color: rgba(255,255,255,.25);}
+    100% { color: rgba(255,255,255,.75);}
   }
+
+  
