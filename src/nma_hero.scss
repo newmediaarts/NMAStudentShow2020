@@ -1,0 +1,212 @@
+// Colors
+$color-dark-accent: black;
+$color-light-accent: white;
+$color-background-teal:#1c4238;
+$color-background-darkteal: #1f4444;
+$color-background-lightgray: #cacacae0;
+
+// Breakpoints
+$breakpoint-small: 768px;
+$breakpoint-medium: 1200px;
+$breakpoint-large: 1550px;
+$breakpoint4k: 2560px;
+// Spacing
+$section-padding: 3vh 0;
+
+//TYPOGRAPHY
+$headingfont-family: 'Open Sans Condensed', 'Bebas Neue', 'Franklin Gothic Condensed', 'Arial', sans-serif;
+$bodyfont-family: 'Cormorant Garamond', 'Lora', serif;
+
+// Base (COLOR BACKGROUND)__________________________
+html {
+  box-sizing: border-box;
+}
+  
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+  
+body{
+  margin: 0;
+}
+
+.sightings {
+  background-image: url(img/background.jpg);
+  background-repeat: none;
+  position: relative;
+  padding: 5vh 0;
+
+//TYPOGRAPHIC SCALE_______________________________________________________
+h3, .small_text { 
+  margin: .5em 0;
+  color: $color-light-accent; 
+}  
+
+h2, h3{
+  font-family: $bodyfont-family;
+  text-transform: uppercase;
+  color: $color-light-accent; 
+}
+
+h3, .small_text{
+  font-weight: 100;
+  letter-spacing: .2em; 
+}
+// _____
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 0;
+  margin-top: 0;
+  letter-spacing: .05em;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: .8em;
+  color: $color-light-accent;
+  font-weight: 700;
+}
+
+.small_text{
+  font-size: 1em;
+  margin-bottom: 0;
+  font-family: $headingfont-family; 
+  text-transform: uppercase;
+}
+
+//HERO PAGE TYPE &STYLING_________________________________________________
+
+
+
+.sightings-container{
+  padding: 0 4em;
+  max-width: 700px;
+  margin: 0 auto;
+    display: grid;
+    grid-gap: 0;
+    // place-items: center;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas:
+      "fairy head head head head head ."
+      ". id_invite id_invite line anim_invite anim_invite .";
+  
+  .fairy{
+    grid-area: fairy;
+    width: auto;
+    height: 50%;
+    visibility: visible;
+    z-index: 100;
+    // margin-left: -4.5vw;
+    top: 10vh;
+    left: 15%;
+    position: absolute;
+  } 
+
+  .head {
+    grid-area: head;
+    margin-bottom: 1.5em;
+    .title{
+      width: 100%;
+      height: auto;
+      z-index:100;
+    }
+  }
+
+  .id_invite {
+    grid-area: id_invite;
+  }
+
+  .line{
+    grid-area: line;
+    height: 80%;
+    width: 1px;
+    margin: 10% auto;
+    background: white;
+  }
+
+  .anim_invite {
+    grid-area: anim_invite;
+  }
+
+
+  .nessy{
+    width: auto;
+    height: 45%;
+    bottom: 5%;
+    right: -7%;
+    position: absolute;
+  }
+}
+
+@media (max-width: $breakpoint-small){
+  
+  .sightings-container{
+    display: block;
+    padding-top: 0;
+    
+// type_______
+  h2, h3, .small_text, .anim_invite, .id_invite{
+    text-align: center;
+  }
+
+  .small_text{
+    font-size: 1em;
+  }
+
+  .anim_invite{
+    margin-top: 2em;
+    margin-bottom: 5em;
+  }
+  
+ 
+    h2{
+      font-size: 2em;
+    }
+
+    h3{
+      font-size: 1em;
+    }
+
+    .save_date{
+      font-size: 8vw;
+    }
+    
+    .web_soon_text{
+      font-size: 4vw;
+    }
+
+    .line{
+      grid-area: line;
+      width: 40%;
+      height: 1px;
+      line-height: 1;
+      margin: 2em auto;
+      // padding-bottom: 2vh;
+      border-right: 0;
+      border-bottom: 1px solid white;
+    }
+
+// characters___
+    .nessy, .fairy{
+      // visibility: hidden;
+    }
+
+    .fairy {
+      height: 35%;
+      top: 45%;
+      left: -5%;
+    }
+
+    .nessy {
+      height: 35%;
+      right: -23%;
+    }
+
+  }
+}  
+
+}
+

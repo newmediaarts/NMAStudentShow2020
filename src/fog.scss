@@ -58,7 +58,7 @@ padding: $section-padding;
 }
 
 // SIGHTINGS INVITE SPECIFIC
-.sightings {
+.sightings { 
 
   h1, h2, h3, .small_text { 
     margin: .5em 0;
@@ -85,7 +85,7 @@ padding: $section-padding;
   }
   // _____
   h1 {
-    font-size: 12vw;
+    font-size: 10vw;
     margin-bottom: 0;
     // text-align: center;
     margin-top: 0;
@@ -94,7 +94,7 @@ padding: $section-padding;
   
   .subhead{
     // margin-top: 0;
-    font-size: 3.2vw;
+    font-size: 2.65vw;
     font-family: $bodyfont-family;
     // color:  $color-light-accent;
     text-transform: none;
@@ -110,7 +110,7 @@ padding: $section-padding;
   }
   
   h2 {
-    font-size: 6vw;
+    font-size: 4vw;
     margin-bottom: 0;
     margin-top: 0;
     letter-spacing: .05em;
@@ -118,13 +118,13 @@ padding: $section-padding;
   
   h3 {
     margin-top: 0;
-    font-size: 2vw;
+    font-size: 1.5vw;
     // color: $color-light-accent;
     font-weight: 700;
   }
   
   .small_text{
-    font-size: 2vw;
+    font-size: 1.5vw;
     margin-bottom: 0;
   }
   
@@ -135,7 +135,7 @@ padding: $section-padding;
   font-style: italic;
   text-transform: uppercase;
   text-align: center;
-  font-size: 5vw;
+  font-size: 3vw;
   }
   
   .web_soon_text{
@@ -145,19 +145,22 @@ padding: $section-padding;
   } 
 
 .invite__container{
-  padding: 0 50px;
-  max-width: 1600px;
+  padding: 7% 50px;
+  max-width: 1000px;
+  // border: 1px solid red;
   margin: 0 auto;
     display: grid;
     grid-gap: 0;
     // place-items: center;
     // justify-content: left;
     // align-items: center;
+    // grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas:
       // ". . fuzzy fuzzy . ."
       ". head head head head ."
-      ". id_invite id_invite anim_invite anim_invite .";
+      ". id_invite id_invite anim_invite anim_invite ."
+      ". save_bottom save_bottom save_bottom save_bottom .";
       // ". fifth fifth fifth fifth .";
   
     // .fuzzy{
@@ -194,6 +197,12 @@ padding: $section-padding;
       grid-area: anim_invite;
     }
 
+    // "save the date" format
+    .save_bottom{
+      grid-area: save_bottom;
+      text-align: center;
+    }
+
     // .fifth {
     //   grid-area: fifth;
     // }
@@ -209,6 +218,14 @@ padding: $section-padding;
     z-index: 100;
     transform: rotate(2deg);
   }  
+  h1 {
+    font-size: 8rem;
+    // color: red;
+  }
+  .subhead {
+    font-size: 2.12rem;
+    // color: red;
+  }
 }
 
 @media (max-width: $breakpoint-small){
@@ -277,6 +294,60 @@ padding: $section-padding;
 }  
 
 
+// SIGHTINGS CREATURES
+.sightings-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  position: absolute;
+}
+
+#sightings-fairy,
+#sightings-nessy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+#sightings-fairy img {
+  top: 25%;
+  left: 0;
+  width: 20%;
+  // max-height: 50px;
+}
+
+#sightings-nessy img {
+  bottom: 0;
+  right: -15%;
+  width: 30%; 
+}
+
+#sightings-monster {
+  position: relative;
+  // text-align: center;
+  // width: 20%;
+  // margin: 0 auto;
+  img {
+    left: 37.5%;
+    display: block;
+    /* top: 45%;
+    left: 40%; */
+    // max-width: 180px;
+    // margin: -10% auto -10% auto;
+    width: 25%;
+    // max-width:20%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -10%;
+  }
+
+}
+
+
 
 }
 
@@ -287,8 +358,8 @@ padding: $section-padding;
     min-height: 100vh;
     width: 100%;
     overflow-x: hidden;
-
-    background: linear-gradient(-45deg, $color-dark-accent, $color-background-darkteal);
+    // background-color: white;
+    background-image: linear-gradient(-45deg, $color-dark-accent, $color-background-darkteal);
     background-size: 400% 100%;
     animation: fog-animated-gradient-background 12s ease infinite;
   
@@ -315,7 +386,7 @@ padding: $section-padding;
     }
 
     .fog__container::before  {
-      background: url('https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-1.png') repeat-x;
+      background: url('img/fog-1.png') repeat-x;
       background-size: cover;
       background-position: center;
       animation: fog-cloud-marquee 6s linear infinite;
@@ -323,7 +394,7 @@ padding: $section-padding;
     }
 
     .fog__container::after {
-      background: url('https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-2.png') repeat-x;
+      background: url('img/fog-2.png') repeat-x; 
       background-size: cover;
       background-position: center;
       animation: fog-cloud-marquee 6s linear 3s infinite;

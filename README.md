@@ -6,10 +6,8 @@
 
 1. Install Dependencies `npm i`
 2. Run command `npm start` to run live server
-3. Run command `npm build` to build/bundle the site for production
+3. Run command `npm run build` to build/bundle the site for production
 
-Note: to export a build with relative paths:
-`parcel build src/index.html --public-url ./`
 
 ## Creating and populating Students section
 
@@ -20,3 +18,8 @@ Note: to export a build with relative paths:
 ## Creating your own branch
 
 1. `git checkout -b yourname`
+
+## Updates
+
+* May 19th 2020 - modified build command to support relative paths
+`parcel build src/index.html --public-url ./`
