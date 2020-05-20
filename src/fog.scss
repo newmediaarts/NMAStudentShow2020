@@ -11,196 +11,11 @@ $breakpoint-medium: 1200px;
 $breakpoint-large: 1550px;
 $breakpoint4k: 2560px;
 // Spacing
-$section-padding: 15vh 0;
+$section-padding: 2vh 0;
 
 //TYPOGRAPHY
 $headingfont-family: 'Open Sans Condensed', 'Bebas Neue', 'Franklin Gothic Condensed', 'Arial', sans-serif;
 $bodyfont-family: 'Cormorant Garamond', 'Lora', serif;
-
-//TYPOGRAPHIC SCALE_______________________________________________________
-h1, h2, h3, .small_text { 
-  margin: .5em 0;
-  color: $color-light-accent; 
-}  
-  
-h1, .small_text{
-  font-family: $headingfont-family; 
-  text-transform: uppercase;
-}
-
-h1, h2{
-  font-weight: 700;
-}
-
-h2, h3{
-  font-family: $bodyfont-family;
-  text-transform: uppercase;
-}
-
-h3, .small_text{
-  font-weight: 100;
-  letter-spacing: .2em; 
-}
-// _____
-h1 {
-  font-size: 12vw;
-  margin-bottom: 0;
-  text-align: center;
-  margin-top: 0;
-  letter-spacing: .02em;
-}
-
-.subhead{
-  margin-top:0;
-  font-size: 3.2vw;
-  font-family: $bodyfont-family;
-  color:  $color-light-accent;
-  text-transform: none;
-  font-weight: 300;
-  margin-bottom: 4rem;
-  text-align: center;
-  margin-top: -.6em;
-  margin-bottom: 7vh;
-  letter-spacing: .03em; 
-}
-
-h2 {
-  font-size: 6vw;
-  margin-bottom: 0;
-  margin-top: 0;
-  letter-spacing: .05em;
-}
-
-h3 {
-  margin-top: 0;
-  font-size: 2vw;
-  color: $color-light-accent;
-  font-weight: 700;
-}
-
-.small_text{
-  font-size: 2vw;
-  margin-bottom: 0;
-}
-
-// "save the date" format
-.save_date{
-margin-top: 6vh;
-padding-bottom: 0;
-font-style: italic;
-text-transform: uppercase;
-text-align: center;
-font-size: 5vw;
-}
-
-.web_soon_text{
-padding-top: 0;
-color: $color-background-lightgray;
-text-align: center;
-} 
-
-//HERO AND COMING SOON PAGE TYPE &STYLING_________________________________________________
-
-#hero {
-padding: $section-padding;
-  .full-height {
-    height: 100vh;
-  }
-}
-
-.container{
-  padding: 0 50px;
-  max-width: 1600px;
-  margin: 0 auto;
-  display: grid;
-  grid-gap: 0;
-  place-items: center;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-areas:
-    ". head head head head head ."
-    ". id_invite id_invite line anim_invite anim_invite ."
-    ". save_date_web save_date_web save_date_web save_date_web save_date_web .";
-   
-  .head {
-    grid-area: head;
-  }
-
-  .id_invite {
-    grid-area: id_invite;
-  }
-
-  .line{
-    grid-area: line;
-    height: 100%;
-    border-right: 1px solid white;
-  }
-
-  .anim_invite {
-    grid-area: anim_invite;
-  }
-
-  .save_date_web {
-    grid-area: save_date_web;
-  }
-}
-
-@media (max-width: $breakpoint-small){
-  #hero{
-    padding-top: 4rem;
-  }
-  
-  .container{
-    display: block;
-    padding-top: 0;
-    
-
-  h2, h3, .small_text, .anim_invite, .id_invite{
-    text-align: center;
-  }
-
-  h1{
-    font-size: 15vw;
-    margin-bottom: 0;
-  }
-
-  .subhead{
-    font-size: 4vw;
-  }
-
-  .small_text{
-    font-size: 1.3rem;
-  }
-
-  .anim_invite{
-    margin-top: 2em;
-  }
-  
-  // type_______
-    h2{
-      font-size: 4rem;
-    }
-
-    h3{
-      font-size: 1.4rem;
-    }
-
-    .save_date{
-      font-size: 8vw;
-    }
-    
-    .web_soon_text{
-      font-size: 4vw;
-    }
-
-    .line{
-      grid-area: line;
-      height: 100%;
-      padding-bottom: 2vh;
-      border-right: 0;
-      border-bottom: 1px solid white;
-    }
-  }
-}  
 
 // Base (COLOR BACKGROUND)__________________________
 html {
@@ -215,4 +30,195 @@ html {
   
 body{
   background-image: url(img/background.jpg);
+  background-repeat: none;
+  margin: 0;
 }
+
+//TYPOGRAPHIC SCALE_______________________________________________________
+h3, .small_text { 
+  margin: .5em 0;
+  color: $color-light-accent; 
+}  
+
+h2, h3{
+  font-family: $bodyfont-family;
+  text-transform: uppercase;
+  color: $color-light-accent; 
+}
+
+h3, .small_text{
+  font-weight: 100;
+  letter-spacing: .2em; 
+}
+// _____
+
+h2 {
+  font-size: 5vw;
+  margin-bottom: 0;
+  margin-top: 0;
+  letter-spacing: .05em;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 1.7vw;
+  color: $color-light-accent;
+  font-weight: 700;
+}
+
+.small_text{
+  font-size: 2vw;
+  margin-bottom: 0;
+  font-family: $headingfont-family; 
+  text-transform: uppercase;
+}
+
+.save_date{
+  margin-top: 5vh;
+  padding-bottom: 0;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4vw;
+}
+
+.web_soon{
+  padding-top: 0;
+  color: $color-background-lightgray;
+  text-align: center;
+} 
+
+//HERO PAGE TYPE &STYLING_________________________________________________
+
+#hero {
+padding: $section-padding;
+position: relative;
+overflow: hidden;
+
+  .full-height {
+    height: 100vh;
+  }
+}
+
+.container{
+  padding: 0 50px;
+  max-width: 1300px;
+  margin: 0 auto;
+    display: grid;
+    grid-gap: 0;
+    place-items: center;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas:
+      "fairy head head head head head ."
+      ". id_invite id_invite line anim_invite anim_invite nessy_container"
+      ". save_bottom save_bottom save_bottom save_bottom save_bottom .";
+  
+    .fairy{
+      grid-area: fairy;
+      width: 15vw;
+      height: auto;
+      visibility: visible;
+      z-index: 100;
+      margin-left: -4.5vw;
+      top: 10vh;
+      position: absolute;
+    } 
+
+    .head {
+      grid-area: head;
+      margin-bottom: 3em;
+      .title{
+        width: 100%;
+        height: auto;
+        z-index:100;
+      }
+    }
+
+    .id_invite {
+      grid-area: id_invite;
+    }
+
+    .line{
+      grid-area: line;
+      height: 100%;
+      border-right: 1px solid white;
+    }
+
+    .anim_invite {
+      grid-area: anim_invite;
+    }
+
+    .nessy_container{
+      grid-area: nessy_container;
+      .nessy{
+        width: 30vw;
+        bottom: 0;
+        right: -15vw;
+        position: absolute;
+      }
+    }
+    
+    // "save the date" format
+  .save_bottom{
+    grid-area: save_bottom;
+  }
+}
+
+@media (max-width: $breakpoint-small){
+  #hero{
+    padding-top: 4vh;
+  }
+  
+  .container{
+    display: block;
+    padding-top: 0;
+    
+// type_______
+  h2, h3, .small_text, .anim_invite, .id_invite{
+    text-align: center;
+  }
+
+  .small_text{
+    font-size: 1.3rem;
+  }
+
+  .anim_invite{
+    margin-top: 2em;
+  }
+  
+ 
+    h2{
+      font-size: 4rem;
+    }
+
+    h3{
+      font-size: 1.4rem;
+    }
+
+    .save_date{
+      font-size: 8vw;
+    }
+    
+    .web_soon{
+      font-size: 4vw;
+    }
+
+    .line{
+      grid-area: line;
+     width: 48vw;
+     margin:0 auto;
+      padding-bottom: 2vh;
+      border-right: 0;
+      border-bottom: 1px solid white;
+    }
+
+    .save_bottom{
+      margin-bottom: 5em;
+    }
+
+// characters___
+    .nessy, .fairy{
+      visibility: hidden;
+    }
+  }
+}  

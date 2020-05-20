@@ -61,6 +61,7 @@ h3 {
 #hero {
 padding: $section-padding;
 position: relative;
+overflow: hidden;
 
   .full-height {
     height: 100vh;
@@ -145,6 +146,7 @@ position: relative;
 
   .anim_invite{
     margin-top: 2em;
+    margin-bottom: 5em;
   }
   
  
@@ -194,5 +196,85 @@ html {
 body{
   background-image: url(img/background.jpg);
   background-repeat: none;
-  overflow: hidden;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+  // FOG ANIMATION__________________________
+// ***********THE FOG IS CAUSING THE HORIZONTAL SCROLL-BAR THE FOG ALSO JERKS AT THE END OF THE SEQUENCE****************
+.fog {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  // background-color: white;
+  background-image: linear-gradient(-45deg, $color-dark-accent, $color-background-darkteal);
+  background-size: 400% 100%;
+  animation: fog-animated-gradient-background 12s ease infinite;
+
+  .fog__container {
+    color: rgba(255, 255, 255, .75);
+    animation: fog-textcolorchange 6s linear infinite;
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .fog__container::before,
+  .fog__container::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 200vw;
+    z-index: 200;
+  }
+
+  .fog__container::before  {
+    background: url('img/fog-1.png') repeat-x;
+    background-size: cover;
+    background-position: center;
+    animation: fog-cloud-marquee 6s linear infinite;
+    opacity: 0;
+  }
+
+  .fog__container::after {
+    background: url('img/fog-2.png') repeat-x; 
+    background-size: cover;
+    background-position: center;
+    animation: fog-cloud-marquee 6s linear 3s infinite;
+    opacity: 0;
+  }
+}
+
+// Fog Animated Gradient Color Background
+@keyframes fog-animated-gradient-background {
+  0%{background-position:0% 0%}
+  50%{background-position:100% 0%}
+  100%{background-position:0% 0%}
+}
+
+// Fog Animated Cloud Marquee
+@keyframes fog-cloud-marquee {
+  0% { transform: translate(0, 0); opacity: 0; }
+  50% { transform: translate(-50vw, 0); opacity: 1;}
+  100% { transform: translate(-100vw, 0); opacity: 0;}
+}
+
+// Fog Animated Text Color Change
+@keyframes fog-textcolorchange {
+  0% { color: rgba(255,255,255,.75);}
+  50% { color: rgba(255,255,255,.25);}
+  100% { color: rgba(255,255,255,.75);}
 }

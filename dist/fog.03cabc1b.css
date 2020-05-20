@@ -1,20 +1,28 @@
-h1, h2, h3, .small_text {
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: url(/background.004d778f.jpg);
+  background-repeat: none;
+  margin: 0;
+}
+
+h3, .small_text {
   margin: 0.5em 0;
   color: white;
-}
-
-h1, .small_text {
-  font-family: "Open Sans Condensed", "Bebas Neue", "Franklin Gothic Condensed", "Arial", sans-serif;
-  text-transform: uppercase;
-}
-
-h1, h2 {
-  font-weight: 700;
 }
 
 h2, h3 {
   font-family: "Cormorant Garamond", "Lora", serif;
   text-transform: uppercase;
+  color: white;
 }
 
 h3, .small_text {
@@ -22,30 +30,8 @@ h3, .small_text {
   letter-spacing: 0.2em;
 }
 
-h1 {
-  font-size: 12vw;
-  margin-bottom: 0;
-  text-align: center;
-  margin-top: 0;
-  letter-spacing: 0.02em;
-}
-
-.subhead {
-  margin-top: 0;
-  font-size: 3.2vw;
-  font-family: "Cormorant Garamond", "Lora", serif;
-  color: white;
-  text-transform: none;
-  font-weight: 300;
-  margin-bottom: 4rem;
-  text-align: center;
-  margin-top: -0.6em;
-  margin-bottom: 7vh;
-  letter-spacing: 0.03em;
-}
-
 h2 {
-  font-size: 6vw;
+  font-size: 5vw;
   margin-bottom: 0;
   margin-top: 0;
   letter-spacing: 0.05em;
@@ -53,7 +39,7 @@ h2 {
 
 h3 {
   margin-top: 0;
-  font-size: 2vw;
+  font-size: 1.7vw;
   color: white;
   font-weight: 700;
 }
@@ -61,25 +47,29 @@ h3 {
 .small_text {
   font-size: 2vw;
   margin-bottom: 0;
+  font-family: "Open Sans Condensed", "Bebas Neue", "Franklin Gothic Condensed", "Arial", sans-serif;
+  text-transform: uppercase;
 }
 
 .save_date {
-  margin-top: 6vh;
+  margin-top: 5vh;
   padding-bottom: 0;
   font-style: italic;
   text-transform: uppercase;
   text-align: center;
-  font-size: 5vw;
+  font-size: 4vw;
 }
 
-.web_soon_text {
+.web_soon {
   padding-top: 0;
   color: #cacacae0;
   text-align: center;
 }
 
 #hero {
-  padding: 15vh 0;
+  padding: 2vh 0;
+  position: relative;
+  overflow: hidden;
 }
 #hero .full-height {
   height: 100vh;
@@ -87,16 +77,32 @@ h3 {
 
 .container {
   padding: 0 50px;
-  max-width: 1600px;
+  max-width: 1300px;
   margin: 0 auto;
   display: grid;
   grid-gap: 0;
   place-items: center;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-areas: ". head head head head head ." ". id_invite id_invite line anim_invite anim_invite ." ". save_date_web save_date_web save_date_web save_date_web save_date_web .";
+  grid-template-areas: "fairy head head head head head ." ". id_invite id_invite line anim_invite anim_invite nessy_container" ". save_bottom save_bottom save_bottom save_bottom save_bottom .";
+}
+.container .fairy {
+  grid-area: fairy;
+  width: 15vw;
+  height: auto;
+  visibility: visible;
+  z-index: 100;
+  margin-left: -4.5vw;
+  top: 10vh;
+  position: absolute;
 }
 .container .head {
   grid-area: head;
+  margin-bottom: 3em;
+}
+.container .head .title {
+  width: 100%;
+  height: auto;
+  z-index: 100;
 }
 .container .id_invite {
   grid-area: id_invite;
@@ -109,13 +115,22 @@ h3 {
 .container .anim_invite {
   grid-area: anim_invite;
 }
-.container .save_date_web {
-  grid-area: save_date_web;
+.container .nessy_container {
+  grid-area: nessy_container;
+}
+.container .nessy_container .nessy {
+  width: 30vw;
+  bottom: 0;
+  right: -15vw;
+  position: absolute;
+}
+.container .save_bottom {
+  grid-area: save_bottom;
 }
 
 @media (max-width: 768px) {
   #hero {
-    padding-top: 4rem;
+    padding-top: 4vh;
   }
 
   .container {
@@ -124,13 +139,6 @@ h3 {
   }
   .container h2, .container h3, .container .small_text, .container .anim_invite, .container .id_invite {
     text-align: center;
-  }
-  .container h1 {
-    font-size: 15vw;
-    margin-bottom: 0;
-  }
-  .container .subhead {
-    font-size: 4vw;
   }
   .container .small_text {
     font-size: 1.3rem;
@@ -147,29 +155,23 @@ h3 {
   .container .save_date {
     font-size: 8vw;
   }
-  .container .web_soon_text {
+  .container .web_soon {
     font-size: 4vw;
   }
   .container .line {
     grid-area: line;
-    height: 100%;
+    width: 48vw;
+    margin: 0 auto;
     padding-bottom: 2vh;
     border-right: 0;
     border-bottom: 1px solid white;
   }
-}
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body {
-  background-image: url(/background.004d778f.jpg);
+  .container .save_bottom {
+    margin-bottom: 5em;
+  }
+  .container .nessy, .container .fairy {
+    visibility: hidden;
+  }
 }
 
 /*# sourceMappingURL=/fog.03cabc1b.css.map */
