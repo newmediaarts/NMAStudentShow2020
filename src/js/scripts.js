@@ -16,24 +16,28 @@ const interfaceParent = document.querySelector('.interface .students-container')
 // };
 
 // TOMY'S EDITS_________________
-function makeStudentElement({ name, website, initialImage, hoveredImage }) {
+function makeStudentElement({ name, website, room, time, initialImage, hoveredImage }) {
     return `<div class="student">
                 <a href="${website}">
-                    <img class="profile" src="${initialImage}"></img>
+                    <img class="profile" src="${initialImage}">
                     <h3 class="name">${name}</h3>
                     <p>${website}</p>
+                    <p><strong>${room}</strong></p>
+                    <p><strong>${time}</strong></p>
                  
                 </a>
             </div>`
 };
 
-// function makeAnimStudentElement({ name, website, demoreel, initialImage, hoveredImage }) {
+// function makeAnimStudentElement({ name, website, demoreel, room, initialImage, hoveredImage }) {
 //     return `<div class="student">
 //                 <a href="${website}">
-//                     <img class="profile" src="${initialImage}"></img>
+//                     <img class="profile" src="${initialImage}" />
 //                     <h3 class="name">${name}</h3>
 //                     <h4>${website}</h4>
 //                     <h4>${demoreel}</h4>
+//                     <p>${room}</p>
+//                     <p>${time}</p>
 //                 </a>
 
 //             </div>`
