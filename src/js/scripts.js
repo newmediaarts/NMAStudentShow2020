@@ -16,7 +16,7 @@ const interfaceParent = document.querySelector('.interface .students-container')
 // };
 
 // TOMY'S EDITS_________________
-function makeStudentElement({ name, website, room, time initialImage, hoveredImage }) {
+function makeStudentElement({ name, website, room, time, initialImage, hoveredImage }) {
     return `<div class="student">
                 <a href="${website}">
                     <img class="profile" src="${initialImage}"></img>
