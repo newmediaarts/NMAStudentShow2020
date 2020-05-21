@@ -5,8 +5,8 @@ export const animationStudents = [
         website: 'http://yourname.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
-        initialImage: 'img/evan1.jpg',
-        hoveredImage: 'img/evan2.jpg'
+        initialImage: 'src/js/data/img/evan1.jpg',
+        hoveredImage: 'img/evan2.jpg',
 
     },
     {
