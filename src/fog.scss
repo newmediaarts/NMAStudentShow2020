@@ -145,6 +145,7 @@ padding: $section-padding;
   } 
 
 .invite__container{
+  z-index: 100;
   padding: 7% 50px;
   max-width: 1000px;
   // border: 1px solid red;
@@ -364,12 +365,13 @@ padding: $section-padding;
     animation: fog-animated-gradient-background 12s ease infinite;
   
     .fog__container {
-      color: rgba(255, 255, 255, .75);
+      color: rgb(163, 63, 63);
       animation: fog-textcolorchange 6s linear infinite;
       min-height: 100vh;
       width: 100%;
       display: grid;
       place-items: center;
+  
     }
   
     .fog__container::before,
@@ -418,9 +420,9 @@ padding: $section-padding;
 
   // Fog Animated Text Color Change
   @keyframes fog-textcolorchange {
-    0% { color: rgba(255,255,255,.75);}
-    50% { color: rgba(255,255,255,.25);}
-    100% { color: rgba(255,255,255,.75);}
+    0% { color: rgba(255,255,255, 1);}
+    50% { color: rgba(255,255,255, 1);}
+    100% { color: rgba(255,255,255, 1);}
   }
 
   
