@@ -117,7 +117,127 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/data/students.js":[function(require,module,exports) {
+})({"img/andruw1.jpg":[function(require,module,exports) {
+module.exports = "/andruw1.c2a3a55e.jpg";
+},{}],"img/andruw2.jpg":[function(require,module,exports) {
+module.exports = "/andruw2.155de652.jpg";
+},{}],"img/annika1.jpg":[function(require,module,exports) {
+module.exports = "/annika1.279ad81c.jpg";
+},{}],"img/annika2.jpg":[function(require,module,exports) {
+module.exports = "/annika2.4b7c21c5.jpg";
+},{}],"img/ariana1.jpg":[function(require,module,exports) {
+module.exports = "/ariana1.d0ce5f23.jpg";
+},{}],"img/ariana2.jpg":[function(require,module,exports) {
+module.exports = "/ariana2.7421964e.jpg";
+},{}],"img/background.jpg":[function(require,module,exports) {
+module.exports = "/background.004d778f.jpg";
+},{}],"img/christi1.jpg":[function(require,module,exports) {
+module.exports = "/christi1.770513d3.jpg";
+},{}],"img/christi2.jpg":[function(require,module,exports) {
+module.exports = "/christi2.5d1be7d4.jpg";
+},{}],"img/christy1.jpg":[function(require,module,exports) {
+module.exports = "/christy1.ed59810c.jpg";
+},{}],"img/christy2.jpg":[function(require,module,exports) {
+module.exports = "/christy2.40009af1.jpg";
+},{}],"img/emily1.jpg":[function(require,module,exports) {
+module.exports = "/emily1.b51722d6.jpg";
+},{}],"img/emily2.jpg":[function(require,module,exports) {
+module.exports = "/emily2.d23683e2.jpg";
+},{}],"img/eryn1.jpg":[function(require,module,exports) {
+module.exports = "/eryn1.79968624.jpg";
+},{}],"img/eryn2.jpg":[function(require,module,exports) {
+module.exports = "/eryn2.76598ece.jpg";
+},{}],"img/evan1.jpg":[function(require,module,exports) {
+module.exports = "/evan1.75182f7e.jpg";
+},{}],"img/evan2.jpg":[function(require,module,exports) {
+module.exports = "/evan2.dfaed0c5.jpg";
+},{}],"img/hannah1.jpg":[function(require,module,exports) {
+module.exports = "/hannah1.bfad8026.jpg";
+},{}],"img/hannah2.jpg":[function(require,module,exports) {
+module.exports = "/hannah2.65f107af.jpg";
+},{}],"img/joanna1.jpg":[function(require,module,exports) {
+module.exports = "/joanna1.e13669aa.jpg";
+},{}],"img/joanna2.jpg":[function(require,module,exports) {
+module.exports = "/joanna2.bca7a9d1.jpg";
+},{}],"img/joshua1.jpg":[function(require,module,exports) {
+module.exports = "/joshua1.ab704ac0.jpg";
+},{}],"img/joshua2.jpg":[function(require,module,exports) {
+module.exports = "/joshua2.5fa5caf2.jpg";
+},{}],"img/koreena1.jpg":[function(require,module,exports) {
+module.exports = "/koreena1.6726d4ba.jpg";
+},{}],"img/koreena2.jpg":[function(require,module,exports) {
+module.exports = "/koreena2.4c4b7457.jpg";
+},{}],"img/kyle1.jpg":[function(require,module,exports) {
+module.exports = "/kyle1.04150077.jpg";
+},{}],"img/kyle2.jpg":[function(require,module,exports) {
+module.exports = "/kyle2.213a8e4f.jpg";
+},{}],"img/miyuki1.jpg":[function(require,module,exports) {
+module.exports = "/miyuki1.c2f10c76.jpg";
+},{}],"img/miyuki2.jpg":[function(require,module,exports) {
+module.exports = "/miyuki2.4b66b5ba.jpg";
+},{}],"img/nao1.jpg":[function(require,module,exports) {
+module.exports = "/nao1.8cced99d.jpg";
+},{}],"img/nao2.jpg":[function(require,module,exports) {
+module.exports = "/nao2.898e278b.jpg";
+},{}],"img/raleigh1.jpg":[function(require,module,exports) {
+module.exports = "/raleigh1.082c2d7b.jpg";
+},{}],"img/raleigh2.jpg":[function(require,module,exports) {
+module.exports = "/raleigh2.1deedb7b.jpg";
+},{}],"img/schyler1.jpg":[function(require,module,exports) {
+module.exports = "/schyler1.cfb55cc4.jpg";
+},{}],"img/schyler2.jpg":[function(require,module,exports) {
+module.exports = "/schyler2.45a69203.jpg";
+},{}],"img/tomy1.jpg":[function(require,module,exports) {
+module.exports = "/tomy1.59748479.jpg";
+},{}],"img/tomy2.jpg":[function(require,module,exports) {
+module.exports = "/tomy2.ac99e0a6.jpg";
+},{}],"img/vivien1.jpg":[function(require,module,exports) {
+module.exports = "/vivien1.8dc3e286.jpg";
+},{}],"img/vivien2.jpg":[function(require,module,exports) {
+module.exports = "/vivien2.2a052c71.jpg";
+},{}],"img/*.jpg":[function(require,module,exports) {
+module.exports = {
+  "andruw1": require("./andruw1.jpg"),
+  "andruw2": require("./andruw2.jpg"),
+  "annika1": require("./annika1.jpg"),
+  "annika2": require("./annika2.jpg"),
+  "ariana1": require("./ariana1.jpg"),
+  "ariana2": require("./ariana2.jpg"),
+  "background": require("./background.jpg"),
+  "christi1": require("./christi1.jpg"),
+  "christi2": require("./christi2.jpg"),
+  "christy1": require("./christy1.jpg"),
+  "christy2": require("./christy2.jpg"),
+  "emily1": require("./emily1.jpg"),
+  "emily2": require("./emily2.jpg"),
+  "eryn1": require("./eryn1.jpg"),
+  "eryn2": require("./eryn2.jpg"),
+  "evan1": require("./evan1.jpg"),
+  "evan2": require("./evan2.jpg"),
+  "hannah1": require("./hannah1.jpg"),
+  "hannah2": require("./hannah2.jpg"),
+  "joanna1": require("./joanna1.jpg"),
+  "joanna2": require("./joanna2.jpg"),
+  "joshua1": require("./joshua1.jpg"),
+  "joshua2": require("./joshua2.jpg"),
+  "koreena1": require("./koreena1.jpg"),
+  "koreena2": require("./koreena2.jpg"),
+  "kyle1": require("./kyle1.jpg"),
+  "kyle2": require("./kyle2.jpg"),
+  "miyuki1": require("./miyuki1.jpg"),
+  "miyuki2": require("./miyuki2.jpg"),
+  "nao1": require("./nao1.jpg"),
+  "nao2": require("./nao2.jpg"),
+  "raleigh1": require("./raleigh1.jpg"),
+  "raleigh2": require("./raleigh2.jpg"),
+  "schyler1": require("./schyler1.jpg"),
+  "schyler2": require("./schyler2.jpg"),
+  "tomy1": require("./tomy1.jpg"),
+  "tomy2": require("./tomy2.jpg"),
+  "vivien1": require("./vivien1.jpg"),
+  "vivien2": require("./vivien2.jpg")
+};
+},{"./andruw1.jpg":"img/andruw1.jpg","./andruw2.jpg":"img/andruw2.jpg","./annika1.jpg":"img/annika1.jpg","./annika2.jpg":"img/annika2.jpg","./ariana1.jpg":"img/ariana1.jpg","./ariana2.jpg":"img/ariana2.jpg","./background.jpg":"img/background.jpg","./christi1.jpg":"img/christi1.jpg","./christi2.jpg":"img/christi2.jpg","./christy1.jpg":"img/christy1.jpg","./christy2.jpg":"img/christy2.jpg","./emily1.jpg":"img/emily1.jpg","./emily2.jpg":"img/emily2.jpg","./eryn1.jpg":"img/eryn1.jpg","./eryn2.jpg":"img/eryn2.jpg","./evan1.jpg":"img/evan1.jpg","./evan2.jpg":"img/evan2.jpg","./hannah1.jpg":"img/hannah1.jpg","./hannah2.jpg":"img/hannah2.jpg","./joanna1.jpg":"img/joanna1.jpg","./joanna2.jpg":"img/joanna2.jpg","./joshua1.jpg":"img/joshua1.jpg","./joshua2.jpg":"img/joshua2.jpg","./koreena1.jpg":"img/koreena1.jpg","./koreena2.jpg":"img/koreena2.jpg","./kyle1.jpg":"img/kyle1.jpg","./kyle2.jpg":"img/kyle2.jpg","./miyuki1.jpg":"img/miyuki1.jpg","./miyuki2.jpg":"img/miyuki2.jpg","./nao1.jpg":"img/nao1.jpg","./nao2.jpg":"img/nao2.jpg","./raleigh1.jpg":"img/raleigh1.jpg","./raleigh2.jpg":"img/raleigh2.jpg","./schyler1.jpg":"img/schyler1.jpg","./schyler2.jpg":"img/schyler2.jpg","./tomy1.jpg":"img/tomy1.jpg","./tomy2.jpg":"img/tomy2.jpg","./vivien1.jpg":"img/vivien1.jpg","./vivien2.jpg":"img/vivien2.jpg"}],"js/data/students.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -130,8 +250,8 @@ var animationStudents = [{
   website: 'http://yourname.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20',
-  initialImage: 'src/js/data/img/evan1.jpg',
-  hoveredImage: 'img/evan2.jpg'
+  initialImage: 'emily1.jpg',
+  hoveredImage: 'emily2.jpg'
 }, {
   name: 'Calvin Gacuya',
   demoreel: 'demoreel',
@@ -254,93 +374,70 @@ var interfaceStudents = [{
   name: 'Christy Liang',
   website: 'https://christyzliang.com',
   room: 'Room No. 1',
-  time: '5:00–5:20 | 6:00–6:20',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Koreena Nagai',
   website: 'https://knagai.com',
   room: 'Room No. 1',
-  time: '5:00–5:20 | 6:00–6:20',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Miyuki Sekiguchi',
   website: 'https://miyukingseki.com',
   room: 'Room No. 1',
-  time: '5:00–5:20 | 6:00–6:20',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Tomy Takemura',
   website: 'https://tomytak.com',
   room: 'Room No. 1',
-  time: '5:00–5:20 | 6:00–6:20',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Joanna Yee',
   website: 'https://joannamedia.com',
   room: 'Room No. 1',
-  time: '5:00–5:20 | 6:00–6:20',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  time: '5:00–5:20 | 6:00–6:20'
 }];
 exports.interfaceStudents = interfaceStudents;
 },{}],"js/scripts.js":[function(require,module,exports) {
 "use strict";
 
+var _ = _interopRequireDefault(require("../img/*.jpg"));
+
 var _students = require("./data/students");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Dynamically Generate Students
 var animationParent = document.querySelector('.animation .students-container');
-var interfaceParent = document.querySelector('.interface .students-container'); // function makeStudentElement({ name, website, initialImage, hoveredImage }) {
-//     return `<div class="student">
-//                 <a href="${website}">
-//                     <img class="profile" src="${initialImage}"></img>
-//                     <h3 class="name">${name}</h3>
-//                     <h4>${website}</h4>
-//                 </a>
-//             </div>`
-// };
-// TOMY'S EDITS_________________
+var interfaceParent = document.querySelector('.interface .students-container');
+var imagesArr = Object.keys(_.default);
 
-function makeStudentElement(_ref) {
+function makeStudentElement(_ref, isAnimation) {
   var name = _ref.name,
       website = _ref.website,
       room = _ref.room,
-      time = _ref.time,
-      initialImage = _ref.initialImage,
-      hoveredImage = _ref.hoveredImage;
-  return "<div class=\"student\">\n                <a href=\"".concat(website, "\">\n                    <img class=\"profile\" src=\"").concat(initialImage, "\"></img>\n                    <h3 class=\"name\">").concat(name, "</h3>\n                    <p>").concat(website, "</p>\n                    <p><strong>").concat(room, "</strong></p>\n                    <p><strong>").concat(time, "</strong></p>\n                 \n                </a>\n            </div>");
+      time = _ref.time;
+  var firstName = name.split(' ')[0].toLowerCase();
+  var initialImage;
+  imagesArr.map(function (img, i) {
+    if (img.includes(firstName + '1')) {
+      initialImage = Object.values(_.default)[i];
+    }
+  });
+  return "<div class=\"student\">\n                    <img class=\"profile\" src=\"".concat(initialImage, "\" />\n                    <h3 class=\"name\">").concat(name, "</h3>\n                    <a href=\"").concat(website, "\"><p>").concat(website, "</p></a>\n                    ").concat(isAnimation ? "<a href=\"google.com\"><p>demo reel</p></a>" : '', "\n                    <p><strong>").concat(room, "</strong></p>\n                    <p><strong>").concat(time, "</strong></p>\n            </div>");
 }
 
-; // function makeAnimStudentElement({ name, website, demoreel, initialImage, hoveredImage }) {
-//     return `<div class="student">
-//                 <a href="${website}">
-//                     <img class="profile" src="${initialImage}"></img>
-//                     <h3 class="name">${name}</h3>
-//                     <h4>${website}</h4>
-//                     <h4>${demoreel}</h4>
-//                 </a>
-//             </div>`
-// };
-// function createStudents(parent, students) {
-//     students.map(student => {
-//         parent.innerHTML += makeAnimStudentElement(student)
-//     })
-// };
-// END TOMY'S EDITS _______________________________
+;
 
 function createStudents(parent, students) {
+  var isAnimation = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
   students.map(function (student) {
-    parent.innerHTML += makeStudentElement(student);
+    parent.innerHTML += makeStudentElement(student, isAnimation);
   });
 }
 
 ;
 createStudents(interfaceParent, _students.interfaceStudents);
-createStudents(animationParent, _students.animationStudents); // Handle Students Hover Effect
+createStudents(animationParent, _students.animationStudents, true); // Handle Students Hover Effect
 
 var animationStudentsCollection = document.querySelectorAll('.animation .student');
 var interfaceStudentsCollection = document.querySelectorAll('.interface .student');
@@ -349,11 +446,17 @@ function handleImageHoverEffect(students, studentsArray) {
   students.forEach(function (student) {
     var studentImage = student.querySelector('img');
     var studentName = student.querySelector('.name').innerText;
-    var _studentsArray$filter = studentsArray.filter(function (el) {
-      return el.name === studentName;
-    })[0],
-        hoveredImage = _studentsArray$filter.hoveredImage,
-        initialImage = _studentsArray$filter.initialImage;
+    var firstName = studentName.split(' ')[0].toLowerCase();
+    var hoveredImage, initialImage;
+    imagesArr.map(function (img, i) {
+      if (img.includes(firstName + '1')) {
+        initialImage = Object.values(_.default)[i];
+      }
+
+      if (img.includes(firstName + '2')) {
+        hoveredImage = Object.values(_.default)[i];
+      }
+    });
     student.addEventListener('mouseenter', function () {
       return studentImage.src = hoveredImage;
     });
@@ -366,7 +469,7 @@ function handleImageHoverEffect(students, studentsArray) {
 ;
 handleImageHoverEffect(interfaceStudentsCollection, _students.interfaceStudents);
 handleImageHoverEffect(animationStudentsCollection, _students.animationStudents);
-},{"./data/students":"js/data/students.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../img/*.jpg":"img/*.jpg","./data/students":"js/data/students.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -394,7 +497,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56506" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50146" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

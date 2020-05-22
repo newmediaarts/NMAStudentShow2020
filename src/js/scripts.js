@@ -1,63 +1,44 @@
+import images from "../img/*.jpg";
 import { interfaceStudents, animationStudents } from './data/students'
 
 // Dynamically Generate Students
 const animationParent = document.querySelector('.animation .students-container');
 const interfaceParent = document.querySelector('.interface .students-container');
 
-// function makeStudentElement({ name, website, initialImage, hoveredImage }) {
-//     return `<div class="student">
-//                 <a href="${website}">
-//                     <img class="profile" src="${initialImage}"></img>
-//                     <h3 class="name">${name}</h3>
-//                     <h4>${website}</h4>
+const imagesArr = Object.keys(images);
 
-//                 </a>
-//             </div>`
-// };
+function makeStudentElement({ name, website, room, time }, isAnimation) {
+    const firstName = name.split(' ')[0].toLowerCase();
+    let initialImage;
 
-// TOMY'S EDITS_________________
-function makeStudentElement({ name, website, room, time, initialImage, hoveredImage }) {
+    imagesArr.map((img, i) => {
+        if (img.includes(firstName + '1')) {
+            initialImage = Object.values(images)[i]
+        }
+    })
+
+
     return `<div class="student">
-                <a href="${website}">
-                    <img class="profile" src="${initialImage}"></img>
+                    <img class="profile" src="${initialImage}" />
                     <h3 class="name">${name}</h3>
-                    <p>${website}</p>
+                    <a href="${website}"><p>${website}</p></a>
+                    ${isAnimation ? `<a href="google.com"><p>demo reel</p></a>` : ''}
                     <p><strong>${room}</strong></p>
                     <p><strong>${time}</strong></p>
-                 
-                </a>
             </div>`
 };
 
-// function makeAnimStudentElement({ name, website, demoreel, initialImage, hoveredImage }) {
-//     return `<div class="student">
-//                 <a href="${website}">
-//                     <img class="profile" src="${initialImage}"></img>
-//                     <h3 class="name">${name}</h3>
-//                     <h4>${website}</h4>
-//                     <h4>${demoreel}</h4>
-//                 </a>
 
-//             </div>`
-// };
-
-// function createStudents(parent, students) {
-//     students.map(student => {
-//         parent.innerHTML += makeAnimStudentElement(student)
-//     })
-// };
-// END TOMY'S EDITS _______________________________
-
-function createStudents(parent, students) {
+function createStudents(parent, students, isAnimation = false) {
     students.map(student => {
-        parent.innerHTML += makeStudentElement(student)
+        parent.innerHTML += makeStudentElement(student, isAnimation)
     })
 };
 
 
 
 createStudents(interfaceParent, interfaceStudents);
-createStudents(animationParent, animationStudents);
+createStudents(animationParent, animationStudents, true);
 
 // Handle Students Hover Effect
 const animationStudentsCollection = document.querySelectorAll('.animation .student');
@@ -67,8 +48,19 @@ function handleImageHoverEffect(students, studentsArray) {
     students.forEach(student => {
         const studentImage = student.querySelector('img');
         const studentName = student.querySelector('.name').innerText;
+        const firstName = studentName.split(' ')[0].toLowerCase();
 
-        const { hoveredImage, initialImage } = studentsArray.filter(el => el.name === studentName)[0];
+        let hoveredImage,
+            initialImage;
+
+        imagesArr.map((img, i) => {
+            if (img.includes(firstName + '1')) {
+                initialImage = Object.values(images)[i]
+            }
+            if (img.includes(firstName + '2')) {
+                hoveredImage = Object.values(images)[i]
+            }
+        })
 
         student.addEventListener('mouseenter', () => studentImage.src = hoveredImage);
         student.addEventListener('mouseleave', () => studentImage.src = initialImage);

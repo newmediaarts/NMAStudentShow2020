@@ -5,8 +5,8 @@ export const animationStudents = [
         website: 'http://yourname.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
-        initialImage: 'src/js/data/img/evan1.jpg',
-        hoveredImage: 'img/evan2.jpg',
+        initialImage: 'emily1.jpg',
+        hoveredImage: 'emily2.jpg',
 
     },
     {
@@ -148,39 +148,29 @@ export const interfaceStudents = [
         website: 'https://christyzliang.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
-        initialImage: 'https://placedog.net/500',
-        hoveredImage: 'http://placekitten.com/g/200/300'
     },
     {
         name: 'Koreena Nagai',
         website: 'https://knagai.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
-        initialImage: 'https://placedog.net/500',
-        hoveredImage: 'http://placekitten.com/g/200/300'
     },
     {
         name: 'Miyuki Sekiguchi',
         website: 'https://miyukingseki.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
-        initialImage: 'https://placedog.net/500',
-        hoveredImage: 'http://placekitten.com/g/200/300'
     },
     {
         name: 'Tomy Takemura',
         website: 'https://tomytak.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
-        initialImage: 'https://placedog.net/500',
-        hoveredImage: 'http://placekitten.com/g/200/300'
     },
     {
         name: 'Joanna Yee',
         website: 'https://joannamedia.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
-        initialImage: 'https://placedog.net/500',
-        hoveredImage: 'http://placekitten.com/g/200/300'
     }
 ]
