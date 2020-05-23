@@ -27,7 +27,7 @@
         grid-area: caption;
     }
 }
-	@media (max-width: $breakpoint-mobile){
+	@media (max-width: $breakpoint-small){
         .container {
             padding-top: 1.5em;
             padding-bottom:0;

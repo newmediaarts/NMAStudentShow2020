@@ -1,15 +1,8 @@
 #hero {
-
-
-	.container {
-		display: grid;
-		grid-gap: 50px;
-		display: block;
-		align-self: center;
-	}
+padding-top: 30vh;
 
 		.hero-content {
-		
+
 			h1 {
 				font-size: 12.5vw;
 				margin-bottom: 0;
@@ -34,6 +27,7 @@
 // GRID_____
 		.container {
 			display: grid;
+			margin: 0 auto;
 			place-items: center;
 			grid-template-columns: repeat(6, 1fr );
 			grid-template-areas:
@@ -45,12 +39,15 @@
 			}
 		}
 
+	}
+
 	@media (min-width: $breakpoint-medium){
 	
 		.hero-content {
-		
+			text-align: center;
+			
 			h1 {
-				font-size: 12.5rem;
+				font-size: 12.5vw;
 			}
 	
 			h2 {
@@ -60,7 +57,14 @@
 	}
 
 	@media (max-width: $breakpoint-small){
+		#hero{
+			padding-top: 3vh;
+			// border: 7px solid green;
+			height: 50vh;
+		}
+
 		.container{
+			margin: 0 auto;
 			grid-gap: 10px;
 			display: block;
 			padding-bottom: 0;
@@ -69,7 +73,7 @@
 		.hero-content {
 			padding: $section-padding;
 			h1 {
-				font-size: 19vw;
+				font-size: 15vw;
 				margin-bottom: 0;
 				text-align: center;
 				margin-top: 0;
@@ -77,10 +81,9 @@
 		
 			h2 {
 				margin-top: 0;
-				font-size: 3.3vw;
+				font-size: 3vw;
 				// margin-bottom: 3rem;
 			}  
 		}
 
 	}
-}

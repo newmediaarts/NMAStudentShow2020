@@ -2,12 +2,6 @@
 	padding: $section-padding;
 	position: relative;
 	padding-bottom: 60vh;
-	// background-image: url(../img/forest.svg);
-	// // background-size: cover;
-	// background-size: contain;
-	// background-repeat: no-repeat;
-	// background-position: bottom left;
-	// width: 100%;
 	
 	.forest{
 		width: 100%;
@@ -20,20 +14,47 @@
 	.container {
 		display: grid;
 		grid-gap: 50px;
-		// position:relative;
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-areas:
-			". fairy-sit animation animation"
-			"interface interface . .";
+		". . animation animation"
+		"interface interface nessy ."
+		"rock_monster . . mer-skull";
 		grid-row-gap: 150px;
 
-		.fairy-sit {
-			grid-area: fairy-sit;
-			width: 20vw;
-			left: -10vw;
-			bottom: 0;
+		// .fairy-sit_container{
+		// 	.fairy-sit{
+		// 	grid-area: fairy-sit;
+		// 	width: 20vw;
+		// 	left: 10vw;
+		// 	bottom: 105em;
+		// 	position: absolute;
+		// 	}
+		// }
+
+		.nessy {
+			grid-area: nessy;
+			width: 10vw;
 			position: absolute;
+			bottom: 40em;
+			right: 20em;
 		}
+
+		.rock_monster{
+			grid-area: rock_monster;
+			width: 40vw;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+
+		.mer-skull {
+			grid-area: mer-skull;
+			width: 25vw;
+			bottom: 5em;
+			position: absolute;
+			right: 7em;
+		}
+
 		.animation {
 			grid-area: animation;
 		}
@@ -92,18 +113,22 @@
 		.container {
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-areas:
-				". fairy-sit animation animation"
+				". . animation animation"
 				"interface interface nessy ."
 				"rock_monster . . mer-skull";
 			grid-row-gap: 150px;
 
-			.fairy-sit {
-				grid-area: fairy-sit;
-				width: 20vw;
-				left: 10vw;
-				bottom: 150em;
-				position: absolute;
-			}
+
+			// .fairy-sit_container {
+			// 	.fairy-sit{
+			// 	grid-area: fairy-sit;
+			// 	width: 20vw;
+			// 	left: 0vw;
+			// 	bottom: 40em;
+			// 	position: absolute;
+			// 	}
+			// }
+
 			.animation {
 				grid-area: animation;
 			}
@@ -131,22 +156,23 @@
 			.mer-skull {
 				grid-area: mer-skull;
 				width: 25vw;
-				bottom: 10em;
+				bottom: 5em;
 				position: absolute;
 				right: 7em;
 			}
 		}
 	}
 
-	@media (max-width: $breakpoint-small){
+	@media (max-width: $breakpoint-s-med){
 		.container{
 			text-align: center;
 			grid-template-columns: repeat(4, 1fr);
+	
 			grid-template-areas:
 				"animation animation animation animation"
 				"fairy-sit fairy-sit fairy-sit fairy-sit"
 				"interface interface interface interface";
-			grid-row-gap: 150px;
+			grid-row-gap: 25px;
 
 			.anim-title-button{
 			display: block;
@@ -159,17 +185,22 @@
 
 			.animation{
 				margin-bottom: 0em; 
-			}
+		}
 
-			.fairy-sit {
+		.interface{
+			display: block;
+		
+
+			.fairy-sit_container {
+				.fairy-sit{
 				grid-area: fairy-sit;
 				width: 30vw;
-				left: 30%;
-				transform: translateX(-30%);
-				top: 50%;
-				transform: translateY(-50%);
+				margin:0 auto;
+				top: 0;
+	
+				}
 			}
-
+		}
 		}	
 	}
 }

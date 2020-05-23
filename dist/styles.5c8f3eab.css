@@ -74,11 +74,8 @@ nav .chris_hero {
   background: red;
 }
 
-#hero .container {
-  display: grid;
-  grid-gap: 50px;
-  display: block;
-  align-self: center;
+#hero {
+  padding-top: 30vh;
 }
 #hero .hero-content h1 {
   font-size: 12.5vw;
@@ -100,6 +97,7 @@ nav .chris_hero {
 }
 #hero .container {
   display: grid;
+  margin: 0 auto;
   place-items: center;
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas: ". hero-content hero-content hero-content hero-content .";
@@ -107,41 +105,55 @@ nav .chris_hero {
 #hero .container .hero-content {
   grid-area: hero-content;
 }
+
 @media (min-width: 1200px) {
-  #hero .hero-content h1 {
-    font-size: 12.5rem;
+  .hero-content {
+    text-align: center;
   }
-  #hero .hero-content h2 {
+  .hero-content h1 {
+    font-size: 12.5vw;
+  }
+  .hero-content h2 {
     font-size: 3.3vw;
   }
 }
 @media (max-width: 768px) {
-  #hero .container {
+  #hero {
+    padding-top: 3vh;
+    height: 50vh;
+  }
+
+  .container {
+    margin: 0 auto;
     grid-gap: 10px;
     display: block;
     padding-bottom: 0;
   }
-  #hero .hero-content {
+
+  .hero-content {
     padding: 15vh 0;
   }
-  #hero .hero-content h1 {
-    font-size: 19vw;
+  .hero-content h1 {
+    font-size: 15vw;
     margin-bottom: 0;
     text-align: center;
     margin-top: 0;
   }
-  #hero .hero-content h2 {
+  .hero-content h2 {
     margin-top: 0;
-    font-size: 3.3vw;
+    font-size: 3vw;
   }
 }
-
 #about {
-  padding: 15vh 0;
-  background-image: url(/clouds.3d65ab04.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top;
+  position: relative;
+}
+#about .clouds {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  z-index: -100;
+  opacity: 0.75;
 }
 #about .container {
   display: grid;
@@ -160,7 +172,12 @@ nav .chris_hero {
 #about .container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-areas: ". about_title about_title about_title about_title ." ". sightings_about sightings_about sightings_about sightings_about ." ". event_about event_about event_about event_about ." ". details details . . ." ". id_event id_event anim_event anim_event ." ". tickets . rsvp . .";
+  grid-template-areas: "fairy fairy fairy fairy fairy fairy" ". about_title about_title about_title about_title ." ". sightings_about sightings_about sightings_about sightings_about ." ". event_about event_about event_about event_about ." ". details details . . ." ". id_event id_event anim_event anim_event ." ". tickets . rsvp . .";
+}
+#about .container .fairy {
+  grid-area: fairy;
+  margin: 0 auto;
+  width: 20vw;
 }
 #about .container .about_title {
   grid-area: about_title;
@@ -201,12 +218,20 @@ nav .chris_hero {
 #about .container .rsvp {
   grid-area: rsvp;
 }
+
 @media (max-width: 768px) {
+  #about .clouds {
+    opacity: 0.7;
+  }
   #about .container {
-    padding-top: 10em;
+    padding-top: -150em;
     display: block;
     grid-gap: 10px;
     text-align: center;
+  }
+  #about .container .fairy {
+    width: 30vw;
+    padding-bottom: 2em;
   }
   #about .container .about_title {
     width: 100%;
@@ -240,8 +265,10 @@ nav .chris_hero {
   #about .container .anim_event {
     margin-top: 3rem;
   }
+  #about .container .animation {
+    display: block;
+  }
 }
-
 #students {
   padding: 15vh 0;
   position: relative;
@@ -258,15 +285,29 @@ nav .chris_hero {
   display: grid;
   grid-gap: 50px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: ". fairy-sit animation animation" "interface interface . .";
+  grid-template-areas: ". . animation animation" "interface interface nessy ." "rock_monster . . mer-skull";
   grid-row-gap: 150px;
 }
-#students .container .fairy-sit {
-  grid-area: fairy-sit;
-  width: 20vw;
-  left: -10vw;
-  bottom: 0;
+#students .container .nessy {
+  grid-area: nessy;
+  width: 10vw;
   position: absolute;
+  bottom: 40em;
+  right: 20em;
+}
+#students .container .rock_monster {
+  grid-area: rock_monster;
+  width: 40vw;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#students .container .mer-skull {
+  grid-area: mer-skull;
+  width: 25vw;
+  bottom: 5em;
+  position: absolute;
+  right: 7em;
 }
 #students .container .animation {
   grid-area: animation;
@@ -313,15 +354,8 @@ nav .chris_hero {
 @media (min-width: 1200px) {
   #students .container {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: ". fairy-sit animation animation" "interface interface nessy ." "rock_monster . . mer-skull";
+    grid-template-areas: ". . animation animation" "interface interface nessy ." "rock_monster . . mer-skull";
     grid-row-gap: 150px;
-  }
-  #students .container .fairy-sit {
-    grid-area: fairy-sit;
-    width: 20vw;
-    left: 10vw;
-    bottom: 150em;
-    position: absolute;
   }
   #students .container .animation {
     grid-area: animation;
@@ -346,17 +380,17 @@ nav .chris_hero {
   #students .container .mer-skull {
     grid-area: mer-skull;
     width: 25vw;
-    bottom: 10em;
+    bottom: 5em;
     position: absolute;
     right: 7em;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   #students .container {
     text-align: center;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "animation animation animation animation" "fairy-sit fairy-sit fairy-sit fairy-sit" "interface interface interface interface";
-    grid-row-gap: 150px;
+    grid-row-gap: 25px;
   }
   #students .container .anim-title-button {
     display: block;
@@ -368,13 +402,14 @@ nav .chris_hero {
   #students .container .animation {
     margin-bottom: 0em;
   }
-  #students .container .fairy-sit {
+  #students .container .interface {
+    display: block;
+  }
+  #students .container .interface .fairy-sit_container .fairy-sit {
     grid-area: fairy-sit;
     width: 30vw;
-    left: 30%;
-    transform: translateX(-30%);
-    top: 50%;
-    transform: translateY(-50%);
+    margin: 0 auto;
+    top: 0;
   }
 }
 
@@ -478,7 +513,7 @@ p {
 #quote .container .caption {
   grid-area: caption;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   #quote .container {
     padding-top: 1.5em;
     padding-bottom: 0;

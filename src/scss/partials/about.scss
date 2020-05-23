@@ -1,10 +1,15 @@
 #about {
-	padding: $section-padding;
-	background-image: url(../img/clouds.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: top;
+position: relative;
 	
+	.clouds{
+		position: absolute;
+		width: 100%;
+		height: auto;
+		top: 0;
+		z-index: -100;
+		opacity: .75;
+	}
+
 	.container {
 		display: grid;
 		grid-gap: 50px;
@@ -31,6 +36,7 @@
 	display: grid;
 	grid-template-columns: repeat(6, 1fr );
 	grid-template-areas:
+	"fairy fairy fairy fairy fairy fairy"
 		". about_title about_title about_title about_title ."
 		". sightings_about sightings_about sightings_about sightings_about ."
 		". event_about event_about event_about event_about ." 
@@ -38,6 +44,12 @@
 		". id_event id_event anim_event anim_event ."
 		". tickets . rsvp . .";
 
+
+	.fairy{
+		grid-area: fairy;
+		margin: 0 auto;
+		width: 20vw;
+	}
 	.about_title {
 		grid-area: about_title;
 		width: 85%;
@@ -78,17 +90,25 @@
 		grid-area: rsvp;
 	}
 }
+}
 	@media (max-width: $breakpoint-small){
+		#about{
+	
+		.clouds{
+			opacity: .7;
+		}
 		.container{
-			padding-top: 10em;
+			padding-top: -150em;
 			display: block;
 			grid-gap: 10px;
 			text-align: center;
 		
-
-			.event_about{
-				
+			.fairy{
+				// top:-5em;;
+				width: 30vw;
+				padding-bottom: 2em;
 			}
+
 			.about_title{
 				width: 100%;
 				margin-bottom: 1.5rem;
@@ -127,6 +147,10 @@
 			.anim_event{
 				margin-top: 3rem;
 			}
+
+			.animation{
+				display: block;
+			}
 		}
 	}
-}
+	}

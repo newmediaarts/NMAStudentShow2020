@@ -117,7 +117,13 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/data/students.js":[function(require,module,exports) {
+})({"img/background.jpg":[function(require,module,exports) {
+module.exports = "/background.004d778f.jpg";
+},{}],"img/*.jpg":[function(require,module,exports) {
+module.exports = {
+  "background": require("./background.jpg")
+};
+},{"./background.jpg":"img/background.jpg"}],"js/data/students.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -125,144 +131,168 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.interfaceStudents = exports.animationStudents = void 0;
 var animationStudents = [{
-  name: 'Animator 1',
-  website: 'web',
-  // demoreel: 'demoreel',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  name: 'Evan Costa',
+  demoreel: 'demoreel',
+  website: 'website portfolio',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
 }, {
-  name: 'Animator 2',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  name: 'Calvin Gacuya',
+  demoreel: 'demoreel',
+  website: 'website portfolio',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
 }, {
-  name: 'Animator 3',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  name: 'Tina Gonzalez',
+  demoreel: 'demoreel',
+  website: 'website portfolio',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
 }, {
-  name: 'Animator 4',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  name: 'Raleigh Harris',
+  demoreel: 'demoreel',
+  website: 'website portfolio',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
 }, {
-  name: 'Animator 5',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  name: 'Vivien Liu',
+  demoreel: 'demoreel',
+  website: 'website portfolio',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
 }, {
-  name: 'Animator 6',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  name: 'Nao Minegishi',
+  demoreel: 'demoreel',
+  website: 'website portfolio',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
+}, // {
+//     name: 'Andruw Penera',
+//     demoreel: 'demoreel',
+//     website: 'website portfolio',
+//     room: 'Room No. 1',
+//     time: '5:00–5:20 | 6:00–6:20',
+// },
+{
+  name: 'Kyle Moy',
+  demoreel: 'demoreel',
+  website: 'website portfolio',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
 }, {
-  name: 'Animator 1',
-  website: 'web',
-  // demoreel: 'demoreel',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  name: 'Joshua Richards',
+  demoreel: 'demoreel',
+  website: 'website portfolio',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
 }, {
-  name: 'Animator 2',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  name: 'Schyler Lai Shinde',
+  demoreel: 'demoreel',
+  website: 'website portfolio',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
 }, {
-  name: 'Animator 3',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  name: 'Annika Quinn',
+  demoreel: 'demoreel',
+  website: 'website portfolio',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
 }, {
-  name: 'Animator 4',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Animator 5',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Animator 6',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  name: 'Hannah Woodward',
+  demoreel: 'demoreel',
+  website: 'website portfolio',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
 }];
 exports.animationStudents = animationStudents;
 var interfaceStudents = [{
+  name: 'Ariana Enomoto',
+  website: 'https://aritayeno.com/',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
+}, {
   name: 'Emily Freeman',
   website: 'https://eafreeman.com',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
+}, {
+  name: 'Christi Gonzales',
+  website: 'https://christigonzales.com/',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
+}, {
+  name: 'Eryn Iwanaga',
+  website: 'https://eiwanaga.com/',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
+}, {
+  name: 'Christy Liang',
+  website: 'https://christyzliang.com',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
+}, {
+  name: 'Koreena Nagai',
+  website: 'https://knagai.com',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Miyuki Sekiguchi',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  website: 'https://miyukingseki.com',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
 }, {
-  name: 'Koko',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  name: 'Tomy Takemura',
+  website: 'https://tomytak.com',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
 }, {
-  name: 'Emily 2',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Tomy 2',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Koko 2',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Emily 2',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Tomy 2',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
-}, {
-  name: 'Koko 2',
-  website: '/',
-  initialImage: 'https://placedog.net/500',
-  hoveredImage: 'http://placekitten.com/g/200/300'
+  name: 'Joanna Yee',
+  website: 'https://joannamedia.com',
+  room: 'Room No. 1',
+  time: '5:00–5:20 | 6:00–6:20'
 }];
 exports.interfaceStudents = interfaceStudents;
 },{}],"js/scripts.js":[function(require,module,exports) {
 "use strict";
 
+var _ = _interopRequireDefault(require("../img/*.jpg"));
+
 var _students = require("./data/students");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Dynamically Generate Students
 var animationParent = document.querySelector('.animation .students-container');
 var interfaceParent = document.querySelector('.interface .students-container');
+var imagesArr = Object.keys(_.default);
 
-function makeStudentElement(_ref) {
+function makeStudentElement(_ref, isAnimation) {
   var name = _ref.name,
       website = _ref.website,
-      initialImage = _ref.initialImage,
-      hoveredImage = _ref.hoveredImage;
-  return "<div class=\"student\">\n                <a href=\"".concat(website, "\">\n                    <img class=\"profile\" src=\"").concat(initialImage, "\"></img>\n                    <h3 class=\"name\">").concat(name, "</h3>\n                    <p>").concat(website, "</p>\n                 \n                </a>\n            </div>");
+      room = _ref.room,
+      time = _ref.time;
+  var firstName = name.split(' ')[0].toLowerCase();
+  var initialImage;
+  imagesArr.map(function (img, i) {
+    if (img.includes(firstName + '1')) {
+      initialImage = Object.values(_.default)[i];
+    }
+  });
+  return "<div class=\"student\">\n                    <img class=\"profile\" src=\"".concat(initialImage, "\" />\n                    <h3 class=\"name\">").concat(name, "</h3>\n                    <a href=\"").concat(website, "\"><p>").concat(website, "</p></a>\n                    ").concat(isAnimation ? "<a href=\"google.com\"><p>demo reel</p></a>" : '', "\n                    <p><strong>").concat(room, "</strong></p>\n                    <p><strong>").concat(time, "</strong></p>\n            </div>");
 }
 
 ;
 
 function createStudents(parent, students) {
+  var isAnimation = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
   students.map(function (student) {
-    parent.innerHTML += makeStudentElement(student);
+    parent.innerHTML += makeStudentElement(student, isAnimation);
   });
 }
 
 ;
 createStudents(interfaceParent, _students.interfaceStudents);
-createStudents(animationParent, _students.animationStudents); // Handle Students Hover Effect
+createStudents(animationParent, _students.animationStudents, true); // Handle Students Hover Effect
 
 var animationStudentsCollection = document.querySelectorAll('.animation .student');
 var interfaceStudentsCollection = document.querySelectorAll('.interface .student');
@@ -271,11 +301,17 @@ function handleImageHoverEffect(students, studentsArray) {
   students.forEach(function (student) {
     var studentImage = student.querySelector('img');
     var studentName = student.querySelector('.name').innerText;
-    var _studentsArray$filter = studentsArray.filter(function (el) {
-      return el.name === studentName;
-    })[0],
-        hoveredImage = _studentsArray$filter.hoveredImage,
-        initialImage = _studentsArray$filter.initialImage;
+    var firstName = studentName.split(' ')[0].toLowerCase();
+    var hoveredImage, initialImage;
+    imagesArr.map(function (img, i) {
+      if (img.includes(firstName + '1')) {
+        initialImage = Object.values(_.default)[i];
+      }
+
+      if (img.includes(firstName + '2')) {
+        hoveredImage = Object.values(_.default)[i];
+      }
+    });
     student.addEventListener('mouseenter', function () {
       return studentImage.src = hoveredImage;
     });
@@ -288,7 +324,7 @@ function handleImageHoverEffect(students, studentsArray) {
 ;
 handleImageHoverEffect(interfaceStudentsCollection, _students.interfaceStudents);
 handleImageHoverEffect(animationStudentsCollection, _students.animationStudents);
-},{"./data/students":"js/data/students.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../img/*.jpg":"img/*.jpg","./data/students":"js/data/students.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -316,7 +352,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57193" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50356" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
