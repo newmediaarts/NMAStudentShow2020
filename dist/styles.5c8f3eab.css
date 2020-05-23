@@ -76,6 +76,15 @@ nav .chris_hero {
 
 #hero {
   padding-top: 30vh;
+  position: relative;
+}
+#hero .clouds {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: -5vh;
+  z-index: -100;
+  opacity: 0.75;
 }
 #hero .hero-content h1 {
   font-size: 12.5vw;
@@ -85,7 +94,7 @@ nav .chris_hero {
 }
 #hero .hero-content h2 {
   margin-top: 0;
-  font-size: 3.5vw;
+  font-size: 3.3vw;
   font-family: "Cormorant Garamond", "Lora", serif;
   color: white;
   text-transform: none;
