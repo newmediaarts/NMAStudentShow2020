@@ -186,7 +186,7 @@ nav .chris_hero {
 #about .container .fairy {
   grid-area: fairy;
   margin: 0 auto;
-  width: 20vw;
+  width: 15vw;
 }
 #about .container .about_title {
   grid-area: about_title;
@@ -276,6 +276,10 @@ nav .chris_hero {
   }
   #about .container .animation {
     display: block;
+  }
+  #about .container .tickets, #about .container .rsvp {
+    margin-top: 1em;
+    margin-bottom: 2em;
   }
 }
 #students {
@@ -394,7 +398,10 @@ nav .chris_hero {
     right: 7em;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 768px) {
+  #students #students {
+    padding: 0;
+  }
   #students .container {
     text-align: center;
     grid-template-columns: repeat(4, 1fr);
@@ -504,37 +511,42 @@ p {
   letter-spacing: 0.07em;
 }
 
-#quote h4 {
-  text-align: center;
-}
-#quote .caption {
-  text-align: center;
+#quote {
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 #quote .container {
   padding: 2em;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-areas: ". bystander_quote bystander_quote bystander_quote bystander_quote ." ". caption caption caption caption .";
+  grid-template-areas: ". leaf_fairy bystander_quote bystander_quote bystander_quote .";
 }
 #quote .container .bystander_quote {
   grid-area: bystander_quote;
+  margin-top: 5em;
 }
-#quote .container .caption {
-  grid-area: caption;
+#quote .container .leaf_fairy {
+  grid-area: leaf_fairy;
+  width: 18vw;
+  top: 0;
 }
 @media (max-width: 768px) {
   #quote .container {
-    padding-top: 1.5em;
+    margin-top: -5em;
+    padding-top: 0;
     padding-bottom: 0;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-areas: "bystander_quote bystander_quote bystander_quote bystander_quote bystander_quote bystander_quote" "caption caption caption caption caption caption";
+    grid-template-areas: "bystander_quote bystander_quote bystander_quote bystander_quote bystander_quote bystander_quote" "leaf_fairy leaf_fairy leaf_fairy leaf_fairy leaf_fairy leaf_fairy";
+  }
+  #quote .container .leaf_fairy {
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 30vw;
   }
   #quote .container .bystander_quote {
     grid-area: bystander_quote;
-  }
-  #quote .container .caption {
-    grid-area: caption;
+    text-align: center;
   }
   #quote .container h4 {
     font-size: 1.7rem;

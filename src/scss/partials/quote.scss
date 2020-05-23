@@ -1,14 +1,6 @@
-// Tomy's edits_________________
 #quote {	
-
-
-// type___
-        h4{
-            text-align: center;
-        }
-        .caption{
-            text-align: center;
-        }
+padding-top: 3em;
+padding-bottom: 3em;
 
 // GRID_____
 .container {
@@ -16,38 +8,48 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr );
     grid-template-areas:
-        ". bystander_quote bystander_quote bystander_quote bystander_quote ."
-        ". caption caption caption caption .";
+        ". leaf_fairy bystander_quote bystander_quote bystander_quote .";
 
     .bystander_quote {
         grid-area: bystander_quote;
+        margin-top: 5em;
     }
 
-    .caption {
-        grid-area: caption;
+    .leaf_fairy{
+        grid-area: leaf_fairy;
+        width:18vw;
+       top: 0;
     }
 }
 	@media (max-width: $breakpoint-small){
         .container {
-            padding-top: 1.5em;
+            margin-top: -5em;
+            padding-top: 0;
             padding-bottom:0;
 			display: grid;
 			grid-template-columns: repeat(6, 1fr );
             grid-template-areas:
                 "bystander_quote bystander_quote bystander_quote bystander_quote bystander_quote bystander_quote"
-                "caption caption caption caption caption caption";
+                "leaf_fairy leaf_fairy leaf_fairy leaf_fairy leaf_fairy leaf_fairy"
+               ;
 
+.leaf_fairy{
+   margin: 0 auto;
+    margin-top: 1em;
+    width: 30vw;
 
+}
 
                 .bystander_quote {
+                   
                     grid-area: bystander_quote;
+                    text-align: center;
                 }
     
-                .caption {
-                    grid-area: caption;
-                }
         h4{
             font-size: 1.7rem;
+            // max-width: 12em;
+        
         }
         .caption{
             text-align: center;

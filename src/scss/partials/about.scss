@@ -49,7 +49,7 @@ position: relative;
 	.fairy{
 		grid-area: fairy;
 		margin: 0 auto;
-		width: 20vw;
+		width: 15vw;
 	}
 	.about_title {
 		grid-area: about_title;
@@ -151,6 +151,11 @@ position: relative;
 
 			.animation{
 				display: block;
+			}
+
+			.tickets, .rsvp{
+				margin-top: 1em;
+				margin-bottom: 2em;
 			}
 		}
 	}

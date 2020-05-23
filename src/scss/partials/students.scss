@@ -163,7 +163,11 @@
 		}
 	}
 
-	@media (max-width: $breakpoint-s-med){
+	@media (max-width: $breakpoint-small){
+		#students{
+			padding: 0;
+		}
+		
 		.container{
 			text-align: center;
 			grid-template-columns: repeat(4, 1fr);
