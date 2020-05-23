@@ -1,24 +1,15 @@
 #about {
 	padding: $section-padding;
-
+	background-image: url(../img/clouds.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: top;
+	
 	.container {
 		display: grid;
 		grid-gap: 50px;
 	}
 
-	// .info-block {
-	// 	h3 {
-	// 		font-size: 3rem;
-	// 	}
-
-	// 	p {
-	// 		font-size: 1.2rem;
-	// 		line-height: 1.5;
-	// 	}
-	// }
-
-
-// (TOMY EDIT)________
 // TYPE
 .id_event h2, .anim_event h2{
 	margin-top: 0;
@@ -40,11 +31,32 @@
 	display: grid;
 	grid-template-columns: repeat(6, 1fr );
 	grid-template-areas:
+		". about_title about_title about_title about_title ."
+		". sightings_about sightings_about sightings_about sightings_about ."
 		". event_about event_about event_about event_about ." 
 		". details details . . ."
 		". id_event id_event anim_event anim_event ."
 		". tickets . rsvp . .";
 
+	.about_title {
+		grid-area: about_title;
+		width: 85%;
+		margin: 0 auto;
+	}
+	.sightings_about {
+		grid-area: sightings_about;
+		margin: 0 auto;
+		hr{
+			margin-top: 4em;
+			width: 85%;
+		}
+		p{
+			font-weight: 500;
+			width: 85%;
+			padding-bottom: 1em;
+			margin: 0 auto;
+		}
+	}
 	.event_about {
 		grid-area: event_about;
 	}
@@ -71,27 +83,49 @@
 			padding-top: 10em;
 			display: block;
 			grid-gap: 10px;
+			text-align: center;
 		
-			.details{
-				margin-top: 3rem;
-				margin-bottom: 1rem;
+
+			.event_about{
+				
+			}
+			.about_title{
+				width: 100%;
+				margin-bottom: 1.5rem;
 			}
 
-			.id_event, .anim_event{
+			.sightings_about {
+				grid-area: sightings_about;
+				margin: 0 auto;
+
+				hr{
+					margin-top: 2em;
+					margin-bottom: 3em;
+					width: 100%;
+				}
+				p{
+					font-weight: 500;
+					width:100%;
+					padding-bottom: 1em;
+				}
+			}
+			
+			.details{
+				margin-top: 3rem;
+				margin-bottom: 1.5rem;
+			}
+
+			 .id_event, .anim_event{
 				margin-bottom: 1rem;
+
 				h2{
 					font-size: 3rem;
-					// margin-top: 0;
 					margin-bottom:0;
 				}
 			}
 
 			.anim_event{
 				margin-top: 3rem;
-			}
-			
-			.tickets, .rsvp{
-				margin-top: 0;
 			}
 		}
 	}

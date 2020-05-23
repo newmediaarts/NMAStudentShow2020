@@ -10,28 +10,13 @@ html {
 
 body {
   margin: 0;
-  margin: 0;
-  background: linear-gradient(358deg, black, #1c4646);
-  background-size: 600% 600%;
-  -webkit-animation: teal-background 200s ease infinite;
-  -moz-animation: teal-background 200s ease infinite;
-  animation: teal-background 200s ease infinite;
-}
-@keyframes teal-background {
-  0% {
-    background-position: 53% 0%;
-  }
-  50% {
-    background-position: 48% 100%;
-  }
-  100% {
-    background-position: 53% 0%;
-  }
+  background: #020024;
+  background: linear-gradient(180deg, black 16%, #1c4646 77%, #8fd4c2 100%);
 }
 body button {
   padding: 1rem;
   border: none;
-  background: black;
+  background: white;
   font-family: "Open Sans Condensed", "Bebas Neue", "Franklin Gothic Condensed", "Arial", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -47,7 +32,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 h1,
@@ -89,13 +74,11 @@ nav .chris_hero {
   background: red;
 }
 
-#hero {
-  padding: 15vh 0;
-}
 #hero .container {
   display: grid;
   grid-gap: 50px;
   display: block;
+  align-self: center;
 }
 #hero .hero-content h1 {
   font-size: 12.5vw;
@@ -105,20 +88,19 @@ nav .chris_hero {
 }
 #hero .hero-content h2 {
   margin-top: 0;
-  font-size: 3.2vw;
+  font-size: 3.5vw;
   font-family: "Cormorant Garamond", "Lora", serif;
   color: white;
   text-transform: none;
-  font-weight: 500;
-  font-style: italic;
+  font-weight: 300;
   margin-bottom: 4rem;
   text-align: center;
-}
-#hero .hero-content p {
-  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
 }
 #hero .container {
   display: grid;
+  place-items: center;
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas: ". hero-content hero-content hero-content hero-content .";
 }
@@ -130,17 +112,17 @@ nav .chris_hero {
     font-size: 12.5rem;
   }
   #hero .hero-content h2 {
-    font-size: 3.4rem;
-  }
-  #hero .hero-content p {
-    margin-bottom: 2rem;
+    font-size: 3.3vw;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   #hero .container {
     grid-gap: 10px;
     display: block;
-    padding-bottom: 10em;
+    padding-bottom: 0;
+  }
+  #hero .hero-content {
+    padding: 15vh 0;
   }
   #hero .hero-content h1 {
     font-size: 19vw;
@@ -150,16 +132,16 @@ nav .chris_hero {
   }
   #hero .hero-content h2 {
     margin-top: 0;
-    font-size: 8vw;
-    margin-bottom: 3rem;
-  }
-  #hero .hero-content p {
-    margin-bottom: 2rem;
+    font-size: 3.3vw;
   }
 }
 
 #about {
   padding: 15vh 0;
+  background-image: url(/clouds.3d65ab04.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 #about .container {
   display: grid;
@@ -178,7 +160,26 @@ nav .chris_hero {
 #about .container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-areas: ". event_about event_about event_about event_about ." ". details details . . ." ". id_event id_event anim_event anim_event ." ". tickets . rsvp . .";
+  grid-template-areas: ". about_title about_title about_title about_title ." ". sightings_about sightings_about sightings_about sightings_about ." ". event_about event_about event_about event_about ." ". details details . . ." ". id_event id_event anim_event anim_event ." ". tickets . rsvp . .";
+}
+#about .container .about_title {
+  grid-area: about_title;
+  width: 85%;
+  margin: 0 auto;
+}
+#about .container .sightings_about {
+  grid-area: sightings_about;
+  margin: 0 auto;
+}
+#about .container .sightings_about hr {
+  margin-top: 4em;
+  width: 85%;
+}
+#about .container .sightings_about p {
+  font-weight: 500;
+  width: 85%;
+  padding-bottom: 1em;
+  margin: 0 auto;
 }
 #about .container .event_about {
   grid-area: event_about;
@@ -205,10 +206,29 @@ nav .chris_hero {
     padding-top: 10em;
     display: block;
     grid-gap: 10px;
+    text-align: center;
+  }
+  #about .container .about_title {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  #about .container .sightings_about {
+    grid-area: sightings_about;
+    margin: 0 auto;
+  }
+  #about .container .sightings_about hr {
+    margin-top: 2em;
+    margin-bottom: 3em;
+    width: 100%;
+  }
+  #about .container .sightings_about p {
+    font-weight: 500;
+    width: 100%;
+    padding-bottom: 1em;
   }
   #about .container .details {
     margin-top: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   #about .container .id_event, #about .container .anim_event {
     margin-bottom: 1rem;
@@ -220,17 +240,39 @@ nav .chris_hero {
   #about .container .anim_event {
     margin-top: 3rem;
   }
-  #about .container .tickets, #about .container .rsvp {
-    margin-top: 0;
-  }
 }
 
 #students {
   padding: 15vh 0;
+  position: relative;
+  padding-bottom: 60vh;
+}
+#students .forest {
+  width: 100%;
+  height: auto;
+  z-index: -100;
+  position: absolute;
+  bottom: 0;
 }
 #students .container {
   display: grid;
   grid-gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: ". fairy-sit animation animation" "interface interface . .";
+  grid-row-gap: 150px;
+}
+#students .container .fairy-sit {
+  grid-area: fairy-sit;
+  width: 20vw;
+  left: -10vw;
+  bottom: 0;
+  position: absolute;
+}
+#students .container .animation {
+  grid-area: animation;
+}
+#students .container .interface {
+  grid-area: interface;
 }
 #students .container h3 {
   margin-bottom: white;
@@ -271,8 +313,15 @@ nav .chris_hero {
 @media (min-width: 1200px) {
   #students .container {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: ". . animation animation" "interface interface . .";
+    grid-template-areas: ". fairy-sit animation animation" "interface interface nessy ." "rock_monster . . mer-skull";
     grid-row-gap: 150px;
+  }
+  #students .container .fairy-sit {
+    grid-area: fairy-sit;
+    width: 20vw;
+    left: 10vw;
+    bottom: 150em;
+    position: absolute;
   }
   #students .container .animation {
     grid-area: animation;
@@ -280,14 +329,52 @@ nav .chris_hero {
   #students .container .interface {
     grid-area: interface;
   }
+  #students .container .nessy {
+    grid-area: nessy;
+    width: 20vw;
+    position: absolute;
+    bottom: 40em;
+    right: 20em;
+  }
+  #students .container .rock_monster {
+    grid-area: rock_monster;
+    width: 40vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  #students .container .mer-skull {
+    grid-area: mer-skull;
+    width: 25vw;
+    bottom: 10em;
+    position: absolute;
+    right: 7em;
+  }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  #students .container {
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "animation animation animation animation" "fairy-sit fairy-sit fairy-sit fairy-sit" "interface interface interface interface";
+    grid-row-gap: 150px;
+  }
   #students .container .anim-title-button {
     display: block;
     color: 3px solid white;
   }
   #students .container button {
     margin-top: 0.5rem;
+  }
+  #students .container .animation {
+    margin-bottom: 0em;
+  }
+  #students .container .fairy-sit {
+    grid-area: fairy-sit;
+    width: 30vw;
+    left: 30%;
+    transform: translateX(-30%);
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -321,7 +408,7 @@ h1 {
   font-size: 3em;
   line-height: 1;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 h2 {

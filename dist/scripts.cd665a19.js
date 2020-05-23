@@ -155,6 +155,37 @@ var animationStudents = [{
   website: '/',
   initialImage: 'https://placedog.net/500',
   hoveredImage: 'http://placekitten.com/g/200/300'
+}, {
+  name: 'Animator 1',
+  website: 'web',
+  // demoreel: 'demoreel',
+  initialImage: 'https://placedog.net/500',
+  hoveredImage: 'http://placekitten.com/g/200/300'
+}, {
+  name: 'Animator 2',
+  website: '/',
+  initialImage: 'https://placedog.net/500',
+  hoveredImage: 'http://placekitten.com/g/200/300'
+}, {
+  name: 'Animator 3',
+  website: '/',
+  initialImage: 'https://placedog.net/500',
+  hoveredImage: 'http://placekitten.com/g/200/300'
+}, {
+  name: 'Animator 4',
+  website: '/',
+  initialImage: 'https://placedog.net/500',
+  hoveredImage: 'http://placekitten.com/g/200/300'
+}, {
+  name: 'Animator 5',
+  website: '/',
+  initialImage: 'https://placedog.net/500',
+  hoveredImage: 'http://placekitten.com/g/200/300'
+}, {
+  name: 'Animator 6',
+  website: '/',
+  initialImage: 'https://placedog.net/500',
+  hoveredImage: 'http://placekitten.com/g/200/300'
 }];
 exports.animationStudents = animationStudents;
 var interfaceStudents = [{
@@ -187,6 +218,21 @@ var interfaceStudents = [{
   website: '/',
   initialImage: 'https://placedog.net/500',
   hoveredImage: 'http://placekitten.com/g/200/300'
+}, {
+  name: 'Emily 2',
+  website: '/',
+  initialImage: 'https://placedog.net/500',
+  hoveredImage: 'http://placekitten.com/g/200/300'
+}, {
+  name: 'Tomy 2',
+  website: '/',
+  initialImage: 'https://placedog.net/500',
+  hoveredImage: 'http://placekitten.com/g/200/300'
+}, {
+  name: 'Koko 2',
+  website: '/',
+  initialImage: 'https://placedog.net/500',
+  hoveredImage: 'http://placekitten.com/g/200/300'
 }];
 exports.interfaceStudents = interfaceStudents;
 },{}],"js/scripts.js":[function(require,module,exports) {
@@ -196,16 +242,7 @@ var _students = require("./data/students");
 
 // Dynamically Generate Students
 var animationParent = document.querySelector('.animation .students-container');
-var interfaceParent = document.querySelector('.interface .students-container'); // function makeStudentElement({ name, website, initialImage, hoveredImage }) {
-//     return `<div class="student">
-//                 <a href="${website}">
-//                     <img class="profile" src="${initialImage}"></img>
-//                     <h3 class="name">${name}</h3>
-//                     <h4>${website}</h4>
-//                 </a>
-//             </div>`
-// };
-// TOMY'S EDITS_________________
+var interfaceParent = document.querySelector('.interface .students-container');
 
 function makeStudentElement(_ref) {
   var name = _ref.name,
@@ -215,22 +252,7 @@ function makeStudentElement(_ref) {
   return "<div class=\"student\">\n                <a href=\"".concat(website, "\">\n                    <img class=\"profile\" src=\"").concat(initialImage, "\"></img>\n                    <h3 class=\"name\">").concat(name, "</h3>\n                    <p>").concat(website, "</p>\n                 \n                </a>\n            </div>");
 }
 
-; // function makeAnimStudentElement({ name, website, demoreel, initialImage, hoveredImage }) {
-//     return `<div class="student">
-//                 <a href="${website}">
-//                     <img class="profile" src="${initialImage}"></img>
-//                     <h3 class="name">${name}</h3>
-//                     <h4>${website}</h4>
-//                     <h4>${demoreel}</h4>
-//                 </a>
-//             </div>`
-// };
-// function createStudents(parent, students) {
-//     students.map(student => {
-//         parent.innerHTML += makeAnimStudentElement(student)
-//     })
-// };
-// END TOMY'S EDITS _______________________________
+;
 
 function createStudents(parent, students) {
   students.map(function (student) {
@@ -294,7 +316,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58370" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57193" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

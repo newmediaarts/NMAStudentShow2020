@@ -1,9 +1,11 @@
 #hero {
-	padding: $section-padding;
+
+
 	.container {
 		display: grid;
 		grid-gap: 50px;
 		display: block;
+		align-self: center;
 	}
 
 		.hero-content {
@@ -17,24 +19,22 @@
 		
 			h2 {
 				margin-top: 0;
-				font-size: 3.2vw;
+				font-size: 3.5vw;
 				font-family: $bodyfont-family;
 				color:  $color-light-accent;
 				text-transform: none;
-				font-weight: 500;
-				font-style: italic;
+				font-weight: 300;
 				margin-bottom: 4rem;
 				text-align: center;
+				text-transform: uppercase;
+				letter-spacing: .15em;
 			}  
-
-			p{
-				margin-bottom: 2rem;
-			};
 		}
 
 // GRID_____
 		.container {
 			display: grid;
+			place-items: center;
 			grid-template-columns: repeat(6, 1fr );
 			grid-template-areas:
 
@@ -52,28 +52,22 @@
 			h1 {
 				font-size: 12.5rem;
 			}
-		
+	
 			h2 {
-				font-size: 3.4rem;
+				font-size: 3.3vw;
 			}  
-
-			p{
-				margin-bottom: 2rem;
-			};
 		}
-
 	}
 
-
-	@media (max-width: $breakpoint-mobile){
+	@media (max-width: $breakpoint-small){
 		.container{
 			grid-gap: 10px;
 			display: block;
-			padding-bottom: 10em;
+			padding-bottom: 0;
 		}
 
 		.hero-content {
-		
+			padding: $section-padding;
 			h1 {
 				font-size: 19vw;
 				margin-bottom: 0;
@@ -83,12 +77,9 @@
 		
 			h2 {
 				margin-top: 0;
-				font-size: 8vw;
-				margin-bottom: 3rem;
+				font-size: 3.3vw;
+				// margin-bottom: 3rem;
 			}  
-			p{
-				margin-bottom: 2rem;
-			};
 		}
 
 	}

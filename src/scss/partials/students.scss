@@ -1,11 +1,47 @@
 #students {
 	padding: $section-padding;
+	position: relative;
+	padding-bottom: 60vh;
+	// background-image: url(../img/forest.svg);
+	// // background-size: cover;
+	// background-size: contain;
+	// background-repeat: no-repeat;
+	// background-position: bottom left;
+	// width: 100%;
+	
+	.forest{
+		width: 100%;
+		height: auto;
+		z-index: -100;
+		position: absolute;
+		bottom:0;
+	}
 
 	.container {
 		display: grid;
 		grid-gap: 50px;
+		// position:relative;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas:
+			". fairy-sit animation animation"
+			"interface interface . .";
+		grid-row-gap: 150px;
 
-// TYPE TOMY EDIT______
+		.fairy-sit {
+			grid-area: fairy-sit;
+			width: 20vw;
+			left: -10vw;
+			bottom: 0;
+			position: absolute;
+		}
+		.animation {
+			grid-area: animation;
+		}
+
+		.interface {
+			grid-area: interface;
+		}
+
 
 		h3{
 			margin-bottom: $color-light-accent; 
@@ -29,7 +65,6 @@
 		.anim-title-button{
 			display: flex;
 			justify-content: space-between;
-
 		}
 
 		button{
@@ -52,14 +87,23 @@
 		}
 	}
 
+
 	@media (min-width: $breakpoint-medium) {
 		.container {
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-areas:
-				". . animation animation"
-				"interface interface . .";
+				". fairy-sit animation animation"
+				"interface interface nessy ."
+				"rock_monster . . mer-skull";
 			grid-row-gap: 150px;
 
+			.fairy-sit {
+				grid-area: fairy-sit;
+				width: 20vw;
+				left: 10vw;
+				bottom: 150em;
+				position: absolute;
+			}
 			.animation {
 				grid-area: animation;
 			}
@@ -67,11 +111,43 @@
 			.interface {
 				grid-area: interface;
 			}
+
+			.nessy {
+				grid-area: nessy;
+				width: 20vw;
+				position: absolute;
+				bottom: 40em;
+				right: 20em;
+			}
+
+			.rock_monster{
+				grid-area: rock_monster;
+				width: 40vw;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+
+			.mer-skull {
+				grid-area: mer-skull;
+				width: 25vw;
+				bottom: 10em;
+				position: absolute;
+				right: 7em;
+			}
 		}
 	}
 
-	@media (max-width: $breakpoint-mobile){
+	@media (max-width: $breakpoint-small){
 		.container{
+			text-align: center;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-areas:
+				"animation animation animation animation"
+				"fairy-sit fairy-sit fairy-sit fairy-sit"
+				"interface interface interface interface";
+			grid-row-gap: 150px;
+
 			.anim-title-button{
 			display: block;
 			color: 3px solid $color-light-accent;
@@ -80,6 +156,20 @@
 			button{
 				margin-top: .5rem;
 			}
+
+			.animation{
+				margin-bottom: 0em; 
+			}
+
+			.fairy-sit {
+				grid-area: fairy-sit;
+				width: 30vw;
+				left: 30%;
+				transform: translateX(-30%);
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
 		}	
 	}
 }
