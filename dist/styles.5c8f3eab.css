@@ -153,6 +153,79 @@ nav .chris_hero {
     font-size: 3vw;
   }
 }
+.fog {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background-size: 400% 100%;
+  animation: fog-animated-gradient-background 12s ease infinite;
+}
+.fog .fog__container {
+  animation: fog-textcolorchange 6s linear infinite;
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+}
+@media (max-width: 768px) {
+  .fog .fog__container .fog__container .clouds {
+    margin-top: 0;
+  }
+}
+.fog .fog__container::before,
+.fog .fog__container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 200vw;
+  z-index: 200;
+}
+.fog .fog__container::before {
+  background: url("/fog-1.38ab1eb1.png") repeat-x;
+  background-size: cover;
+  background-position: center;
+  animation: fog-cloud-marquee 6s linear infinite;
+  opacity: 0;
+}
+.fog .fog__container::after {
+  background: url("/fog-2.ab815c59.png") repeat-x;
+  background-size: cover;
+  background-position: center;
+  animation: fog-cloud-marquee 6s linear 3s infinite;
+  opacity: 0;
+}
+
+@keyframes fog-animated-gradient-background {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@keyframes fog-cloud-marquee {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50vw, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-100vw, 0);
+    opacity: 0;
+  }
+}
 #about {
   position: relative;
 }
@@ -186,7 +259,7 @@ nav .chris_hero {
 #about .container .fairy {
   grid-area: fairy;
   margin: 0 auto;
-  width: 15vw;
+  width: 14vw;
 }
 #about .container .about_title {
   grid-area: about_title;
@@ -283,44 +356,41 @@ nav .chris_hero {
   }
 }
 #students {
-  padding: 15vh 0;
   position: relative;
   padding-bottom: 60vh;
+  background-image: url(/forest_large_back.4aca6a65.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  z-index: -200;
 }
-#students .forest {
+#students .forest-med {
   width: 100%;
   height: auto;
   z-index: -100;
   position: absolute;
   bottom: 0;
+  visibility: visible;
+  border: 4px solid green;
+}
+#students .forest-mobile, #students .forest-large {
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  visibility: hidden;
 }
 #students .container {
   display: grid;
   grid-gap: 50px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: ". . animation animation" "interface interface nessy ." "rock_monster . . mer-skull";
-  grid-row-gap: 150px;
+  grid-template-areas: ". . animation animation" "interface interface . ." "interface interface . .";
+  grid-row-gap: 0px;
 }
-#students .container .nessy {
-  grid-area: nessy;
-  width: 10vw;
-  position: absolute;
-  bottom: 40em;
-  right: 20em;
-}
-#students .container .rock_monster {
-  grid-area: rock_monster;
-  width: 40vw;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-#students .container .mer-skull {
-  grid-area: mer-skull;
-  width: 25vw;
-  bottom: 5em;
-  position: absolute;
-  right: 7em;
+#students .container .fairy-sit, #students .container .nessy, #students .container .mer-skull, #students .container .rock_monster {
+  visibility: hidden;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
 }
 #students .container .animation {
   grid-area: animation;
@@ -364,49 +434,75 @@ nav .chris_hero {
   width: 100%;
   object-fit: cover;
 }
-@media (min-width: 1200px) {
-  #students .container {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: ". . animation animation" "interface interface nessy ." "rock_monster . . mer-skull";
-    grid-row-gap: 150px;
-  }
-  #students .container .animation {
-    grid-area: animation;
-  }
-  #students .container .interface {
-    grid-area: interface;
-  }
-  #students .container .nessy {
-    grid-area: nessy;
-    width: 20vw;
-    position: absolute;
-    bottom: 40em;
-    right: 20em;
-  }
-  #students .container .rock_monster {
-    grid-area: rock_monster;
-    width: 40vw;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
-  #students .container .mer-skull {
-    grid-area: mer-skull;
-    width: 25vw;
-    bottom: 5em;
-    position: absolute;
-    right: 7em;
+
+@media (min-width: 1550px) {
+  #students {
+    padding-bottom: 100vh;
   }
 }
-@media (max-width: 768px) {
-  #students #students {
-    padding: 0;
+@media (min-width: 1200px) {
+  #students {
+    padding-bottom: 80vh;
+    position: relative;
+  }
+  #students .forest-large {
+    width: 100%;
+    height: auto;
+    z-index: -100;
+    position: absolute;
+    bottom: 0;
+    visibility: visible;
+    border: 4px solid red;
+  }
+  #students .forest-med, #students .forest-mobile {
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    visibility: hidden;
+  }
+
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: ". . animation animation" "interface interface . .";
+    grid-row-gap: 50px;
+  }
+  .container .fairy-sit, .container .nessy, .container .mer-skull, .container .rock_monster {
+    visibility: hidden;
+    left: -9999em;
+    top: -9999em;
+    width: 1px;
+  }
+  .container .animation {
+    grid-area: animation;
+  }
+  .container .interface {
+    grid-area: interface;
+  }
+}
+@media (max-width: 1050px) {
+  #students {
+    padding-bottom: 0;
+  }
+  #students .forest-large, #students .forest-med {
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    visibility: hidden;
+  }
+  #students .forest-mobile {
+    width: 100vw;
+    height: auto;
+    z-index: -100;
+    position: absolute;
+    visibility: visible;
+    border: 4px solid yellow;
   }
   #students .container {
     text-align: center;
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
     grid-template-areas: "animation animation animation animation" "fairy-sit fairy-sit fairy-sit fairy-sit" "interface interface interface interface";
-    grid-row-gap: 25px;
+    grid-row-gap: 0px;
   }
   #students .container .anim-title-button {
     display: block;
@@ -418,22 +514,96 @@ nav .chris_hero {
   #students .container .animation {
     margin-bottom: 0em;
   }
+  #students .container .fairy-nessy_container {
+    display: inline-block;
+    margin-top: 3vh;
+  }
+  #students .container .fairy-nessy_container .fairy-sit {
+    visibility: visible;
+    grid-area: fairy-sit;
+    width: 20vw;
+    left: 0;
+    top: 0;
+  }
   #students .container .interface {
     display: block;
   }
-  #students .container .interface .fairy-sit_container .fairy-sit {
-    grid-area: fairy-sit;
+  #students .container .interface .nessy {
+    visibility: visible;
     width: 30vw;
-    margin: 0 auto;
+    margin-left: 10vw;
+    margin-top: 3vh;
+    margin-bottom: 0;
+  }
+  #students .container .interface .rock-mer_container {
+    position: relative;
+    margin-top: 0;
+  }
+  #students .container .interface .rock-mer_container .rock_monster {
+    visibility: visible;
+    width: 40vw;
     top: 0;
+    left: 1vw;
+  }
+  #students .container .interface .rock-mer_container .mer-skull {
+    visibility: visible;
+    width: 35vw;
+    top: 5vh;
+    left: 41vw;
+  }
+}
+#cave .container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: ". thank_you thank_you .";
+  grid-row-gap: 50px;
+}
+#cave .container .thank_you {
+  z-index: 100;
+  grid-area: thank_you;
+}
+#cave .cave_bottom {
+  margin-top: -50vh;
+  z-index: -100%;
+}
+@media (max-width: 968px) {
+  #cave .container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "thank_you thank_you thank_you thank_you";
+    grid-row-gap: 50px;
+  }
+  #cave .container .thank_you {
+    text-align: center;
+    z-index: 100;
+    grid-area: thank_you;
+  }
+  #cave .cave_bottom {
+    padding-top: 50vh;
+    z-index: -100%;
   }
 }
 
-#cave {
-  height: 60vh;
+footer {
   display: grid;
   place-items: center;
-  font-size: 5rem;
+  margin-top: -3em;
+  padding-top: 0;
+  background-color: #131517;
+  padding-bottom: 8em;
+}
+footer .container {
+  margin-top: 3em;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: ". learn_more learn_more .";
+  grid-row-gap: 50px;
+}
+footer .container .learn_more {
+  grid-area: learn_more;
 }
 
 h1, h2, h3, h4, p, .small_text {

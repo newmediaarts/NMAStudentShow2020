@@ -1,6 +1,63 @@
 #cave {
-	height: 60vh;
+
+	.container{
+		display: grid;
+		place-items: center;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas: ". thank_you thank_you .";
+		grid-row-gap: 50px;
+	
+		.thank_you{
+			z-index: 100;
+			grid-area: thank_you;
+		}
+	}
+
+	.cave_bottom{
+		margin-top: -50vh;
+		z-index: -100%;
+	}
+
+	@media (max-width: 968px){
+		.container{
+			display: grid;
+			place-items: center;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-areas: "thank_you thank_you thank_you thank_you";
+			grid-row-gap: 50px;
+		
+			.thank_you{
+				text-align: center;
+				z-index: 100;
+				grid-area: thank_you;
+			}
+		}
+
+		.cave_bottom{
+			padding-top: 50vh;
+			z-index: -100%;
+		}
+	}
+}
+
+footer{
 	display: grid;
 	place-items: center;
-	font-size: 5rem;
+	margin-top: -3em;
+	padding-top: 0;
+	background-color: $color-footer;
+	padding-bottom: 8em;
+
+	.container{
+		margin-top:3em;
+		display: grid;
+			place-items: center;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-areas: ". learn_more learn_more .";
+			grid-row-gap: 50px;
+
+		.learn_more{
+			grid-area: learn_more;
+		}
+	}
 }
