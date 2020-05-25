@@ -1,5 +1,5 @@
 #cave {
-
+position: relative;
 	.container{
 		display: grid;
 		place-items: center;
@@ -10,15 +10,28 @@
 		.thank_you{
 			z-index: 100;
 			grid-area: thank_you;
+
+		p{
+			margin-bottom: 1.5em;
+		}
 		}
 	}
 
-	.cave_bottom{
-		margin-top: -50vh;
+	.cave_bottom_med{
+		margin-top: 0vh;
 		z-index: -100%;
+		margin-top:-30vh;
+		width: 100%;
+		height: auto;
 	}
 
-	@media (max-width: 968px){
+	.cave_bottom_mobile, .cave-bird{
+		left: -9999px;
+		width: 1px;
+		visibility: hidden;
+	}
+
+	@media (max-width: 1050px){
 		.container{
 			display: grid;
 			place-items: center;
@@ -33,9 +46,38 @@
 			}
 		}
 
-		.cave_bottom{
-			padding-top: 50vh;
-			z-index: -100%;
+		.bird_container{
+			// position: relative;
+		.cave-bird{
+			visibility: visible;
+			width: 20vh;
+			// top: 0;
+			left:50%;
+			transform: translateX(-50%);
+			z-index: 200;
+			bottom: 4vh;
+			position: absolute;
+		}
+	}
+		// .cave_mobile{
+		// 	visibility: visible;
+		// 	padding-top: 0vh;
+		// 	margin-top:-10vh;
+			
+			.cave_bottom_mobile{
+				visibility: visible;
+				padding-top: 0vh;
+				margin-top:-10vh;
+				z-index: -100%;
+				width: 100%;
+				height: auto;
+			}	
+		// }
+
+		.cave_bottom_med{
+			left: -9999px;
+			width: 1px;
+			visibility: hidden;
 		}
 	}
 }

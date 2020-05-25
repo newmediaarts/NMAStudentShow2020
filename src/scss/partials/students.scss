@@ -1,6 +1,6 @@
 #students {
 	position: relative;
-	padding-bottom: 60vh;
+	padding-bottom: 55vh;
 	background-image: url(/img/forest_large_back.png);
 	background-repeat: no-repeat;
 	width: 100%;
@@ -18,7 +18,7 @@
 		border: 4px solid green;
 	}
 
-	.forest-mobile, .forest-large{
+	.forest-mobile,	.forest-large{
 		left: -9999px;
 		top:-9999px;
 		width: 1px;
@@ -104,7 +104,7 @@
 
 	@media (min-width: $breakpoint-medium) {
 		#students{
-			padding-bottom: 80vh;
+			padding-bottom: 100vh;
 			position: relative;
 			
 			.forest-large{
@@ -165,9 +165,9 @@
 				width: 100vw;
 				height: auto;
 				z-index: -100;
+				bottom: 0;
 				position: absolute;
-				visibility: visible;
-				border: 4px solid yellow;
+				visibility: visible;	
 			}
 		
 		.container{
@@ -194,9 +194,7 @@
 				margin-bottom: 0em; 
 			}
 
-			.fairy-nessy_container {
-				display: inline-block; 
-				// position: relative;
+			.fairy-container {
 				margin-top: 3vh;
 				.fairy-sit{
 					visibility: visible;
@@ -205,14 +203,6 @@
 					left: 0;
 					top: 0;
 				}
-
-				// .nessy{
-				// 	visibility: visible;
-				// 	grid-area: nessy;
-				// 	width: 30vw;
-				// 	left: 50vw;
-				// 	top: 0;
-				// }
 			}
 
 			.interface{
@@ -247,6 +237,6 @@
 			}
 
 		}
-		}	
-	}
-// }
+	}	
+}
+
