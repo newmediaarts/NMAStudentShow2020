@@ -369,6 +369,12 @@ nav .chris_hero {
   left: 0;
   border: 4px solid green;
 }
+#students .forest-mobile, #students .forest-large {
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  visibility: hidden;
+}
 #students .container {
   display: grid;
   grid-gap: 50px;
@@ -475,7 +481,7 @@ nav .chris_hero {
     visibility: hidden;
   }
   #students .forest-mobile {
-    width: 100vw;
+    width: 100%;
     height: auto;
     z-index: -100;
     bottom: 0;
