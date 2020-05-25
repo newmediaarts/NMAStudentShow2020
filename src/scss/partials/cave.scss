@@ -10,6 +10,7 @@ position: relative;
 		.thank_you{
 			z-index: 100;
 			grid-area: thank_you;
+			margin-top: -35vh;
 
 		p{
 			margin-bottom: 1.5em;
@@ -17,12 +18,46 @@ position: relative;
 		}
 	}
 
-	.cave_bottom_med{
-		margin-top: 0vh;
-		z-index: -100%;
-		margin-top:-30vh;
+	.cave_top{
 		width: 100%;
 		height: auto;
+		top: 0;
+		z-index: 200;
+		// position: absolute
+	}
+	.cave_bottom_med{
+		z-index: -100;
+		margin-top:-35vh;
+		width: 100%;
+		height: auto;
+		bottom: 0;
+	}
+
+	.cave_bottom_mobile, .cave-bird{
+		left: -9999px;
+		width: 1px;
+		visibility: hidden;
+	}
+}
+
+@media (min-width: $breakpoint-large){
+
+	.cave_bottom_mobile, .cave-bird{
+		left: -9999px;
+		width: 1px;
+		visibility: hidden;
+	}
+
+	.thank_you{
+		z-index: 100;
+		margin-top: -50vh;
+		border: 1px solid red;
+	}
+}
+
+@media (min-width: $breakpoint-medium){
+	.cave_bottom_med{
+		padding-top: 0vh;
 	}
 
 	.cave_bottom_mobile, .cave-bird{
@@ -31,38 +66,47 @@ position: relative;
 		visibility: hidden;
 	}
 
-	@media (max-width: 1050px){
-		.container{
-			display: grid;
-			place-items: center;
-			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: "thank_you thank_you thank_you thank_you";
-			grid-row-gap: 50px;
-		
-			.thank_you{
-				text-align: center;
-				z-index: 100;
-				grid-area: thank_you;
-			}
-		}
-
-		.bird_container{
-			// position: relative;
-		.cave-bird{
-			visibility: visible;
-			width: 20vh;
-			// top: 0;
-			left:50%;
-			transform: translateX(-50%);
-			z-index: 200;
-			bottom: 4vh;
-			position: absolute;
-		}
+	.thank_you{
+		z-index: 100;
+		grid-area: thank_you;
+		margin-top: -10vh;
 	}
-		// .cave_mobile{
-		// 	visibility: visible;
-		// 	padding-top: 0vh;
-		// 	margin-top:-10vh;
+}
+
+	@media (max-width: 1050px){
+		#cave{
+			.container{
+				display: grid;
+				place-items: center;
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-areas: 
+				"fuzzy fuzzy fuzzy fuzzy"
+				"thank_you thank_you thank_you thank_you";
+				grid-row-gap: 50px;
+			
+				.fuzzy{
+					grid-area: fuzzy;
+					z-index: 100;
+				}
+
+				.thank_you{
+					text-align: center;
+					z-index: 100;
+					grid-area: thank_you;
+				}
+			}
+
+			.bird_container{
+				.cave-bird{
+					visibility: visible;
+					width: 20vh;
+					left:50%;
+					transform: translateX(-50%);
+					z-index: 200;
+					bottom: 4vh;
+					position: absolute;
+				}
+			}
 			
 			.cave_bottom_mobile{
 				visibility: visible;
@@ -72,15 +116,15 @@ position: relative;
 				width: 100%;
 				height: auto;
 			}	
-		// }
-
-		.cave_bottom_med{
-			left: -9999px;
-			width: 1px;
-			visibility: hidden;
+	
+			.cave_bottom_med{
+				left: -9999px;
+				width: 1px;
+				visibility: hidden;
+			}
 		}
 	}
-}
+
 
 footer{
 	display: grid;

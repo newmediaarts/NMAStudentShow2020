@@ -375,7 +375,6 @@ nav .chris_hero {
 }
 #students .forest-mobile, #students .forest-large {
   left: -9999px;
-  top: -9999px;
   width: 1px;
   visibility: hidden;
 }
@@ -456,7 +455,6 @@ nav .chris_hero {
   }
   #students .forest-med, #students .forest-mobile {
     left: -9999px;
-    top: -9999px;
     width: 1px;
     visibility: hidden;
   }
@@ -564,29 +562,71 @@ nav .chris_hero {
 #cave .container .thank_you {
   z-index: 100;
   grid-area: thank_you;
+  margin-top: -35vh;
 }
 #cave .container .thank_you p {
   margin-bottom: 1.5em;
 }
-#cave .cave_bottom_med {
-  margin-top: 0vh;
-  z-index: -100%;
-  margin-top: -30vh;
+#cave .cave_top {
   width: 100%;
   height: auto;
+  top: 0;
+  z-index: 200;
+}
+#cave .cave_bottom_med {
+  z-index: -100;
+  margin-top: -35vh;
+  width: 100%;
+  height: auto;
+  bottom: 0;
 }
 #cave .cave_bottom_mobile, #cave .cave-bird {
   left: -9999px;
   width: 1px;
   visibility: hidden;
 }
+
+@media (min-width: 1550px) {
+  .cave_bottom_mobile, .cave-bird {
+    left: -9999px;
+    width: 1px;
+    visibility: hidden;
+  }
+
+  .thank_you {
+    z-index: 100;
+    margin-top: -50vh;
+    border: 1px solid red;
+  }
+}
+@media (min-width: 1200px) {
+  .cave_bottom_med {
+    padding-top: 0vh;
+  }
+
+  .cave_bottom_mobile, .cave-bird {
+    left: -9999px;
+    width: 1px;
+    visibility: hidden;
+  }
+
+  .thank_you {
+    z-index: 100;
+    grid-area: thank_you;
+    margin-top: -10vh;
+  }
+}
 @media (max-width: 1050px) {
   #cave .container {
     display: grid;
     place-items: center;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "thank_you thank_you thank_you thank_you";
+    grid-template-areas: "fuzzy fuzzy fuzzy fuzzy" "thank_you thank_you thank_you thank_you";
     grid-row-gap: 50px;
+  }
+  #cave .container .fuzzy {
+    grid-area: fuzzy;
+    z-index: 100;
   }
   #cave .container .thank_you {
     text-align: center;
@@ -616,7 +656,6 @@ nav .chris_hero {
     visibility: hidden;
   }
 }
-
 footer {
   display: grid;
   place-items: center;
