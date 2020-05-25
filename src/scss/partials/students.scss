@@ -19,12 +19,12 @@
 		border: 4px solid green;
 	}
 
-	.forest-mobile, .forest-large{
-		left: -9999px;
-		top:-9999px;
-		width: 1px;
-		visibility: hidden;
-	}
+	// .forest-mobile, .forest-large{
+	// 	left: -9999px;
+	// 	top:-9999px;
+	// 	width: 1px;
+	// 	visibility: hidden;
+	// }
 
 	.container {
 		display: grid;
@@ -118,11 +118,11 @@
 				border: 4px solid red;
 			}
 		
-			.forest-med, .forest-mobile{
-				left: -9999px;
-				width: 1px;
-				visibility: hidden;
-			}
+			// .forest-med, .forest-mobile{
+			// 	left: -9999px;
+			// 	width: 1px;
+			// 	visibility: hidden;
+			// }
 
 		}
 		.container {
