@@ -19,12 +19,12 @@
 		border: 4px solid green;
 	}
 
-	// .forest-mobile, .forest-large{
-	// 	left: -9999px;
-	// 	top:-9999px;
-	// 	width: 1px;
-	// 	visibility: hidden;
-	// }
+	.forest-mobile, .forest-large{
+		left: -9999px;
+		top:-9999px;
+		width: 1px;
+		visibility: hidden;
+	}
 
 	.container {
 		display: grid;
@@ -119,12 +119,11 @@
 				border: 4px solid red;
 			}
 		
-			// .forest-med, .forest-mobile{
-			// 	left: -9999px;
-			// 	width: 1px;
-			// 	visibility: hidden;
-			// }
-
+			.forest-med, .forest-mobile{
+				left: -9999px;
+				width: 1px;
+				visibility: hidden;
+			}
 		}
 		.container {
 			grid-template-columns: repeat(4, 1fr);
@@ -155,12 +154,12 @@
 		#students{
 			padding-bottom: 0;
 
-			// .forest-large, .forest-med{
-			// 	left: -9999px;
-			// 	top:-9999px;
-			// 	width: 1px;
-			// 	visibility: hidden;
-			// }
+			.forest-large, .forest-med{
+				left: -9999px;
+				top:-9999px;
+				width: 1px;
+				visibility: hidden;
+			}
 	
 			.forest-mobile{
 				width: 100%;
