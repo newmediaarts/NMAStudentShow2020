@@ -114,6 +114,7 @@
 				z-index: -100;
 				position: absolute;
 				bottom:0;
+				left: 0;
 				visibility: visible;
 				border: 4px solid red;
 			}
@@ -167,7 +168,8 @@
 				z-index: -100;
 				bottom: 0;
 				position: absolute;
-				visibility: visible;	
+				visibility: visible;
+				left: 0;	
 			}
 		
 		.container{

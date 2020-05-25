@@ -117,13 +117,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"img/background.jpg":[function(require,module,exports) {
-module.exports = "/background.004d778f.jpg";
-},{}],"img/*.jpg":[function(require,module,exports) {
-module.exports = {
-  "background": require("./background.jpg")
-};
-},{"./background.jpg":"img/background.jpg"}],"js/data/students.js":[function(require,module,exports) {
+})({"img/*.jpg":[function(require,module,exports) {
+module.exports = {};
+},{}],"js/data/students.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -352,7 +348,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52110" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52330" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
