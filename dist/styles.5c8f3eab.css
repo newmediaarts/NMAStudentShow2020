@@ -373,6 +373,10 @@ p {
   letter-spacing: 0.07em;
 }
 
+.upper {
+  text-transform: uppercase;
+}
+
 #quote h4 {
   text-align: center;
 }
