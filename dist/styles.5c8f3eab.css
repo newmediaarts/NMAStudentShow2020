@@ -580,7 +580,7 @@ nav .chris_hero {
   height: auto;
   bottom: 0;
 }
-#cave .cave_bottom_mobile, #cave .cave-bird {
+#cave .cave_bottom_mobile, #cave .cave-bird, #cave .fuzzy {
   left: -9999px;
   width: 1px;
   visibility: hidden;

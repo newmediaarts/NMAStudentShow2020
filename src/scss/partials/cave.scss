@@ -33,7 +33,7 @@ position: relative;
 		bottom: 0;
 	}
 
-	.cave_bottom_mobile, .cave-bird{
+	.cave_bottom_mobile, .cave-bird, .fuzzy{
 		left: -9999px;
 		width: 1px;
 		visibility: hidden;
@@ -87,6 +87,7 @@ position: relative;
 				.fuzzy{
 					grid-area: fuzzy;
 					z-index: 100;
+
 				}
 
 				.thank_you{
