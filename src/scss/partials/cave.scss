@@ -19,6 +19,7 @@ position: relative;
 	}
 
 	.cave_top{
+		margin-top: -.5em;
 		width: 100%;
 		height: auto;
 		top: 0;
@@ -33,7 +34,7 @@ position: relative;
 		bottom: 0;
 	}
 
-	.cave_bottom_mobile, .cave-bird, .fuzzy{
+	.cave_bottom_mobile, .cave-bird, .fuzzy, .lizard{
 		left: -9999px;
 		width: 1px;
 		visibility: hidden;
@@ -42,7 +43,7 @@ position: relative;
 
 @media (min-width: $breakpoint-large){
 
-	.cave_bottom_mobile, .cave-bird{
+	.cave_bottom_mobile, .cave-bird, .fuzzy, .lizard{
 		left: -9999px;
 		width: 1px;
 		visibility: hidden;
@@ -60,7 +61,7 @@ position: relative;
 		padding-top: 0vh;
 	}
 
-	.cave_bottom_mobile, .cave-bird{
+	.cave_bottom_mobile, .cave-bird, .fuzzy, .lizard{
 		left: -9999px;
 		width: 1px;
 		visibility: hidden;
@@ -73,34 +74,38 @@ position: relative;
 	}
 }
 
-	@media (max-width: 1050px){
-		#cave{
-			.container{
-				display: grid;
-				place-items: center;
-				grid-template-columns: repeat(4, 1fr);
-				grid-template-areas: 
-				"fuzzy fuzzy fuzzy fuzzy"
-				"thank_you thank_you thank_you thank_you";
-				grid-row-gap: 50px;
-			
+@media (max-width: 1050px){
+	#cave{
+		.container{
+			display: grid;
+			place-items: center;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-areas: 
+			"thank_you thank_you thank_you thank_you";
+			grid-row-gap: 50px;
+		
+			.thank_you{
+				text-align: center;
+				z-index: 100;
+				grid-area: thank_you;
+				margin-top: -3em;
+
+				h2{
+					font-size:6vw;
+				}
+
 				.fuzzy{
-					grid-area: fuzzy;
+					margin-top: -10vh;
+					margin-bottom: -2em;
 					z-index: 100;
-
-				}
-
-				.thank_you{
-					text-align: center;
-					z-index: 100;
-					grid-area: thank_you;
-				}
-			}
-
-			.bird_container{
-				.cave-bird{
 					visibility: visible;
-					width: 20vh;
+					left:0;
+					width: 25vh;
+				}
+
+				.lizard{
+					visibility: visible;
+					width: 35vh;
 					left:50%;
 					transform: translateX(-50%);
 					z-index: 200;
@@ -108,34 +113,51 @@ position: relative;
 					position: absolute;
 				}
 			}
-			
-			.cave_bottom_mobile{
-				visibility: visible;
-				padding-top: 0vh;
-				margin-top:-10vh;
-				z-index: -100%;
-				width: 100%;
-				height: auto;
-			}	
-	
-			.cave_bottom_med{
-				left: -9999px;
-				width: 1px;
-				visibility: hidden;
-			}
+		}
+		
+		.cave_bottom_mobile{
+			visibility: visible;
+			padding-top: 0vh;
+			margin-top:-10vh;
+			z-index: -100%;
+			width: 100%;
+			height: auto;
+		}	
+
+		.cave_bottom_med{
+			left: -9999px;
+			width: 1px;
+			visibility: hidden;
 		}
 	}
+}
 
+@media (max-width: $breakpoint-small){
+	.thank_you{
+		.fuzzy{
+			visibility: visible;
+			padding-bottom: 2em;
+		}
+
+		img{
+			max-width: 35%;
+		}
+		
+	}
+}
+
+// FOOTER______________
 
 footer{
 	display: grid;
 	place-items: center;
-	margin-top: -3em;
+	margin-top: -5em;
 	padding-top: 0;
 	background-color: $color-footer;
 	padding-bottom: 8em;
 
 	.container{
+		z-index: 100;
 		margin-top:3em;
 		display: grid;
 			place-items: center;
@@ -146,5 +168,49 @@ footer{
 		.learn_more{
 			grid-area: learn_more;
 		}
+
+		button{
+			margin-top: 1em;
+		}
+		.cave-bird{
+		left: -9999px;
+		width: 1px;
+		visibility: hidden;
+	}
+	}
+
+	@media (max-width: 1050px){
+		.container{
+			text-align: center;
+			margin-top: 8em;
+			z-index: 100;
+			display: grid;
+			place-items: center;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-areas: 
+			"learn_more learn_more learn_more learn_more";
+			grid-row-gap: 50px;
+	
+
+		.learn_more{
+			grid-area: learn_more;
+		}
+		.cave-bird{
+			width: 20vw;
+			visibility: visible;
+		}
+
+		.learn_more_button{
+			grid-area: learn_more_button;
+		}
+
+		h2{
+			font-size:6vw;
+		}
+		button{
+			margin-top: 1em;
+			margin-bottom: 2em;
+		}
+	}
 	}
 }

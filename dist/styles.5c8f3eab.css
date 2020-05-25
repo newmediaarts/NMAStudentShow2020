@@ -11,7 +11,7 @@ html {
 body {
   margin: 0;
   background: #020024;
-  background: linear-gradient(180deg, black 16%, #1c4646 77%, #8fd4c2 100%);
+  background: linear-gradient(180deg, black 15%, #1c4646 75%, #8fd4c2 100%);
 }
 body button {
   padding: 1rem;
@@ -168,11 +168,6 @@ nav .chris_hero {
   display: grid;
   place-items: center;
   position: absolute;
-}
-@media (max-width: 768px) {
-  .fog .fog__container .fog__container .clouds {
-    margin-top: 0;
-  }
 }
 .fog .fog__container::before,
 .fog .fog__container::after {
@@ -371,10 +366,12 @@ nav .chris_hero {
   position: absolute;
   bottom: 0;
   visibility: visible;
+  left: 0;
   border: 4px solid green;
 }
 #students .forest-mobile, #students .forest-large {
   left: -9999px;
+  top: -9999px;
   width: 1px;
   visibility: hidden;
 }
@@ -568,6 +565,7 @@ nav .chris_hero {
   margin-bottom: 1.5em;
 }
 #cave .cave_top {
+  margin-top: -0.5em;
   width: 100%;
   height: auto;
   top: 0;
@@ -580,14 +578,14 @@ nav .chris_hero {
   height: auto;
   bottom: 0;
 }
-#cave .cave_bottom_mobile, #cave .cave-bird, #cave .fuzzy {
+#cave .cave_bottom_mobile, #cave .cave-bird, #cave .fuzzy, #cave .lizard {
   left: -9999px;
   width: 1px;
   visibility: hidden;
 }
 
 @media (min-width: 1550px) {
-  .cave_bottom_mobile, .cave-bird {
+  .cave_bottom_mobile, .cave-bird, .fuzzy, .lizard {
     left: -9999px;
     width: 1px;
     visibility: hidden;
@@ -604,7 +602,7 @@ nav .chris_hero {
     padding-top: 0vh;
   }
 
-  .cave_bottom_mobile, .cave-bird {
+  .cave_bottom_mobile, .cave-bird, .fuzzy, .lizard {
     left: -9999px;
     width: 1px;
     visibility: hidden;
@@ -621,21 +619,29 @@ nav .chris_hero {
     display: grid;
     place-items: center;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "fuzzy fuzzy fuzzy fuzzy" "thank_you thank_you thank_you thank_you";
+    grid-template-areas: "thank_you thank_you thank_you thank_you";
     grid-row-gap: 50px;
-  }
-  #cave .container .fuzzy {
-    grid-area: fuzzy;
-    z-index: 100;
   }
   #cave .container .thank_you {
     text-align: center;
     z-index: 100;
     grid-area: thank_you;
+    margin-top: -3em;
   }
-  #cave .bird_container .cave-bird {
+  #cave .container .thank_you h2 {
+    font-size: 6vw;
+  }
+  #cave .container .thank_you .fuzzy {
+    margin-top: -10vh;
+    margin-bottom: -2em;
+    z-index: 100;
     visibility: visible;
-    width: 20vh;
+    left: 0;
+    width: 25vh;
+  }
+  #cave .container .thank_you .lizard {
+    visibility: visible;
+    width: 35vh;
     left: 50%;
     transform: translateX(-50%);
     z-index: 200;
@@ -656,15 +662,25 @@ nav .chris_hero {
     visibility: hidden;
   }
 }
+@media (max-width: 768px) {
+  .thank_you .fuzzy {
+    visibility: visible;
+    padding-bottom: 2em;
+  }
+  .thank_you img {
+    max-width: 35%;
+  }
+}
 footer {
   display: grid;
   place-items: center;
-  margin-top: -3em;
+  margin-top: -5em;
   padding-top: 0;
   background-color: #131517;
   padding-bottom: 8em;
 }
 footer .container {
+  z-index: 100;
   margin-top: 3em;
   display: grid;
   place-items: center;
@@ -674,6 +690,43 @@ footer .container {
 }
 footer .container .learn_more {
   grid-area: learn_more;
+}
+footer .container button {
+  margin-top: 1em;
+}
+footer .container .cave-bird {
+  left: -9999px;
+  width: 1px;
+  visibility: hidden;
+}
+@media (max-width: 1050px) {
+  footer .container {
+    text-align: center;
+    margin-top: 8em;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "learn_more learn_more learn_more learn_more";
+    grid-row-gap: 50px;
+  }
+  footer .container .learn_more {
+    grid-area: learn_more;
+  }
+  footer .container .cave-bird {
+    width: 20vw;
+    visibility: visible;
+  }
+  footer .container .learn_more_button {
+    grid-area: learn_more_button;
+  }
+  footer .container h2 {
+    font-size: 6vw;
+  }
+  footer .container button {
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
 }
 
 h1, h2, h3, h4, p, .small_text {
