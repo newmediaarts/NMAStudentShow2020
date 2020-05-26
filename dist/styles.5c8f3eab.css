@@ -223,6 +223,7 @@ nav .chris_hero {
 }
 #about {
   position: relative;
+  padding-top: 10vh;
 }
 #about .clouds {
   position: absolute;
@@ -297,6 +298,9 @@ nav .chris_hero {
 }
 
 @media (max-width: 768px) {
+  #about {
+    padding-top: 0;
+  }
   #about .clouds {
     opacity: 0.7;
   }
@@ -453,25 +457,25 @@ nav .chris_hero {
   }
   #students .forest-med, #students .forest-mobile {
     left: -9999px;
+    top: -9999px;
     width: 1px;
     visibility: hidden;
   }
-
-  .container {
+  #students .container {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: ". . animation animation" "interface interface . .";
     grid-row-gap: 50px;
   }
-  .container .fairy-sit, .container .nessy, .container .mer-skull, .container .rock_monster {
+  #students .container .fairy-sit, #students .container .nessy, #students .container .mer-skull, #students .container .rock_monster {
     visibility: hidden;
     left: -9999em;
     top: -9999em;
     width: 1px;
   }
-  .container .animation {
+  #students .container .animation {
     grid-area: animation;
   }
-  .container .interface {
+  #students .container .interface {
     grid-area: interface;
   }
 }
@@ -534,6 +538,7 @@ nav .chris_hero {
   #students .container .interface .rock-mer_container {
     position: relative;
     margin-top: 0;
+    margin-bottom: 1em;
   }
   #students .container .interface .rock-mer_container .rock_monster {
     visibility: visible;
@@ -596,7 +601,6 @@ nav .chris_hero {
   .thank_you {
     z-index: 100;
     margin-top: -50vh;
-    border: 1px solid red;
   }
 }
 @media (min-width: 1200px) {
@@ -632,6 +636,9 @@ nav .chris_hero {
   }
   #cave .container .thank_you h2 {
     font-size: 6vw;
+  }
+  #cave .container .thank_you p {
+    text-align: center;
   }
   #cave .container .thank_you .fuzzy {
     margin-top: -10vh;

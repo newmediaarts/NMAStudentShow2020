@@ -52,7 +52,6 @@ position: relative;
 	.thank_you{
 		z-index: 100;
 		margin-top: -50vh;
-		border: 1px solid red;
 	}
 }
 
@@ -92,6 +91,10 @@ position: relative;
 
 				h2{
 					font-size:6vw;
+				}
+
+				p{
+					text-align: center;
 				}
 
 				.fuzzy{

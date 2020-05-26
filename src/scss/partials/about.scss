@@ -1,6 +1,6 @@
 #about {
 position: relative;
-// padding-top: 30vh;
+padding-top: 10vh;
 	
 	.clouds{
 		position: absolute;
@@ -94,7 +94,7 @@ position: relative;
 }
 	@media (max-width: $breakpoint-small){
 		#about{
-	
+	padding-top: 0;
 		.clouds{
 			opacity: .7;
 		}
