@@ -2,14 +2,6 @@
 padding-top: 30vh;
 position: relative;
 
-.clouds{
-	position: absolute;
-	width: 100%;
-	height: auto;
-	top: -5vh;
-	z-index: -100;
-	opacity: .75;
-}
 		.hero-content {
 
 			h1 {
@@ -93,7 +85,6 @@ position: relative;
 			h2 {
 				margin-top: 0;
 				font-size: 3vw;
-				// margin-bottom: 3rem;
 			}  
 		}
 
@@ -121,16 +112,6 @@ position: relative;
       display: grid;
 	  place-items: center;
 	  position: absolute;
-  
-	  .clouds{
-		position: absolute;
-		width: 100%;
-		height: auto;
-		top: 100vh;
-		z-index: -100;
-		opacity: .75;
-	}
-
     }
   
     .fog__container::before,

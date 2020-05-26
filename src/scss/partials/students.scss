@@ -1,6 +1,6 @@
 #students {
 	position: relative;
-	padding-bottom: 55vh;
+	padding-bottom: 60vh;
 	background-image: url(/img/forest_large_back.png);
 	background-repeat: no-repeat;
 	width: 100%;
@@ -33,10 +33,7 @@
 		grid-row-gap: 0px;
 
 		.fairy-sit, .nessy, .mer-skull,.rock_monster{
-			visibility: hidden;
-			left: -9999px;
-			top:-9999px;
-			width: 1px;
+		display: none;
 		}
 
 		.animation {
@@ -99,7 +96,7 @@
 	}
 }
 
-@media (min-width: $breakpoint-medium) {
+@media (min-width: 1300px) {
 	#students{
 		padding-bottom: 100vh;
 		position: relative;
@@ -128,10 +125,7 @@
 
 
 			.fairy-sit, .nessy, .mer-skull, .rock_monster{
-				visibility: hidden;
-				left: -9999em;
-				top: -9999em;
-				width: 1px;
+			display: none;
 			}
 
 			.animation {
@@ -161,7 +155,7 @@
 			position: absolute;
 			visibility: visible;
 			left: 0;	
-			display: block;
+			display: inline-block;
 		}
 
 		.container{
@@ -189,49 +183,42 @@
 			}
 
 			.fairy-container {
+			
 				margin-top: 3vh;
 
 				.fairy-sit{
-					visibility: visible;
+					display: inline-block;
 					grid-area: fairy-sit;
 					width: 20vw;
-					left: 0;
-					top: 0;
 				}
 			}
 
 			.interface{
-				display: block;
 
 				.nessy{
-					visibility: visible;
 					width: 30vw;
 					margin-left: 10vw;
 					margin-top: 3vh;
 					margin-bottom: 0;
+					display: inline-block;
 				}
 
 				.rock-mer_container{
-					position: relative;
 					margin-top: 0;
-					margin-bottom: 1em;
+					margin-bottom: 0;
+					margin-left: -2em;
 
 					.rock_monster{
-						visibility: visible;
 						width: 40vw;
-						top: 0;
-						left: 1vw;	
+						display:inline-block;	
 					}
 
 					.mer-skull{
-						visibility: visible;
 						width: 35vw;
-						top:5vh;
-						left: 41vw;
+						display: inline-block;
 					}
 				}
 			}
 		}
 	}	
 }
-

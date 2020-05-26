@@ -12,9 +12,9 @@ position: relative;
 			grid-area: thank_you;
 			margin-top: -35vh;
 
-		p{
-			margin-bottom: 1.5em;
-		}
+			p{
+				margin-bottom: 1.5em;
+			}
 		}
 	}
 
@@ -24,7 +24,6 @@ position: relative;
 		height: auto;
 		top: 0;
 		z-index: 200;
-		// position: absolute
 	}
 	.cave_bottom_med{
 		z-index: -100;
@@ -35,18 +34,14 @@ position: relative;
 	}
 
 	.cave_bottom_mobile, .cave-bird, .fuzzy, .lizard{
-		left: -9999px;
-		width: 1px;
-		visibility: hidden;
+		display: none;
 	}
 }
 
 @media (min-width: $breakpoint-large){
 
 	.cave_bottom_mobile, .cave-bird, .fuzzy, .lizard{
-		left: -9999px;
-		width: 1px;
-		visibility: hidden;
+		display: none;
 	}
 
 	.thank_you{
@@ -61,9 +56,7 @@ position: relative;
 	}
 
 	.cave_bottom_mobile, .cave-bird, .fuzzy, .lizard{
-		left: -9999px;
-		width: 1px;
-		visibility: hidden;
+		display: none;
 	}
 
 	.thank_you{
@@ -101,13 +94,13 @@ position: relative;
 					margin-top: -10vh;
 					margin-bottom: -2em;
 					z-index: 100;
-					visibility: visible;
+					display: inline-block;
 					left:0;
 					width: 25vh;
 				}
 
 				.lizard{
-					visibility: visible;
+					display: inline-block;
 					width: 35vh;
 					left:50%;
 					transform: translateX(-50%);
@@ -119,7 +112,7 @@ position: relative;
 		}
 		
 		.cave_bottom_mobile{
-			visibility: visible;
+			display: inline-block;
 			padding-top: 0vh;
 			margin-top:-10vh;
 			z-index: -100%;
@@ -128,9 +121,7 @@ position: relative;
 		}	
 
 		.cave_bottom_med{
-			left: -9999px;
-			width: 1px;
-			visibility: hidden;
+			display: none;
 		}
 	}
 }
@@ -176,9 +167,7 @@ footer{
 			margin-top: 1em;
 		}
 		.cave-bird{
-		left: -9999px;
-		width: 1px;
-		visibility: hidden;
+		display: none;
 	}
 	}
 
@@ -200,7 +189,7 @@ footer{
 		}
 		.cave-bird{
 			width: 20vw;
-			visibility: visible;
+			display: inline-block;
 		}
 
 		.learn_more_button{

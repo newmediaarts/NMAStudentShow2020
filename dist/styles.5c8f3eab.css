@@ -60,7 +60,7 @@ nav {
   position: fixed;
   bottom: 1em;
   right: 0;
-  z-index: 100;
+  z-index: 200;
 }
 nav button {
   padding: 1rem;
@@ -74,14 +74,6 @@ nav button {
 #hero {
   padding-top: 30vh;
   position: relative;
-}
-#hero .clouds {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  top: -5vh;
-  z-index: -100;
-  opacity: 0.75;
 }
 #hero .hero-content h1 {
   font-size: 12.5vw;
@@ -165,14 +157,6 @@ nav button {
   display: grid;
   place-items: center;
   position: absolute;
-}
-.fog .fog__container .clouds {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  top: 100vh;
-  z-index: -100;
-  opacity: 0.75;
 }
 .fog .fog__container::before,
 .fog .fog__container::after {
@@ -313,7 +297,7 @@ nav button {
     text-align: center;
   }
   #about .container .fairy {
-    width: 30vw;
+    width: 20vw;
     padding-bottom: 2em;
   }
   #about .container .about_title {
@@ -348,9 +332,6 @@ nav button {
   #about .container .anim_event {
     margin-top: 3rem;
   }
-  #about .container .animation {
-    display: block;
-  }
   #about .container .tickets, #about .container .rsvp {
     margin-top: 1em;
     margin-bottom: 2em;
@@ -358,7 +339,7 @@ nav button {
 }
 #students {
   position: relative;
-  padding-bottom: 55vh;
+  padding-bottom: 60vh;
   background-image: url(/forest_large_back.4aca6a65.png);
   background-repeat: no-repeat;
   width: 100%;
@@ -386,10 +367,7 @@ nav button {
   grid-row-gap: 0px;
 }
 #students .container .fairy-sit, #students .container .nessy, #students .container .mer-skull, #students .container .rock_monster {
-  visibility: hidden;
-  left: -9999px;
-  top: -9999px;
-  width: 1px;
+  display: none;
 }
 #students .container .animation {
   grid-area: animation;
@@ -439,7 +417,7 @@ nav button {
     padding-bottom: 100vh;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   #students {
     padding-bottom: 100vh;
     position: relative;
@@ -463,10 +441,7 @@ nav button {
     grid-row-gap: 50px;
   }
   #students .container .fairy-sit, #students .container .nessy, #students .container .mer-skull, #students .container .rock_monster {
-    visibility: hidden;
-    left: -9999em;
-    top: -9999em;
-    width: 1px;
+    display: none;
   }
   #students .container .animation {
     grid-area: animation;
@@ -490,7 +465,7 @@ nav button {
     position: absolute;
     visibility: visible;
     left: 0;
-    display: block;
+    display: inline-block;
   }
   #students .container {
     text-align: center;
@@ -513,38 +488,29 @@ nav button {
     margin-top: 3vh;
   }
   #students .container .fairy-container .fairy-sit {
-    visibility: visible;
+    display: inline-block;
     grid-area: fairy-sit;
     width: 20vw;
-    left: 0;
-    top: 0;
-  }
-  #students .container .interface {
-    display: block;
   }
   #students .container .interface .nessy {
-    visibility: visible;
     width: 30vw;
     margin-left: 10vw;
     margin-top: 3vh;
     margin-bottom: 0;
+    display: inline-block;
   }
   #students .container .interface .rock-mer_container {
-    position: relative;
     margin-top: 0;
-    margin-bottom: 1em;
+    margin-bottom: 0;
+    margin-left: -2em;
   }
   #students .container .interface .rock-mer_container .rock_monster {
-    visibility: visible;
     width: 40vw;
-    top: 0;
-    left: 1vw;
+    display: inline-block;
   }
   #students .container .interface .rock-mer_container .mer-skull {
-    visibility: visible;
     width: 35vw;
-    top: 5vh;
-    left: 41vw;
+    display: inline-block;
   }
 }
 #cave {
@@ -580,16 +546,12 @@ nav button {
   bottom: 0;
 }
 #cave .cave_bottom_mobile, #cave .cave-bird, #cave .fuzzy, #cave .lizard {
-  left: -9999px;
-  width: 1px;
-  visibility: hidden;
+  display: none;
 }
 
 @media (min-width: 1550px) {
   .cave_bottom_mobile, .cave-bird, .fuzzy, .lizard {
-    left: -9999px;
-    width: 1px;
-    visibility: hidden;
+    display: none;
   }
 
   .thank_you {
@@ -603,9 +565,7 @@ nav button {
   }
 
   .cave_bottom_mobile, .cave-bird, .fuzzy, .lizard {
-    left: -9999px;
-    width: 1px;
-    visibility: hidden;
+    display: none;
   }
 
   .thank_you {
@@ -638,12 +598,12 @@ nav button {
     margin-top: -10vh;
     margin-bottom: -2em;
     z-index: 100;
-    visibility: visible;
+    display: inline-block;
     left: 0;
     width: 25vh;
   }
   #cave .container .thank_you .lizard {
-    visibility: visible;
+    display: inline-block;
     width: 35vh;
     left: 50%;
     transform: translateX(-50%);
@@ -652,7 +612,7 @@ nav button {
     position: absolute;
   }
   #cave .cave_bottom_mobile {
-    visibility: visible;
+    display: inline-block;
     padding-top: 0vh;
     margin-top: -10vh;
     z-index: -100%;
@@ -660,9 +620,7 @@ nav button {
     height: auto;
   }
   #cave .cave_bottom_med {
-    left: -9999px;
-    width: 1px;
-    visibility: hidden;
+    display: none;
   }
 }
 @media (max-width: 768px) {
@@ -698,9 +656,7 @@ footer .container button {
   margin-top: 1em;
 }
 footer .container .cave-bird {
-  left: -9999px;
-  width: 1px;
-  visibility: hidden;
+  display: none;
 }
 @media (max-width: 1050px) {
   footer .container {
@@ -718,7 +674,7 @@ footer .container .cave-bird {
   }
   footer .container .cave-bird {
     width: 20vw;
-    visibility: visible;
+    display: inline-block;
   }
   footer .container .learn_more_button {
     grid-area: learn_more_button;
