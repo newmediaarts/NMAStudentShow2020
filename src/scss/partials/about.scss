@@ -75,7 +75,7 @@ padding-top: 10vh;
 	.event_about {
 		grid-area: event_about;
 	}
-	.details {
+	#details {
 		grid-area: details;
 		margin-top: 1rem;
 		margin-bottom: -2em;
@@ -132,7 +132,7 @@ padding-top: 10vh;
 				}
 			}
 			
-			.details{
+			#details{
 				margin-top: 3rem;
 				margin-bottom: 1.5rem;
 			}
