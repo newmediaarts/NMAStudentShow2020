@@ -185,6 +185,17 @@ nav button {
   opacity: 0;
 }
 
+.fog::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40vh;
+  border: 1px solid red;
+  background-image: linear-gradient(0deg), rbga(0, 0, 0, 1), rgba(0, 0, 0, 0);
+  z-index: 300;
+}
+
 @keyframes fog-animated-gradient-background {
   0% {
     background-position: 0% 0%;
