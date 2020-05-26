@@ -58,20 +58,17 @@ p {
 
 nav {
   position: fixed;
-  top: 10vh;
+  bottom: 1em;
   right: 0;
+  z-index: 100;
 }
 nav button {
-  padding: 3rem;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   border: none;
-  background: yellow;
-  color: black;
-}
-nav .chris_hero {
-  top: 20vh;
-  padding: 3rem;
-  border: none;
-  background: red;
+  background: #8fd4c2;
+  color: white;
 }
 
 #hero {
@@ -169,6 +166,14 @@ nav .chris_hero {
   place-items: center;
   position: absolute;
 }
+.fog .fog__container .clouds {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 100vh;
+  z-index: -100;
+  opacity: 0.75;
+}
 .fog .fog__container::before,
 .fog .fog__container::after {
   content: "";
@@ -229,9 +234,9 @@ nav .chris_hero {
   position: absolute;
   width: 100%;
   height: auto;
-  top: 0;
+  top: -20em;
   z-index: -100;
-  opacity: 0.75;
+  opacity: 0.85;
 }
 #about .container {
   display: grid;
@@ -241,11 +246,8 @@ nav .chris_hero {
   margin-top: 0;
   line-height: 1.1;
 }
-#about .tickets {
-  width: 13.6rem;
-}
-#about .rsvp {
-  width: 9.4rem;
+#about .tickets, #about .rsvp {
+  text-align: center;
 }
 #about .container {
   display: grid;

@@ -6,9 +6,10 @@ padding-top: 10vh;
 		position: absolute;
 		width: 100%;
 		height: auto;
-		top: 0;
+		top: -20em;
+		
 		z-index: -100;
-		opacity: .75;
+		opacity: .85;
 	}
 
 	.container {
@@ -22,12 +23,13 @@ padding-top: 10vh;
 	line-height: 1.1;
 }
 // BUTTON WIDTH 
-	.tickets{
-		width: 13.6rem;
+	.tickets, .rsvp{
+		text-align: center;
+		// width: 13.6rem;
 	}
 
 	.rsvp{
-		width: 9.4rem;
+		// width: 9.4rem;
 	}
 
 
