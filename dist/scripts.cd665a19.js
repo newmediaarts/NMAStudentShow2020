@@ -205,10 +205,10 @@ module.exports = "/schyler1.cfb55cc4.jpg";
 module.exports = "/schyler2.45a69203.jpg";
 },{}],"img/tina1.jpg":[function(require,module,exports) {
 module.exports = "/tina1.7dc91b27.jpg";
-},{}],"img/title.jpg":[function(require,module,exports) {
-module.exports = "/title.e995355d.jpg";
 },{}],"img/tina2.jpg":[function(require,module,exports) {
 module.exports = "/tina2.819330d2.jpg";
+},{}],"img/title.jpg":[function(require,module,exports) {
+module.exports = "/title.e995355d.jpg";
 },{}],"img/tomy1.jpg":[function(require,module,exports) {
 module.exports = "/tomy1.59748479.jpg";
 },{}],"img/tomy2.jpg":[function(require,module,exports) {
@@ -263,14 +263,14 @@ module.exports = {
   "schyler1": require("./schyler1.jpg"),
   "schyler2": require("./schyler2.jpg"),
   "tina1": require("./tina1.jpg"),
-  "title": require("./title.jpg"),
   "tina2": require("./tina2.jpg"),
+  "title": require("./title.jpg"),
   "tomy1": require("./tomy1.jpg"),
   "tomy2": require("./tomy2.jpg"),
   "vivien1": require("./vivien1.jpg"),
   "vivien2": require("./vivien2.jpg")
 };
-},{"./andruw1.jpg":"img/andruw1.jpg","./andruw2.jpg":"img/andruw2.jpg","./annika1.jpg":"img/annika1.jpg","./annika2.jpg":"img/annika2.jpg","./ariana1.jpg":"img/ariana1.jpg","./ariana2.jpg":"img/ariana2.jpg","./background.jpg":"img/background.jpg","./blue_fairy.jpg":"img/blue_fairy.jpg","./calvin1.jpg":"img/calvin1.jpg","./calvin2.jpg":"img/calvin2.jpg","./christi1.jpg":"img/christi1.jpg","./christi2.jpg":"img/christi2.jpg","./christy1.jpg":"img/christy1.jpg","./christy2.jpg":"img/christy2.jpg","./emily1.jpg":"img/emily1.jpg","./emily2.jpg":"img/emily2.jpg","./eryn1.jpg":"img/eryn1.jpg","./eryn2.jpg":"img/eryn2.jpg","./evan1.jpg":"img/evan1.jpg","./evan2.jpg":"img/evan2.jpg","./fog-1.jpg":"img/fog-1.jpg","./fog-2.jpg":"img/fog-2.jpg","./forest.jpg":"img/forest.jpg","./fuzzy_monster.jpg":"img/fuzzy_monster.jpg","./hannah1.jpg":"img/hannah1.jpg","./hannah2.jpg":"img/hannah2.jpg","./joanna1.jpg":"img/joanna1.jpg","./joanna2.jpg":"img/joanna2.jpg","./joshua1.jpg":"img/joshua1.jpg","./joshua2.jpg":"img/joshua2.jpg","./koreena1.jpg":"img/koreena1.jpg","./koreena2.jpg":"img/koreena2.jpg","./kyle1.jpg":"img/kyle1.jpg","./kyle2.jpg":"img/kyle2.jpg","./miyuki1.jpg":"img/miyuki1.jpg","./miyuki2.jpg":"img/miyuki2.jpg","./nao1.jpg":"img/nao1.jpg","./nao2.jpg":"img/nao2.jpg","./nessy.jpg":"img/nessy.jpg","./raleigh1.jpg":"img/raleigh1.jpg","./raleigh2.jpg":"img/raleigh2.jpg","./schyler1.jpg":"img/schyler1.jpg","./schyler2.jpg":"img/schyler2.jpg","./tina1.jpg":"img/tina1.jpg","./title.jpg":"img/title.jpg","./tina2.jpg":"img/tina2.jpg","./tomy1.jpg":"img/tomy1.jpg","./tomy2.jpg":"img/tomy2.jpg","./vivien1.jpg":"img/vivien1.jpg","./vivien2.jpg":"img/vivien2.jpg"}],"js/data/students.js":[function(require,module,exports) {
+},{"./andruw1.jpg":"img/andruw1.jpg","./andruw2.jpg":"img/andruw2.jpg","./annika1.jpg":"img/annika1.jpg","./annika2.jpg":"img/annika2.jpg","./ariana1.jpg":"img/ariana1.jpg","./ariana2.jpg":"img/ariana2.jpg","./background.jpg":"img/background.jpg","./blue_fairy.jpg":"img/blue_fairy.jpg","./calvin1.jpg":"img/calvin1.jpg","./calvin2.jpg":"img/calvin2.jpg","./christi1.jpg":"img/christi1.jpg","./christi2.jpg":"img/christi2.jpg","./christy1.jpg":"img/christy1.jpg","./christy2.jpg":"img/christy2.jpg","./emily1.jpg":"img/emily1.jpg","./emily2.jpg":"img/emily2.jpg","./eryn1.jpg":"img/eryn1.jpg","./eryn2.jpg":"img/eryn2.jpg","./evan1.jpg":"img/evan1.jpg","./evan2.jpg":"img/evan2.jpg","./fog-1.jpg":"img/fog-1.jpg","./fog-2.jpg":"img/fog-2.jpg","./forest.jpg":"img/forest.jpg","./fuzzy_monster.jpg":"img/fuzzy_monster.jpg","./hannah1.jpg":"img/hannah1.jpg","./hannah2.jpg":"img/hannah2.jpg","./joanna1.jpg":"img/joanna1.jpg","./joanna2.jpg":"img/joanna2.jpg","./joshua1.jpg":"img/joshua1.jpg","./joshua2.jpg":"img/joshua2.jpg","./koreena1.jpg":"img/koreena1.jpg","./koreena2.jpg":"img/koreena2.jpg","./kyle1.jpg":"img/kyle1.jpg","./kyle2.jpg":"img/kyle2.jpg","./miyuki1.jpg":"img/miyuki1.jpg","./miyuki2.jpg":"img/miyuki2.jpg","./nao1.jpg":"img/nao1.jpg","./nao2.jpg":"img/nao2.jpg","./nessy.jpg":"img/nessy.jpg","./raleigh1.jpg":"img/raleigh1.jpg","./raleigh2.jpg":"img/raleigh2.jpg","./schyler1.jpg":"img/schyler1.jpg","./schyler2.jpg":"img/schyler2.jpg","./tina1.jpg":"img/tina1.jpg","./tina2.jpg":"img/tina2.jpg","./title.jpg":"img/title.jpg","./tomy1.jpg":"img/tomy1.jpg","./tomy2.jpg":"img/tomy2.jpg","./vivien1.jpg":"img/vivien1.jpg","./vivien2.jpg":"img/vivien2.jpg"}],"js/data/students.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -354,7 +354,7 @@ var animationStudents = [{
 exports.animationStudents = animationStudents;
 var interfaceStudents = [{
   name: 'Ariana Enomoto',
-  website: 'https://aritayeno.com/',
+  website: 'https://aritayeno.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
@@ -364,12 +364,12 @@ var interfaceStudents = [{
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Christi Gonzales',
-  website: 'https://christigonzales.com/',
+  website: 'https://christigonzales.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Eryn Iwanaga',
-  website: 'https://eiwanaga.com/',
+  website: 'https://eiwanaga.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
@@ -501,7 +501,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55507" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61911" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

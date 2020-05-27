@@ -89,7 +89,7 @@ export const animationStudents = [
 export const interfaceStudents = [
     {
         name: 'Ariana Enomoto',
-        website: 'https://aritayeno.com/',
+        website: 'https://aritayeno.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
     },
@@ -101,13 +101,13 @@ export const interfaceStudents = [
     },
     {
         name: 'Christi Gonzales',
-        website: 'https://christigonzales.com/',
+        website: 'https://christigonzales.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
     },
     {
         name: 'Eryn Iwanaga',
-        website: 'https://eiwanaga.com/',
+        website: 'https://eiwanaga.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
     },
