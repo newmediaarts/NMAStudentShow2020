@@ -10,7 +10,7 @@ position: relative;
 		.thank_you{
 			z-index: 100;
 			grid-area: thank_you;
-			margin-top: -35vh;
+			margin-top: -36vh;
 
 			p{
 				margin-bottom: 1.5em;
@@ -82,10 +82,6 @@ position: relative;
 				grid-area: thank_you;
 				margin-top: -3em;
 
-				h2{
-					font-size:6vw;
-				}
-
 				p{
 					text-align: center;
 				}
@@ -140,6 +136,14 @@ position: relative;
 	}
 }
 
+@media (max-width: 400px){
+	.illustrators{
+		text-align: center;
+		max-width: 220px;
+		margin: 0 auto;
+		margin-top: 1em;
+	}
+}
 // FOOTER______________
 
 footer{
@@ -160,6 +164,7 @@ footer{
 			grid-row-gap: 50px;
 
 		.learn_more{
+			margin-top: 3em;
 			grid-area: learn_more;
 		}
 
@@ -196,9 +201,6 @@ footer{
 			grid-area: learn_more_button;
 		}
 
-		h2{
-			font-size:6vw;
-		}
 		button{
 			margin-top: 1em;
 			margin-bottom: 2em;

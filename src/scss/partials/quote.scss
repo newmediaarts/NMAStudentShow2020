@@ -3,57 +3,56 @@ padding-top: 3em;
 padding-bottom: 3em;
 
 // GRID_____
-.container {
-    padding: 2em;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr );
-    grid-template-areas:
-        ". leaf_fairy bystander_quote bystander_quote bystander_quote .";
-
-    .bystander_quote {
-        grid-area: bystander_quote;
+    .container {
+        padding: 2em;
+        display: grid;
         margin-top: 5em;
-    }
+        grid-template-columns: repeat(6, 1fr );
+        grid-template-areas:
+            ". leaf_fairy bystander_quote bystander_quote bystander_quote .";
 
-    .leaf_fairy{
-        grid-area: leaf_fairy;
-        width:18vw;
-       top: 0;
+        .bystander_quote {
+            grid-area: bystander_quote;
+        
+        }
+
+        .leaf_fairy{
+            grid-area: leaf_fairy;
+            width:13vw;
+            margin-right: 3vh;
+            top: 0;
+        }
     }
-}
 	@media (max-width: $breakpoint-small){
         .container {
             margin-top: -5em;
             padding-top: 0;
             padding-bottom:0;
-			display: grid;
+            display: grid;
 			grid-template-columns: repeat(6, 1fr );
             grid-template-areas:
                 "bystander_quote bystander_quote bystander_quote bystander_quote bystander_quote bystander_quote"
                 "leaf_fairy leaf_fairy leaf_fairy leaf_fairy leaf_fairy leaf_fairy"
                ;
 
-.leaf_fairy{
-   margin: 0 auto;
-    margin-top: 1em;
-    width: 30vw;
+            .leaf_fairy{
+            margin: 0 auto;
+                margin-top: 1em;
+                width: 25vw;
+            }
 
-}
-
-                .bystander_quote {
-                   
-                    grid-area: bystander_quote;
-                    text-align: center;
-                }
+            .bystander_quote {       
+                grid-area: bystander_quote;
+                text-align: center;
+            }
     
-        h4{
-            font-size: 1.7rem;
-            // max-width: 12em;
-        
-        }
-        .caption{
-            text-align: center;
+            h4{
+                font-size: 1.7rem;
+            }
+            
+            .caption{
+                text-align: center;
+            }
         }
     }
-}
 }

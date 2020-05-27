@@ -203,47 +203,47 @@ var animationStudents = [{
 exports.animationStudents = animationStudents;
 var interfaceStudents = [{
   name: 'Ariana Enomoto',
-  website: 'https://aritayeno.com/',
+  website: 'aritayeno.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Emily Freeman',
-  website: 'https://eafreeman.com',
+  website: 'eafreeman.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Christi Gonzales',
-  website: 'https://christigonzales.com/',
+  website: 'christigonzales.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Eryn Iwanaga',
-  website: 'https://eiwanaga.com/',
+  website: 'eiwanaga.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Christy Liang',
-  website: 'https://christyzliang.com',
+  website: 'christyzliang.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Koreena Nagai',
-  website: 'https://knagai.com',
+  website: 'knagai.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Miyuki Sekiguchi',
-  website: 'https://miyukingseki.com',
+  website: 'miyukingseki.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Tomy Takemura',
-  website: 'https://tomytak.com',
+  website: 'tomytak.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Joanna Yee',
-  website: 'https://joannamedia.com',
+  website: 'joannamedia.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }];
@@ -262,10 +262,9 @@ var animationParent = document.querySelector('.animation .students-container');
 var interfaceParent = document.querySelector('.interface .students-container');
 var imagesArr = Object.keys(_.default);
 
-function makeStudentElement(_ref, isAnimation) {
+function makeStudentElement(_ref, isAnimation, isID) {
   var name = _ref.name,
       website = _ref.website,
-      room = _ref.room,
       time = _ref.time;
   var firstName = name.split(' ')[0].toLowerCase();
   var initialImage;
@@ -274,7 +273,7 @@ function makeStudentElement(_ref, isAnimation) {
       initialImage = Object.values(_.default)[i];
     }
   });
-  return "<div class=\"student\">\n                    <img class=\"profile\" src=\"".concat(initialImage, "\" />\n                    <h3 class=\"name\">").concat(name, "</h3>\n                    <a href=\"").concat(website, "\"><p>").concat(website, "</p></a>\n                    ").concat(isAnimation ? "<a href=\"google.com\"><p>demo reel</p></a>" : '', "\n                    <p><strong>").concat(room, "</strong></p>\n                    <p><strong>").concat(time, "</strong></p>\n            </div>");
+  return "<div class=\"student\">\n                    <img class=\"profile\" src=\"".concat(initialImage, "\" />\n                    <h3 class=\"name\">").concat(name, "</h3>\n                    <a href=\"").concat(website, "\"><p>").concat(website, "</p></a>\n                    ").concat(isAnimation ? "<a href=\"google.com\"><p>demo reel</p></a>" : '', "\n                    ").concat(isID ? "<a href=\"google.com\"><p>demo reel</p></a>" : '', "\n                    <p><strong>").concat(time, "</strong></p>\n            </div>");
 }
 
 ;
@@ -348,7 +347,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49207" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49848" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
