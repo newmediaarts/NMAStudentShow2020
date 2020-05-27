@@ -117,9 +117,136 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"img/*.jpg":[function(require,module,exports) {
-module.exports = {};
-},{}],"js/data/students.js":[function(require,module,exports) {
+})({"img/andruw1.jpg":[function(require,module,exports) {
+module.exports = "/andruw1.c2a3a55e.jpg";
+},{}],"img/andruw2.jpg":[function(require,module,exports) {
+module.exports = "/andruw2.155de652.jpg";
+},{}],"img/annika1.jpg":[function(require,module,exports) {
+module.exports = "/annika1.279ad81c.jpg";
+},{}],"img/annika2.jpg":[function(require,module,exports) {
+module.exports = "/annika2.4b7c21c5.jpg";
+},{}],"img/ariana1.jpg":[function(require,module,exports) {
+module.exports = "/ariana1.d0ce5f23.jpg";
+},{}],"img/ariana2.jpg":[function(require,module,exports) {
+module.exports = "/ariana2.7421964e.jpg";
+},{}],"img/calvin1.jpg":[function(require,module,exports) {
+module.exports = "/calvin1.5409e81f.jpg";
+},{}],"img/calvin2.jpg":[function(require,module,exports) {
+module.exports = "/calvin2.6bf48703.jpg";
+},{}],"img/christi1.jpg":[function(require,module,exports) {
+module.exports = "/christi1.770513d3.jpg";
+},{}],"img/christi2.jpg":[function(require,module,exports) {
+module.exports = "/christi2.5d1be7d4.jpg";
+},{}],"img/christy1.jpg":[function(require,module,exports) {
+module.exports = "/christy1.ed59810c.jpg";
+},{}],"img/christy2.jpg":[function(require,module,exports) {
+module.exports = "/christy2.40009af1.jpg";
+},{}],"img/emily1.jpg":[function(require,module,exports) {
+module.exports = "/emily1.b51722d6.jpg";
+},{}],"img/emily2.jpg":[function(require,module,exports) {
+module.exports = "/emily2.d23683e2.jpg";
+},{}],"img/eryn1.jpg":[function(require,module,exports) {
+module.exports = "/eryn1.79968624.jpg";
+},{}],"img/eryn2.jpg":[function(require,module,exports) {
+module.exports = "/eryn2.76598ece.jpg";
+},{}],"img/evan1.jpg":[function(require,module,exports) {
+module.exports = "/evan1.75182f7e.jpg";
+},{}],"img/evan2.jpg":[function(require,module,exports) {
+module.exports = "/evan2.dfaed0c5.jpg";
+},{}],"img/hannah1.jpg":[function(require,module,exports) {
+module.exports = "/hannah1.bfad8026.jpg";
+},{}],"img/hannah2.jpg":[function(require,module,exports) {
+module.exports = "/hannah2.65f107af.jpg";
+},{}],"img/joanna1.jpg":[function(require,module,exports) {
+module.exports = "/joanna1.e13669aa.jpg";
+},{}],"img/joanna2.jpg":[function(require,module,exports) {
+module.exports = "/joanna2.bca7a9d1.jpg";
+},{}],"img/joshua1.jpg":[function(require,module,exports) {
+module.exports = "/joshua1.ab704ac0.jpg";
+},{}],"img/joshua2.jpg":[function(require,module,exports) {
+module.exports = "/joshua2.5fa5caf2.jpg";
+},{}],"img/koreena1.jpg":[function(require,module,exports) {
+module.exports = "/koreena1.6726d4ba.jpg";
+},{}],"img/koreena2.jpg":[function(require,module,exports) {
+module.exports = "/koreena2.4c4b7457.jpg";
+},{}],"img/kyle1.jpg":[function(require,module,exports) {
+module.exports = "/kyle1.04150077.jpg";
+},{}],"img/kyle2.jpg":[function(require,module,exports) {
+module.exports = "/kyle2.213a8e4f.jpg";
+},{}],"img/miyuki1.jpg":[function(require,module,exports) {
+module.exports = "/miyuki1.c2f10c76.jpg";
+},{}],"img/miyuki2.jpg":[function(require,module,exports) {
+module.exports = "/miyuki2.4b66b5ba.jpg";
+},{}],"img/nao1.jpg":[function(require,module,exports) {
+module.exports = "/nao1.8cced99d.jpg";
+},{}],"img/nao2.jpg":[function(require,module,exports) {
+module.exports = "/nao2.898e278b.jpg";
+},{}],"img/raleigh1.jpg":[function(require,module,exports) {
+module.exports = "/raleigh1.082c2d7b.jpg";
+},{}],"img/raleigh2.jpg":[function(require,module,exports) {
+module.exports = "/raleigh2.1deedb7b.jpg";
+},{}],"img/schyler1.jpg":[function(require,module,exports) {
+module.exports = "/schyler1.cfb55cc4.jpg";
+},{}],"img/schyler2.jpg":[function(require,module,exports) {
+module.exports = "/schyler2.45a69203.jpg";
+},{}],"img/tina1.jpg":[function(require,module,exports) {
+module.exports = "/tina1.7dc91b27.jpg";
+},{}],"img/tina2.jpg":[function(require,module,exports) {
+module.exports = "/tina2.819330d2.jpg";
+},{}],"img/tomy1.jpg":[function(require,module,exports) {
+module.exports = "/tomy1.59748479.jpg";
+},{}],"img/tomy2.jpg":[function(require,module,exports) {
+module.exports = "/tomy2.ac99e0a6.jpg";
+},{}],"img/vivien1.jpg":[function(require,module,exports) {
+module.exports = "/vivien1.8dc3e286.jpg";
+},{}],"img/vivien2.jpg":[function(require,module,exports) {
+module.exports = "/vivien2.2a052c71.jpg";
+},{}],"img/*.jpg":[function(require,module,exports) {
+module.exports = {
+  "andruw1": require("./andruw1.jpg"),
+  "andruw2": require("./andruw2.jpg"),
+  "annika1": require("./annika1.jpg"),
+  "annika2": require("./annika2.jpg"),
+  "ariana1": require("./ariana1.jpg"),
+  "ariana2": require("./ariana2.jpg"),
+  "calvin1": require("./calvin1.jpg"),
+  "calvin2": require("./calvin2.jpg"),
+  "christi1": require("./christi1.jpg"),
+  "christi2": require("./christi2.jpg"),
+  "christy1": require("./christy1.jpg"),
+  "christy2": require("./christy2.jpg"),
+  "emily1": require("./emily1.jpg"),
+  "emily2": require("./emily2.jpg"),
+  "eryn1": require("./eryn1.jpg"),
+  "eryn2": require("./eryn2.jpg"),
+  "evan1": require("./evan1.jpg"),
+  "evan2": require("./evan2.jpg"),
+  "hannah1": require("./hannah1.jpg"),
+  "hannah2": require("./hannah2.jpg"),
+  "joanna1": require("./joanna1.jpg"),
+  "joanna2": require("./joanna2.jpg"),
+  "joshua1": require("./joshua1.jpg"),
+  "joshua2": require("./joshua2.jpg"),
+  "koreena1": require("./koreena1.jpg"),
+  "koreena2": require("./koreena2.jpg"),
+  "kyle1": require("./kyle1.jpg"),
+  "kyle2": require("./kyle2.jpg"),
+  "miyuki1": require("./miyuki1.jpg"),
+  "miyuki2": require("./miyuki2.jpg"),
+  "nao1": require("./nao1.jpg"),
+  "nao2": require("./nao2.jpg"),
+  "raleigh1": require("./raleigh1.jpg"),
+  "raleigh2": require("./raleigh2.jpg"),
+  "schyler1": require("./schyler1.jpg"),
+  "schyler2": require("./schyler2.jpg"),
+  "tina1": require("./tina1.jpg"),
+  "tina2": require("./tina2.jpg"),
+  "tomy1": require("./tomy1.jpg"),
+  "tomy2": require("./tomy2.jpg"),
+  "vivien1": require("./vivien1.jpg"),
+  "vivien2": require("./vivien2.jpg")
+};
+},{"./andruw1.jpg":"img/andruw1.jpg","./andruw2.jpg":"img/andruw2.jpg","./annika1.jpg":"img/annika1.jpg","./annika2.jpg":"img/annika2.jpg","./ariana1.jpg":"img/ariana1.jpg","./ariana2.jpg":"img/ariana2.jpg","./calvin1.jpg":"img/calvin1.jpg","./calvin2.jpg":"img/calvin2.jpg","./christi1.jpg":"img/christi1.jpg","./christi2.jpg":"img/christi2.jpg","./christy1.jpg":"img/christy1.jpg","./christy2.jpg":"img/christy2.jpg","./emily1.jpg":"img/emily1.jpg","./emily2.jpg":"img/emily2.jpg","./eryn1.jpg":"img/eryn1.jpg","./eryn2.jpg":"img/eryn2.jpg","./evan1.jpg":"img/evan1.jpg","./evan2.jpg":"img/evan2.jpg","./hannah1.jpg":"img/hannah1.jpg","./hannah2.jpg":"img/hannah2.jpg","./joanna1.jpg":"img/joanna1.jpg","./joanna2.jpg":"img/joanna2.jpg","./joshua1.jpg":"img/joshua1.jpg","./joshua2.jpg":"img/joshua2.jpg","./koreena1.jpg":"img/koreena1.jpg","./koreena2.jpg":"img/koreena2.jpg","./kyle1.jpg":"img/kyle1.jpg","./kyle2.jpg":"img/kyle2.jpg","./miyuki1.jpg":"img/miyuki1.jpg","./miyuki2.jpg":"img/miyuki2.jpg","./nao1.jpg":"img/nao1.jpg","./nao2.jpg":"img/nao2.jpg","./raleigh1.jpg":"img/raleigh1.jpg","./raleigh2.jpg":"img/raleigh2.jpg","./schyler1.jpg":"img/schyler1.jpg","./schyler2.jpg":"img/schyler2.jpg","./tina1.jpg":"img/tina1.jpg","./tina2.jpg":"img/tina2.jpg","./tomy1.jpg":"img/tomy1.jpg","./tomy2.jpg":"img/tomy2.jpg","./vivien1.jpg":"img/vivien1.jpg","./vivien2.jpg":"img/vivien2.jpg"}],"js/data/students.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -350,7 +477,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53413" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53759" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
