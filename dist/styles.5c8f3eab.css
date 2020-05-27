@@ -60,7 +60,7 @@ nav {
   position: fixed;
   bottom: 1em;
   right: 0;
-  z-index: 200;
+  z-index: 500;
 }
 nav button {
   padding: 1rem;
@@ -72,8 +72,11 @@ nav button {
 }
 
 #hero {
-  padding-top: 30vh;
   position: relative;
+  height: 100vh;
+}
+#hero .hero-content {
+  padding-top: 30vh;
 }
 #hero .hero-content h1 {
   font-size: 12.5vw;
@@ -143,8 +146,8 @@ nav button {
   }
 }
 .fog {
-  position: relative;
-  min-height: 100vh;
+  position: absolute;
+  height: 100%;
   width: 100%;
   overflow-x: hidden;
   background-size: 400% 100%;
@@ -153,7 +156,7 @@ nav button {
 
 .fog__container {
   animation: fog-textcolorchange 6s linear infinite;
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
   display: grid;
   place-items: center;
@@ -195,7 +198,7 @@ nav button {
   bottom: 0;
   width: 100%;
   height: 40vh;
-  background-image: linear-gradient(0deg), rbga(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0);
+  background-image: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0) 100%);
   z-index: 300;
 }
 
@@ -232,8 +235,8 @@ nav button {
   position: absolute;
   width: 100%;
   height: auto;
-  top: -20em;
-  z-index: -100;
+  top: -25em;
+  z-index: 400;
   opacity: 0.85;
 }
 #about .container {
@@ -243,6 +246,9 @@ nav button {
 #about .id_event h2, #about .anim_event h2 {
   margin-top: 0;
   line-height: 1.1;
+}
+#about .upper {
+  text-transform: uppercase;
 }
 #about .tickets, #about .rsvp {
   text-align: center;
@@ -256,6 +262,7 @@ nav button {
   grid-area: fairy;
   margin: 0 auto;
   width: 14vw;
+  z-index: 500;
 }
 #about .container .about_title {
   grid-area: about_title;

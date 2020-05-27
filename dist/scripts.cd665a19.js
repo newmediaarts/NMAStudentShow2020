@@ -262,9 +262,12 @@ var animationParent = document.querySelector('.animation .students-container');
 var interfaceParent = document.querySelector('.interface .students-container');
 var imagesArr = Object.keys(_.default);
 
-function makeStudentElement(_ref, isAnimation, isID) {
+function makeStudentElement(_ref, isAnimation) {
   var name = _ref.name,
-      website = _ref.website,
+      _ref$website = _ref.website,
+      website = _ref$website === void 0 ? '' : _ref$website,
+      _ref$room = _ref.room,
+      room = _ref$room === void 0 ? '' : _ref$room,
       time = _ref.time;
   var firstName = name.split(' ')[0].toLowerCase();
   var initialImage;
@@ -273,7 +276,7 @@ function makeStudentElement(_ref, isAnimation, isID) {
       initialImage = Object.values(_.default)[i];
     }
   });
-  return "<div class=\"student\">\n                    <img class=\"profile\" src=\"".concat(initialImage, "\" />\n                    <h3 class=\"name\">").concat(name, "</h3>\n                    <a href=\"").concat(website, "\"><p>").concat(website, "</p></a>\n                    ").concat(isAnimation ? "<a href=\"google.com\"><p>demo reel</p></a>" : '', "\n                    ").concat(isID ? "<a href=\"google.com\"><p>demo reel</p></a>" : '', "\n                    <p><strong>").concat(time, "</strong></p>\n            </div>");
+  return "<div class=\"student\">\n                    <img class=\"profile\" src=\"".concat(initialImage, "\" />\n                    <h3 class=\"name\">").concat(name, "</h3>\n                    <a href=\"").concat(website, "\"><p>").concat(website, "</p></a>\n                    ").concat(isAnimation ? "<a href=\"google.com\"><p>demo reel</p></a>" : '', "\n                    ").concat(!isAnimation ? "<p><strong>".concat(room, "</strong></p>") : "", "\n                    ").concat(!isAnimation ? "<p><strong>".concat(time, "</strong></p>") : "", "\n            </div>");
 }
 
 ;
@@ -347,7 +350,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49848" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53413" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

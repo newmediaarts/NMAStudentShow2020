@@ -6,8 +6,8 @@ padding-top: 10vh;
 		position: absolute;
 		width: 100%;
 		height: auto;
-		top: -20em;
-		z-index: -100;
+		top: -25em;
+		z-index: 400;
 		opacity: .85;
 	}
 
@@ -20,6 +20,10 @@ padding-top: 10vh;
 	.id_event h2, .anim_event h2{
 		margin-top: 0;
 		line-height: 1.1;
+	}
+
+	.upper{
+		text-transform: uppercase;
 	}
 // BUTTON WIDTH 
 	.tickets, .rsvp{
@@ -44,6 +48,7 @@ padding-top: 10vh;
 			grid-area: fairy;
 			margin: 0 auto;
 			width: 14vw;
+			z-index: 500;
 		}
 
 		.about_title {
