@@ -7,7 +7,7 @@ const interfaceParent = document.querySelector('.interface .students-container')
 
 const imagesArr = Object.keys(images);
 
-function makeStudentElement({ name, website, room, time }, isAnimation) {
+function makeStudentElement({ name, website = '', room = '', time }, isAnimation) {
     const firstName = name.split(' ')[0].toLowerCase();
     let initialImage;
 
@@ -23,19 +23,16 @@ function makeStudentElement({ name, website, room, time }, isAnimation) {
                     <h3 class="name">${name}</h3>
                     <a href="${website}"><p>${website}</p></a>
                     ${isAnimation ? `<a href="google.com"><p>demo reel</p></a>` : ''}
-                    <p><strong>${room}</strong></p>
-                    <p><strong>${time}</strong></p>
+                    ${!isAnimation ? `<p><strong>${room}</strong></p>` : ""}
+                    ${!isAnimation ? `<p><strong>${time}</strong></p>` : ""}
             </div>`
 };
-
 
 function createStudents(parent, students, isAnimation = false) {
     students.map(student => {
         parent.innerHTML += makeStudentElement(student, isAnimation)
     })
 };
-
-
 
 createStudents(interfaceParent, interfaceStudents);
 createStudents(animationParent, animationStudents, true);
