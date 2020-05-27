@@ -5,15 +5,14 @@
 	background-repeat: no-repeat;
 	width: 100%;
 	background-size: cover;
-	z-index:-200;
+	z-index: -200;
 
 	.forest-med{
 		width: 100%;
 		height: auto;
-		z-index: -100;
+		z-index: -300;
 		position: absolute;
 		bottom:0;
-		visibility: visible;
 		left:0;
 		display: block;
 	}
@@ -22,7 +21,7 @@
 		display: none;
 	}
 
-	.container {
+	.container {	
 		display: grid;
 		grid-gap: 70px;
 		grid-template-columns: repeat(4, 1fr);
@@ -31,6 +30,7 @@
 		"interface interface . ."
 		"interface interface . .";
 		grid-row-gap: 0px;
+		z-index: 500;
 
 		.fairy-sit, .nessy, .mer-skull,.rock_monster{
 		display: none;
@@ -94,6 +94,11 @@
 	}
 }
 
+#students.container{
+z-index: 300;
+
+}
+
 @media (min-width: $breakpoint-large) {
 	#students{
 		padding-bottom: 100vh;
@@ -112,7 +117,6 @@
 			position: absolute;
 			bottom:0;
 			left: 0;
-			visibility: visible;
 			display: block;
 		}
 	
@@ -157,7 +161,6 @@
 			z-index: -100;
 			bottom: 0;
 			position: absolute;
-			visibility: visible;
 			left: 0;	
 			display: inline-block;
 		}

@@ -177,10 +177,10 @@ module.exports = "/kyle2.213a8e4f.jpg";
 module.exports = "/miyuki1.c2f10c76.jpg";
 },{}],"img/miyuki2.jpg":[function(require,module,exports) {
 module.exports = "/miyuki2.4b66b5ba.jpg";
-},{}],"img/nao1.jpg":[function(require,module,exports) {
-module.exports = "/nao1.8cced99d.jpg";
 },{}],"img/nao2.jpg":[function(require,module,exports) {
 module.exports = "/nao2.898e278b.jpg";
+},{}],"img/nao1.jpg":[function(require,module,exports) {
+module.exports = "/nao1.8cced99d.jpg";
 },{}],"img/raleigh1.jpg":[function(require,module,exports) {
 module.exports = "/raleigh1.082c2d7b.jpg";
 },{}],"img/raleigh2.jpg":[function(require,module,exports) {
@@ -233,8 +233,8 @@ module.exports = {
   "kyle2": require("./kyle2.jpg"),
   "miyuki1": require("./miyuki1.jpg"),
   "miyuki2": require("./miyuki2.jpg"),
-  "nao1": require("./nao1.jpg"),
   "nao2": require("./nao2.jpg"),
+  "nao1": require("./nao1.jpg"),
   "raleigh1": require("./raleigh1.jpg"),
   "raleigh2": require("./raleigh2.jpg"),
   "schyler1": require("./schyler1.jpg"),
@@ -246,7 +246,7 @@ module.exports = {
   "vivien1": require("./vivien1.jpg"),
   "vivien2": require("./vivien2.jpg")
 };
-},{"./andruw1.jpg":"img/andruw1.jpg","./andruw2.jpg":"img/andruw2.jpg","./annika1.jpg":"img/annika1.jpg","./annika2.jpg":"img/annika2.jpg","./ariana1.jpg":"img/ariana1.jpg","./ariana2.jpg":"img/ariana2.jpg","./calvin1.jpg":"img/calvin1.jpg","./calvin2.jpg":"img/calvin2.jpg","./christi1.jpg":"img/christi1.jpg","./christi2.jpg":"img/christi2.jpg","./christy1.jpg":"img/christy1.jpg","./christy2.jpg":"img/christy2.jpg","./emily1.jpg":"img/emily1.jpg","./emily2.jpg":"img/emily2.jpg","./eryn1.jpg":"img/eryn1.jpg","./eryn2.jpg":"img/eryn2.jpg","./evan1.jpg":"img/evan1.jpg","./evan2.jpg":"img/evan2.jpg","./hannah1.jpg":"img/hannah1.jpg","./hannah2.jpg":"img/hannah2.jpg","./joanna1.jpg":"img/joanna1.jpg","./joanna2.jpg":"img/joanna2.jpg","./joshua1.jpg":"img/joshua1.jpg","./joshua2.jpg":"img/joshua2.jpg","./koreena1.jpg":"img/koreena1.jpg","./koreena2.jpg":"img/koreena2.jpg","./kyle1.jpg":"img/kyle1.jpg","./kyle2.jpg":"img/kyle2.jpg","./miyuki1.jpg":"img/miyuki1.jpg","./miyuki2.jpg":"img/miyuki2.jpg","./nao1.jpg":"img/nao1.jpg","./nao2.jpg":"img/nao2.jpg","./raleigh1.jpg":"img/raleigh1.jpg","./raleigh2.jpg":"img/raleigh2.jpg","./schyler1.jpg":"img/schyler1.jpg","./schyler2.jpg":"img/schyler2.jpg","./tina1.jpg":"img/tina1.jpg","./tina2.jpg":"img/tina2.jpg","./tomy1.jpg":"img/tomy1.jpg","./tomy2.jpg":"img/tomy2.jpg","./vivien1.jpg":"img/vivien1.jpg","./vivien2.jpg":"img/vivien2.jpg"}],"js/data/students.js":[function(require,module,exports) {
+},{"./andruw1.jpg":"img/andruw1.jpg","./andruw2.jpg":"img/andruw2.jpg","./annika1.jpg":"img/annika1.jpg","./annika2.jpg":"img/annika2.jpg","./ariana1.jpg":"img/ariana1.jpg","./ariana2.jpg":"img/ariana2.jpg","./calvin1.jpg":"img/calvin1.jpg","./calvin2.jpg":"img/calvin2.jpg","./christi1.jpg":"img/christi1.jpg","./christi2.jpg":"img/christi2.jpg","./christy1.jpg":"img/christy1.jpg","./christy2.jpg":"img/christy2.jpg","./emily1.jpg":"img/emily1.jpg","./emily2.jpg":"img/emily2.jpg","./eryn1.jpg":"img/eryn1.jpg","./eryn2.jpg":"img/eryn2.jpg","./evan1.jpg":"img/evan1.jpg","./evan2.jpg":"img/evan2.jpg","./hannah1.jpg":"img/hannah1.jpg","./hannah2.jpg":"img/hannah2.jpg","./joanna1.jpg":"img/joanna1.jpg","./joanna2.jpg":"img/joanna2.jpg","./joshua1.jpg":"img/joshua1.jpg","./joshua2.jpg":"img/joshua2.jpg","./koreena1.jpg":"img/koreena1.jpg","./koreena2.jpg":"img/koreena2.jpg","./kyle1.jpg":"img/kyle1.jpg","./kyle2.jpg":"img/kyle2.jpg","./miyuki1.jpg":"img/miyuki1.jpg","./miyuki2.jpg":"img/miyuki2.jpg","./nao2.jpg":"img/nao2.jpg","./nao1.jpg":"img/nao1.jpg","./raleigh1.jpg":"img/raleigh1.jpg","./raleigh2.jpg":"img/raleigh2.jpg","./schyler1.jpg":"img/schyler1.jpg","./schyler2.jpg":"img/schyler2.jpg","./tina1.jpg":"img/tina1.jpg","./tina2.jpg":"img/tina2.jpg","./tomy1.jpg":"img/tomy1.jpg","./tomy2.jpg":"img/tomy2.jpg","./vivien1.jpg":"img/vivien1.jpg","./vivien2.jpg":"img/vivien2.jpg"}],"js/data/students.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -330,47 +330,47 @@ var animationStudents = [{
 exports.animationStudents = animationStudents;
 var interfaceStudents = [{
   name: 'Ariana Enomoto',
-  website: 'aritayeno.com',
+  website: 'https://aritayeno.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Emily Freeman',
-  website: 'eafreeman.com',
+  website: 'https://eafreeman.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Christi Gonzales',
-  website: 'christigonzales.com',
+  website: 'https://christigonzales.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Eryn Iwanaga',
-  website: 'eiwanaga.com',
+  website: 'https://eiwanaga.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Christy Liang',
-  website: 'christyzliang.com',
+  website: 'https://christyzliang.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Koreena Nagai',
-  website: 'knagai.com',
+  website: 'https://knagai.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Miyuki Sekiguchi',
-  website: 'miyukingseki.com',
+  website: 'https://miyukingseki.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Tomy Takemura',
-  website: 'tomytak.com',
+  website: 'https://tomytak.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Joanna Yee',
-  website: 'joannamedia.com',
+  website: 'https://joannamedia.com',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }];
@@ -477,7 +477,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53759" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59808" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

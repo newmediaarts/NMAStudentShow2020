@@ -89,56 +89,57 @@ export const animationStudents = [
 export const interfaceStudents = [
     {
         name: 'Ariana Enomoto',
-        website: 'aritayeno.com',
+        website: 'https://aritayeno.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
     },
     {
         name: 'Emily Freeman',
-        website: 'eafreeman.com',
+        website: 'https://eafreeman.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
     },
     {
         name: 'Christi Gonzales',
-        website: 'christigonzales.com',
+        website: 'https://christigonzales.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
     },
     {
         name: 'Eryn Iwanaga',
-        website: 'eiwanaga.com',
+        website: 'https://eiwanaga.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
     },
     {
         name: 'Christy Liang',
-        website: 'christyzliang.com',
+        website: 'https://christyzliang.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
     },
     {
         name: 'Koreena Nagai',
-        website: 'knagai.com',
+        website: 'https://knagai.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
     },
     {
         name: 'Miyuki Sekiguchi',
-        website: 'miyukingseki.com',
+        website: 'https://miyukingseki.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
     },
     {
         name: 'Tomy Takemura',
-        website: 'tomytak.com',
+        website: 'https://tomytak.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
     },
     {
         name: 'Joanna Yee',
-        website: 'joannamedia.com',
+        website: 'https://joannamedia.com',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
     }
 ]
+

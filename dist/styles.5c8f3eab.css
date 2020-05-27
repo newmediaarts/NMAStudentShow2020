@@ -369,10 +369,9 @@ nav button {
 #students .forest-med {
   width: 100%;
   height: auto;
-  z-index: -100;
+  z-index: -300;
   position: absolute;
   bottom: 0;
-  visibility: visible;
   left: 0;
   display: block;
 }
@@ -385,6 +384,7 @@ nav button {
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: ". . animation animation" "interface interface . ." "interface interface . .";
   grid-row-gap: 0px;
+  z-index: 500;
 }
 #students .container .fairy-sit, #students .container .nessy, #students .container .mer-skull, #students .container .rock_monster {
   display: none;
@@ -434,6 +434,10 @@ nav button {
   object-fit: cover;
 }
 
+#students.container {
+  z-index: 300;
+}
+
 @media (min-width: 1550px) {
   #students {
     padding-bottom: 100vh;
@@ -451,7 +455,6 @@ nav button {
     position: absolute;
     bottom: 0;
     left: 0;
-    visibility: visible;
     display: block;
   }
   #students .forest-med, #students .forest-mobile {
@@ -485,7 +488,6 @@ nav button {
     z-index: -100;
     bottom: 0;
     position: absolute;
-    visibility: visible;
     left: 0;
     display: inline-block;
   }
