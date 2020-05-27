@@ -370,9 +370,10 @@ nav button {
 #students .forest-med {
   width: 100%;
   height: auto;
-  z-index: -300;
+  z-index: -100;
   position: absolute;
   bottom: 0;
+  visibility: visible;
   left: 0;
   display: block;
 }
@@ -385,7 +386,6 @@ nav button {
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: ". . animation animation" "interface interface . ." "interface interface . .";
   grid-row-gap: 0px;
-  z-index: 500;
 }
 #students .container .fairy-sit, #students .container .nessy, #students .container .mer-skull, #students .container .rock_monster {
   display: none;
@@ -411,7 +411,7 @@ nav button {
   text-align: center;
   font-size: 1rem;
   margin: 0 auto;
-  padding-top: 0.2em;
+  padding-top: 0.5em;
   font-family: "Open Sans", sans-serif;
 }
 #students .container .anim-title-button {
@@ -435,10 +435,6 @@ nav button {
   object-fit: cover;
 }
 
-#students.container {
-  z-index: 300;
-}
-
 @media (min-width: 1550px) {
   #students {
     padding-bottom: 100vh;
@@ -448,6 +444,16 @@ nav button {
   #students {
     padding-bottom: 100vh;
     position: relative;
+  }
+  #students .forest-large {
+    width: 100%;
+    height: auto;
+    z-index: -100;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: visible;
+    display: block;
   }
   #students .forest-med, #students .forest-mobile {
     display: none;
@@ -466,17 +472,6 @@ nav button {
   #students .container .interface {
     grid-area: interface;
   }
-
-  .forest_large_container {
-    z-index: 100;
-  }
-  .forest_large_container .forest-large {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    bottom: 0;
-    display: block;
-  }
 }
 @media (max-width: 1050px) {
   #students {
@@ -491,6 +486,7 @@ nav button {
     z-index: -100;
     bottom: 0;
     position: absolute;
+    visibility: visible;
     left: 0;
     display: inline-block;
   }

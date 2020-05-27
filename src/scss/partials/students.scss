@@ -5,14 +5,15 @@
 	background-repeat: no-repeat;
 	width: 100%;
 	background-size: cover;
-	z-index: -200;
+	z-index:-200;
 
 	.forest-med{
 		width: 100%;
 		height: auto;
-		z-index: -300;
+		z-index: -100;
 		position: absolute;
 		bottom:0;
+		visibility: visible;
 		left:0;
 		display: block;
 	}
@@ -21,7 +22,7 @@
 		display: none;
 	}
 
-	.container {	
+	.container {
 		display: grid;
 		grid-gap: 70px;
 		grid-template-columns: repeat(4, 1fr);
@@ -30,7 +31,6 @@
 		"interface interface . ."
 		"interface interface . .";
 		grid-row-gap: 0px;
-		z-index: 500;
 
 		.fairy-sit, .nessy, .mer-skull,.rock_monster{
 		display: none;
@@ -48,7 +48,7 @@
 			margin-bottom: $color-light-accent; 
 		}
 
-		.name {
+		.name { 
 			font-family: $bodyfont-family;
 			text-transform: none;
 			font-size: 1.5rem;
@@ -61,7 +61,7 @@
 			text-align: center;
 			font-size: 1rem;
 			margin: 0 auto;
-			padding-top: .2em;
+			padding-top: .5em;
 			font-family: $heading-normal-font-family;
 		}
 
@@ -94,11 +94,6 @@
 	}
 }
 
-#students.container{
-z-index: 300;
-
-}
-
 @media (min-width: $breakpoint-large) {
 	#students{
 		padding-bottom: 100vh;
@@ -110,19 +105,17 @@ z-index: 300;
 		padding-bottom: 100vh;
 		position: relative;
 		
-	// 	.forest_large_container{
-	// 		z-index: -100;
-	// 	.forest-large{
-	// 		width: 100%;
-	// 		height: auto;
-			
-	// 		position: absolute;
-	// 		bottom:0;
-	// 		left: 0;
-	// 		display: block;
-	// 	}
-	// }
-
+		.forest-large{
+			width: 100%;
+			height: auto;
+			z-index: -100;
+			position: absolute;
+			bottom:0;
+			left: 0;
+			visibility: visible;
+			display: block;
+		}
+	
 		.forest-med, .forest-mobile{
 			display: none;
 		}
@@ -148,17 +141,6 @@ z-index: 300;
 			}
 		}
 	}
-	.forest_large_container{
-		z-index: 100;
-	.forest-large{
-		width: 100%;
-		height: auto;
-		position: absolute;
-		bottom:0;
-		// left: 0;
-		display: block;
-	}
-}
 }
 
 @media (max-width: 1050px){
@@ -175,6 +157,7 @@ z-index: 300;
 			z-index: -100;
 			bottom: 0;
 			position: absolute;
+			visibility: visible;
 			left: 0;	
 			display: inline-block;
 		}
