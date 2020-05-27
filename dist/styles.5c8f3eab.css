@@ -239,6 +239,12 @@ nav button {
   position: relative;
   z-index: 300;
 }
+#about .thin {
+  font-weight: 100;
+}
+#about .reg {
+  font-weight: 500;
+}
 #about .clouds {
   position: absolute;
   width: 100%;
@@ -771,11 +777,12 @@ h3 {
 
 h4 {
   margin-top: 0;
-  font-size: 2rem;
+  font-size: 1.9rem;
   line-height: 1.4;
   font-weight: 700;
   font-style: italic;
   margin-bottom: 1em;
+  letter-spacing: 0.01em;
 }
 
 .small_text {
