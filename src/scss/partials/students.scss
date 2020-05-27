@@ -1,28 +1,26 @@
 #students {
 	position: relative;
-	padding-bottom: 60vh;
+	padding-bottom: 65vh;
 	background-image: url(/img/forest_large_back.png);
 	background-repeat: no-repeat;
 	width: 100%;
 	background-size: cover;
-	z-index:-200;
 
 	.forest-med{
 		width: 100%;
 		height: auto;
-		z-index: -100;
 		position: absolute;
 		bottom:0;
-		visibility: visible;
 		left:0;
 		display: block;
+		z-index: 10;
 	}
 
-	.forest-mobile, .forest-large{
+	.forest-mobile, .forest-large {
 		display: none;
 	}
 
-	.container {
+	.container {	
 		display: grid;
 		grid-gap: 70px;
 		grid-template-columns: repeat(4, 1fr);
@@ -31,6 +29,8 @@
 		"interface interface . ."
 		"interface interface . .";
 		grid-row-gap: 0px;
+		position: relative;
+		z-index: 500;
 
 		.fairy-sit, .nessy, .mer-skull,.rock_monster{
 		display: none;
@@ -48,7 +48,7 @@
 			margin-bottom: $color-light-accent; 
 		}
 
-		.name { 
+		.name {
 			font-family: $bodyfont-family;
 			text-transform: none;
 			font-size: 1.5rem;
@@ -61,7 +61,7 @@
 			text-align: center;
 			font-size: 1rem;
 			margin: 0 auto;
-			padding-top: .5em;
+			padding-top: .2em;
 			font-family: $heading-normal-font-family;
 		}
 
@@ -108,11 +108,10 @@
 		.forest-large{
 			width: 100%;
 			height: auto;
-			z-index: -100;
+			z-index: 10;
 			position: absolute;
 			bottom:0;
 			left: 0;
-			visibility: visible;
 			display: block;
 		}
 	
@@ -154,10 +153,9 @@
 		.forest-mobile{
 			width: 100%;
 			height: auto;
-			z-index: -100;
+			z-index: 10;
 			bottom: 0;
 			position: absolute;
-			visibility: visible;
 			left: 0;	
 			display: inline-block;
 		}

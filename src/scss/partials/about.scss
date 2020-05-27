@@ -1,14 +1,15 @@
 #about {
 position: relative;
-padding-top: 10vh;
+// padding-top: 0;
+z-index: 300;
 	
 	.clouds{
 		position: absolute;
 		width: 100%;
 		height: auto;
 		top: -25em;
-		z-index: 400;
 		opacity: .85;
+
 	}
 
 	.container {
@@ -49,6 +50,7 @@ padding-top: 10vh;
 			margin: 0 auto;
 			width: 14vw;
 			z-index: 500;
+			top: 0;
 		}
 
 		.about_title {
@@ -102,12 +104,18 @@ padding-top: 10vh;
 	}
 }
 
+@media (min-width: $breakpoint-medium){
+	#about{
+		padding-top: 30vh;
+	}
+}
+
 @media (max-width: $breakpoint-small){
 	#about{
 		padding-top: 0;
 
 		.clouds{
-			opacity: .7;
+			top: -25vh;
 		}
 
 		.container{
@@ -119,7 +127,6 @@ padding-top: 10vh;
 			.fairy{
 				width: 20vw;
 				padding-bottom: 2em;
-				z-index: 500;
 			}
 
 			.about_title{
@@ -152,7 +159,6 @@ padding-top: 10vh;
 				margin-bottom: 1rem;
 
 				h2{
-					// font-size: 3rem;
 					margin-bottom:0;
 				}
 			}

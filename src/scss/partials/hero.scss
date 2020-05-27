@@ -165,5 +165,12 @@
 	100% { transform: translate(-100vw, 0); opacity: 0;}
 	}
 	 
-	
-	
+@media (max-width: $breakpoint-small){
+	#hero{
+		padding-top: 0;
+
+		.hero-content{
+			padding-top: 15vh;
+		}
+	}
+}
