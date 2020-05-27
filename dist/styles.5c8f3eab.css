@@ -320,6 +320,7 @@ nav button {
   #about .container .fairy {
     width: 20vw;
     padding-bottom: 2em;
+    z-index: 500;
   }
   #about .container .about_title {
     width: 100%;
@@ -448,15 +449,6 @@ nav button {
     padding-bottom: 100vh;
     position: relative;
   }
-  #students .forest-large {
-    width: 100%;
-    height: auto;
-    z-index: -100;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: block;
-  }
   #students .forest-med, #students .forest-mobile {
     display: none;
   }
@@ -473,6 +465,17 @@ nav button {
   }
   #students .container .interface {
     grid-area: interface;
+  }
+
+  .forest_large_container {
+    z-index: 100;
+  }
+  .forest_large_container .forest-large {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    display: block;
   }
 }
 @media (max-width: 1050px) {

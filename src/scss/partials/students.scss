@@ -110,16 +110,19 @@ z-index: 300;
 		padding-bottom: 100vh;
 		position: relative;
 		
-		.forest-large{
-			width: 100%;
-			height: auto;
-			z-index: -100;
-			position: absolute;
-			bottom:0;
-			left: 0;
-			display: block;
-		}
-	
+	// 	.forest_large_container{
+	// 		z-index: -100;
+	// 	.forest-large{
+	// 		width: 100%;
+	// 		height: auto;
+			
+	// 		position: absolute;
+	// 		bottom:0;
+	// 		left: 0;
+	// 		display: block;
+	// 	}
+	// }
+
 		.forest-med, .forest-mobile{
 			display: none;
 		}
@@ -145,6 +148,17 @@ z-index: 300;
 			}
 		}
 	}
+	.forest_large_container{
+		z-index: 100;
+	.forest-large{
+		width: 100%;
+		height: auto;
+		position: absolute;
+		bottom:0;
+		// left: 0;
+		display: block;
+	}
+}
 }
 
 @media (max-width: 1050px){
