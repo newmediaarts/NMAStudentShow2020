@@ -1,87 +1,163 @@
 #about {
-	padding: $section-padding;
+position: relative;
+// padding-top: 0;
+z-index: 300;
+
+	.clouds{
+		position: absolute;
+		width: 100%;
+		height: auto;
+		top: -25em;
+		opacity: .85;
+	}
 
 	.container {
 		display: grid;
 		grid-gap: 50px;
 	}
 
-	// .info-block {
-	// 	h3 {
-	// 		font-size: 3rem;
-	// 	}
-
-	// 	p {
-	// 		font-size: 1.2rem;
-	// 		line-height: 1.5;
-	// 	}
-	// }
-
-
-// (TOMY EDIT)________
 // TYPE
-.id_event h2, .anim_event h2{
-	margin-top: 0;
-	line-height: 1.1;
-}
+	.id_event h2, .anim_event h2{
+		margin-top: 0;
+		line-height: 1.1;
+	}
+
+	.upper{
+		text-transform: uppercase;
+	}
 // BUTTON WIDTH 
-	.tickets{
-		width: 13.6rem;
+	.tickets, .rsvp{
+		text-align: center;
 	}
-
-	.rsvp{
-		width: 9.4rem;
-	}
-
 
 // GRID_____
 
-.container {
-	display: grid;
-	grid-template-columns: repeat(6, 1fr );
-	grid-template-areas:
-		". event_about event_about event_about event_about ." 
-		". details details . . ."
-		". id_event id_event anim_event anim_event ."
-		". tickets . rsvp . .";
+	.container {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr );
+		grid-template-areas:
+			"fairy fairy fairy fairy fairy fairy"
+			". about_title about_title about_title about_title ."
+			". sightings_about sightings_about sightings_about sightings_about ."
+			". event_about event_about event_about event_about ." 
+			". details details . . ."
+			". id_event id_event anim_event anim_event ."
+			". tickets . rsvp . .";
 
-	.event_about {
-		grid-area: event_about;
-	}
-	.details {
-		grid-area: details;
-		margin-top: 1rem;
-		margin-bottom: -2em;
-	}
-	.id_event {
-		grid-area: id_event;
-	}
-	.anim_event {
-		grid-area: anim_event;
-	}
-	.tickets {
-		grid-area: tickets;
-	}
-	.rsvp {
-		grid-area: rsvp;
-	}
-}
-	@media (max-width: $breakpoint-small){
-		.container{
-			padding-top: 10em;
-			display: block;
-			grid-gap: 10px;
-		
-			.details{
-				margin-top: 3rem;
-				margin-bottom: 1rem;
+		.fairy{
+			grid-area: fairy;
+			margin: 0 auto;
+			width: 14vw;
+			z-index: 500;
+			top: 0;
+		}
+
+		.about_title {
+			grid-area: about_title;
+			width: 85%;
+			margin: 0 auto;
+		}
+
+		.sightings_about {
+			grid-area: sightings_about;
+			margin: 0 auto;
+
+			hr{
+				margin-top: 4em;
+				width: 85%;
 			}
 
-			.id_event, .anim_event{
+			p{
+				font-weight: 500;
+				width: 85%;
+				padding-bottom: 1em;
+				margin: 0 auto;
+			}
+		}
+
+		.event_about {
+			grid-area: event_about;
+		}
+
+		#details {
+			grid-area: details;
+			margin-top: 1rem;
+			margin-bottom: -2em;
+		}
+
+		.id_event {
+			grid-area: id_event;
+		}
+
+		.anim_event {
+			grid-area: anim_event;
+		}
+
+		.tickets {
+			grid-area: tickets;
+		}
+		
+		.rsvp {
+			grid-area: rsvp;
+		}
+	}
+}
+
+@media (min-width: $breakpoint-medium){
+	#about{
+		padding-top: 30vh;
+	}
+}
+
+@media (max-width: $breakpoint-small){
+	#about{
+		padding-top: 0;
+
+		.clouds{
+			top: -25vh;
+		}
+
+		.container{
+			padding-top: -150em;
+			display: block;
+			grid-gap: 10px;
+			text-align: center;
+		
+			.fairy{
+				width: 20vw;
+				padding-bottom: 2em;
+			}
+
+			.about_title{
+				width: 100%;
+				margin-bottom: 1.5rem;
+			}
+
+			.sightings_about {
+				grid-area: sightings_about;
+				margin: 0 auto;
+
+				hr{
+					margin-top: 2em;
+					margin-bottom: 3em;
+					width: 100%;
+				}
+				p{
+					font-weight: 500;
+					width:100%;
+					padding-bottom: 1em;
+				}
+			}
+			
+			#details{
+				margin-top: 3rem;
+				margin-bottom: 1.5rem;
+			}
+
+			 .id_event, .anim_event{
 				margin-bottom: 1rem;
+
 				h2{
-					font-size: 3rem;
-					// margin-top: 0;
 					margin-bottom:0;
 				}
 			}
@@ -89,9 +165,10 @@
 			.anim_event{
 				margin-top: 3rem;
 			}
-			
+
 			.tickets, .rsvp{
-				margin-top: 0;
+				margin-top: 1em;
+				margin-bottom: 2em;
 			}
 		}
 	}

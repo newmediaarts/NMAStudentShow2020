@@ -1,95 +1,176 @@
 #hero {
-	padding: $section-padding;
-	.container {
-		display: grid;
-		grid-gap: 50px;
-		display: block;
+	// padding-top: 30vh;
+	position: relative;
+	height: 100vh;
+	 
+	   .hero-content {
+		   padding-top: 30vh;
+		   h1 {
+			   font-size: 12.5vw;
+			   margin-bottom: 0;
+			   text-align: center;
+			   margin-top: 0;
+		   }
+	  
+		   h2 {
+			   margin-top: 0;
+			   font-size: 3.3vw;
+			   font-family: $bodyfont-family;
+			   color:  $color-light-accent;
+			   text-transform: none;
+			   font-weight: 300;
+			   margin-bottom: 4rem;
+			   text-align: center;
+			   text-transform: uppercase;
+			   letter-spacing: .15em;
+		   } 
+	   }
+	 
+	// GRID_____
+	   .container {
+		   display: grid;
+		   margin: 0 auto;
+		   place-items: center;
+		   grid-template-columns: repeat(6, 1fr );
+		   grid-template-areas:
+	 
+			   ". hero-content hero-content hero-content hero-content .";
+	 
+		   .hero-content {
+			   grid-area: hero-content;
+		   }
+	   }
 	}
-
-		.hero-content {
-		
-			h1 {
-				font-size: 12.5vw;
-				margin-bottom: 0;
-				text-align: center;
-				margin-top: 0;
-			}
-		
-			h2 {
-				margin-top: 0;
-				font-size: 3.2vw;
-				font-family: $bodyfont-family;
-				color:  $color-light-accent;
-				text-transform: none;
-				font-weight: 500;
-				font-style: italic;
-				margin-bottom: 4rem;
-				text-align: center;
-			}  
-
-			p{
-				margin-bottom: 2rem;
-			};
-		}
-
-// GRID_____
-		.container {
-			display: grid;
-			grid-template-columns: repeat(6, 1fr );
-			grid-template-areas:
-
-				". hero-content hero-content hero-content hero-content .";
-
-			.hero-content {
-				grid-area: hero-content;
-			}
-		}
-
+	 
 	@media (min-width: $breakpoint-medium){
-	
-		.hero-content {
-		
-			h1 {
-				font-size: 12.5rem;
-			}
-		
-			h2 {
-				font-size: 3.4rem;
-			}  
-
-			p{
-				margin-bottom: 2rem;
-			};
-		}
-
+	 
+	   .hero-content {
+		   text-align: center;
+		  
+		   h1 {
+			   font-size: 12.5vw;
+		   }
+	 
+		   h2 {
+			   font-size: 3.3vw;
+		   } 
+	   }
 	}
+	 
+	@media (max-width: $breakpoint-small){
+	   #hero{
+		   padding-top: 3vh;
+		   height: 50vh;
+	   }
+	 
+	   .container{
+		   margin: 0 auto;
+		   grid-gap: 10px;
+		   display: block;
+		   padding-bottom: 0;
+	   }
+	 
+	   .hero-content {
+		   padding: $section-padding;
+		   h1 {
+			   font-size: 15vw;
+			   margin-bottom: 0;
+			   text-align: center;
+			   margin-top: 0;
+		   }
+	  
+		   h2 {
+			   margin-top: 0;
+			   font-size: 3vw;
+		   } 
+	   }
+	}
+	 
+	 
+	 
+	 
+	 
+	 
+	   // FOG ANIMATION__________________________
+	.fog {
+	   position: absolute;
+	   height: 100%;
+	   width: 100%;
+	   overflow-x: hidden;
+	   background-size: 400% 100%;
+	   animation: fog-animated-gradient-background 12s ease infinite;
+	}
+	 
+	   .fog__container {
+	 
+		 animation: fog-textcolorchange 6s linear infinite;
+		 height: 100%;
+		 width: 100%;
+		 display: grid;
+		 place-items: center;
+		 position: absolute;
+	   }
+		.fog__container::before,
+	   .fog__container::after {
+		 content: "";
+		 display: block;
+		 position: absolute;
+		 top: 0;
+		 left: 0;
+		 bottom: 0;
+		 right: 0;
+		 width: 200vw;
+		 z-index: 200;
+	   }
+	 
+	   .fog__container::before  {
+		 background: url('../img/fog-1.png') repeat-x;
+		 background-size: cover;
+		 background-position: center;
+		 animation: fog-cloud-marquee 6s linear infinite;
+		 opacity: 0;
+	  
+	   }
+	 
+	   .fog__container::after {
+		 background: url('../img/fog-2.png') repeat-x;
+		 background-size: cover;
+		 background-position: center;
+		 animation: fog-cloud-marquee 6s linear 3s infinite;
+		 opacity: 0;
+	   }
+	// }
+	 
+	.fog::after {
+	   content:"";
+	   position: absolute;
+	   bottom: 0;
+	   width: 100%;
+	   height: 40vh;
+	   background-image: linear-gradient(0deg,  rgba(0, 0 ,0, 1) 0%,  rgba(0, 0, 0, 0) 100%);
+	   z-index: 300;
+	}
+	 
+	// Fog Animated Gradient Color Background
+	@keyframes fog-animated-gradient-background{ 10%{$color-dark-accent:30%}
+	0%{background-position:0% 0%}
+	50%{background-position:100% 0%}
+	100%{background-position:100% 100%}
+	}
+	 
+	// Fog Animated Cloud Marquee
+	@keyframes fog-cloud-marquee {
+	0% { transform: translate(0, 0); opacity: 0; }
+	50% { transform: translate(-50vw, 0); opacity: 1;}
+	100% { transform: translate(-100vw, 0); opacity: 0;}
+	}
+	 
+@media (max-width: $breakpoint-small){
+	#hero{
+		padding-top: 0;
 
-
-	@media (max-width: $breakpoint-mobile){
-		.container{
-			grid-gap: 10px;
-			display: block;
-			padding-bottom: 10em;
+		.hero-content{
+			padding-top: 15vh;
 		}
-
-		.hero-content {
-		
-			h1 {
-				font-size: 19vw;
-				margin-bottom: 0;
-				text-align: center;
-				margin-top: 0;
-			}
-		
-			h2 {
-				margin-top: 0;
-				font-size: 8vw;
-				margin-bottom: 3rem;
-			}  
-			p{
-				margin-bottom: 2rem;
-			};
-		}
-
 	}
 }

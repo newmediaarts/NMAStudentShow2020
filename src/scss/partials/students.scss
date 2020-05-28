@@ -1,11 +1,48 @@
 #students {
-	padding: $section-padding;
+	position: relative;
+	padding-bottom: 65vh;
+	background-image: url(/img/forest_large_back.png);
+	background-repeat: no-repeat;
+	width: 100%;
+	background-size: cover;
 
-	.container {
+	.forest-med{
+		width: 100%;
+		height: auto;
+		position: absolute;
+		bottom:0;
+		left:0;
+		display: block;
+		z-index: 10;
+	}
+
+	.forest-mobile, .forest-large {
+		display: none;
+	}
+
+	.container {	
 		display: grid;
-		grid-gap: 50px;
+		grid-gap: 70px;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas:
+		". . animation animation"
+		"interface interface . ."
+		"interface interface . .";
+		grid-row-gap: 0px;
+		position: relative;
+		z-index: 500;
 
-// TYPE TOMY EDIT______
+		.fairy-sit, .nessy, .mer-skull,.rock_monster{
+		display: none;
+		}
+
+		.animation {
+			grid-area: animation;
+		}
+
+		.interface {
+			grid-area: interface;
+		}
 
 		h3{
 			margin-bottom: $color-light-accent; 
@@ -14,8 +51,8 @@
 		.name {
 			font-family: $bodyfont-family;
 			text-transform: none;
-			font-size: 1.7rem;
-			line-height: 1.3;
+			font-size: 1.5rem;
+			line-height: 1.5;
 			text-align: center;
 			color: $color-light-accent; 
 		}
@@ -23,13 +60,16 @@
 		p{
 			text-align: center;
 			font-size: 1rem;
+			margin: 0 auto;
+			padding-top: .2em;
 			font-family: $heading-normal-font-family;
 		}
+
+		
 
 		.anim-title-button{
 			display: flex;
 			justify-content: space-between;
-
 		}
 
 		button{
@@ -43,6 +83,7 @@
 
 			.student {
 				margin-top: 2rem;
+				
 				.profile {
 					height: 200px;
 					width: 100%;
@@ -51,14 +92,44 @@
 			}
 		}
 	}
+}
 
-	@media (min-width: $breakpoint-medium) {
+@media (min-width: $breakpoint-large) {
+	#students{
+		padding-bottom: 100vh;
+	}
+}
+
+@media (min-width: 1300px) {
+	#students{
+		padding-bottom: 100vh;
+		position: relative;
+		
+		.forest-large{
+			width: 100%;
+			height: auto;
+			z-index: 10;
+			position: absolute;
+			bottom:0;
+			left: 0;
+			display: block;
+		}
+	
+		.forest-med, .forest-mobile{
+			display: none;
+		}
+	
 		.container {
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-areas:
 				". . animation animation"
 				"interface interface . .";
-			grid-row-gap: 150px;
+			grid-row-gap: 50px;
+
+
+			.fairy-sit, .nessy, .mer-skull, .rock_monster{
+			display: none;
+			}
 
 			.animation {
 				grid-area: animation;
@@ -69,17 +140,87 @@
 			}
 		}
 	}
+}
 
-	@media (max-width: $breakpoint-mobile){
+@media (max-width: 1050px){
+	#students{
+		padding-bottom: 0;
+
+		.forest-large, .forest-med{
+			display: none;
+		}
+
+		.forest-mobile{
+			width: 100%;
+			height: auto;
+			z-index: 10;
+			bottom: 0;
+			position: absolute;
+			left: 0;	
+			display: inline-block;
+		}
+
 		.container{
+			text-align: center;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 50px;
+			grid-template-areas:
+				"animation animation animation animation"
+				"fairy-sit fairy-sit fairy-sit fairy-sit"
+				"interface interface interface interface"
+				;
+			grid-row-gap: 0px;
+
 			.anim-title-button{
-			display: block;
-			color: 3px solid $color-light-accent;
+				display: block;
+				color: 3px solid $color-light-accent;
 			}
 
 			button{
 				margin-top: .5rem;
 			}
-		}	
-	}
+
+			.animation{
+				margin-bottom: 0em; 
+			}
+
+			.fairy-container {
+			
+				margin-top: 3vh;
+
+				.fairy-sit{
+					display: inline-block;
+					grid-area: fairy-sit;
+					width: 20vw;
+				}
+			}
+
+			.interface{
+
+				.nessy{
+					width: 30vw;
+					margin-left: 10vw;
+					margin-top: 3vh;
+					margin-bottom: 0;
+					display: inline-block;
+				}
+
+				.rock-mer_container{
+					margin-top: 0;
+					margin-bottom: .5em;
+					margin-left: -2em;
+
+					.rock_monster{
+						width: 40vw;
+						display:inline-block;	
+					}
+
+					.mer-skull{
+						width: 35vw;
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}	
 }

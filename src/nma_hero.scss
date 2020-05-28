@@ -17,27 +17,6 @@ $section-padding: 3vh 0;
 $headingfont-family: 'Open Sans Condensed', 'Bebas Neue', 'Franklin Gothic Condensed', 'Arial', sans-serif;
 $bodyfont-family: 'Cormorant Garamond', 'Lora', serif;
 
-// Base (COLOR BACKGROUND)__________________________
-html {
-  box-sizing: border-box;
-}
-  
-*, 
-*:before, 
-*:after {
-  box-sizing: inherit;
-}
-  
-body{
-  margin: 0;
-}
-
-.sightings {
-  background-image: url(img/background.jpg);
-  background-repeat: none;
-  position: relative;
-  padding: 5vh 0;
-
 //TYPOGRAPHIC SCALE_______________________________________________________
 h3, .small_text { 
   margin: .5em 0;
@@ -57,7 +36,7 @@ h3, .small_text{
 // _____
 
 h2 {
-  font-size: 2.5em;
+  font-size: 6vw;
   margin-bottom: 0;
   margin-top: 0;
   letter-spacing: .05em;
@@ -65,13 +44,13 @@ h2 {
 
 h3 {
   margin-top: 0;
-  font-size: .8em;
+  font-size: 2vw;
   color: $color-light-accent;
   font-weight: 700;
 }
 
 .small_text{
-  font-size: 1em;
+  font-size: 2vw;
   margin-bottom: 0;
   font-family: $headingfont-family; 
   text-transform: uppercase;
@@ -79,35 +58,42 @@ h3 {
 
 //HERO PAGE TYPE &STYLING_________________________________________________
 
+#hero {
+padding: $section-padding;
+position: relative;
+overflow: hidden;
 
+  .full-height {
+    height: 100vh;
+  }
+}
 
-.sightings-container{
-  padding: 0 4em;
-  max-width: 700px;
+.container{
+  padding: 0 50px;
+  max-width: 1400px;
   margin: 0 auto;
     display: grid;
     grid-gap: 0;
-    // place-items: center;
+    place-items: center;
     grid-template-columns: repeat(7, 1fr);
     grid-template-areas:
       "fairy head head head head head ."
-      ". id_invite id_invite line anim_invite anim_invite .";
+      ". id_invite id_invite line anim_invite anim_invite nessy_container";
   
   .fairy{
     grid-area: fairy;
-    width: auto;
-    height: 50%;
+    width: 15vw;
+    height: auto;
     visibility: visible;
     z-index: 100;
-    // margin-left: -4.5vw;
+    margin-left: -4.5vw;
     top: 10vh;
-    left: 15%;
     position: absolute;
   } 
 
   .head {
     grid-area: head;
-    margin-bottom: 1.5em;
+    margin-bottom: 3em;
     .title{
       width: 100%;
       height: auto;
@@ -121,29 +107,31 @@ h3 {
 
   .line{
     grid-area: line;
-    height: 80%;
-    width: 1px;
-    margin: 10% auto;
-    background: white;
+    height: 100%;
+    border-right: 1px solid white;
   }
 
   .anim_invite {
     grid-area: anim_invite;
   }
 
-
-  .nessy{
-    width: auto;
-    height: 45%;
-    bottom: 5%;
-    right: -7%;
-    position: absolute;
+  .nessy_container{
+    grid-area: nessy_container;
+    .nessy{
+      width: 30vw;
+      bottom: 0;
+      right: -15vw;
+      position: absolute;
+    }
   }
 }
 
 @media (max-width: $breakpoint-small){
+  #hero{
+    padding-top: 4vh;
+  }
   
-  .sightings-container{
+  .container{
     display: block;
     padding-top: 0;
     
@@ -153,7 +141,7 @@ h3 {
   }
 
   .small_text{
-    font-size: 1em;
+    font-size: 1.3rem;
   }
 
   .anim_invite{
@@ -163,11 +151,11 @@ h3 {
   
  
     h2{
-      font-size: 2em;
+      font-size: 4rem;
     }
 
     h3{
-      font-size: 1em;
+      font-size: 1.4rem;
     }
 
     .save_date{
@@ -180,33 +168,113 @@ h3 {
 
     .line{
       grid-area: line;
-      width: 40%;
-      height: 1px;
-      line-height: 1;
-      margin: 2em auto;
-      // padding-bottom: 2vh;
+     width: 48vw;
+     margin:0 auto;
+      padding-bottom: 2vh;
       border-right: 0;
       border-bottom: 1px solid white;
     }
 
 // characters___
     .nessy, .fairy{
-      // visibility: hidden;
+      visibility: hidden;
     }
-
-    .fairy {
-      height: 35%;
-      top: 45%;
-      left: -5%;
-    }
-
-    .nessy {
-      height: 35%;
-      right: -23%;
-    }
-
   }
 }  
 
+// Base (COLOR BACKGROUND)__________________________
+html {
+  box-sizing: border-box;
+}
+  
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+  
+body{
+  background-image: url(img/background.jpg);
+  background-repeat: none;
+  margin: 0;
 }
 
+
+
+
+
+
+
+
+
+  // FOG ANIMATION__________________________
+// ***********THE FOG IS CAUSING THE HORIZONTAL SCROLL-BAR THE FOG ALSO JERKS AT THE END OF THE SEQUENCE****************
+.fog {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: white;
+  background-image: linear-gradient(-45deg, $color-dark-accent, $color-background-darkteal);
+  background-size: 400% 100%;
+  animation: fog-animated-gradient-background 12s ease infinite;
+
+  .fog__container {
+    color: rgba(255, 255, 255, .75);
+    animation: fog-textcolorchange 6s linear infinite;
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .fog__container::before,
+  .fog__container::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 200vw;
+    z-index: 200;
+  }
+
+  .fog__container::before  {
+    background: url('img/fog-1.png') repeat-x;
+    background-size: cover;
+    background-position: center;
+    animation: fog-cloud-marquee 6s linear infinite;
+    opacity: 0;
+  }
+
+  .fog__container::after {
+    background: url('img/fog-2.png') repeat-x; 
+    background-size: cover;
+    background-position: center;
+    animation: fog-cloud-marquee 6s linear 3s infinite;
+    opacity: 0;
+  }
+}
+
+// Fog Animated Gradient Color Background
+@keyframes fog-animated-gradient-background {
+  0%{background-position:0% 0%}
+  50%{background-position:100% 0%}
+  100%{background-position:0% 0%}
+}
+
+// Fog Animated Cloud Marquee
+@keyframes fog-cloud-marquee {
+  0% { transform: translate(0, 0); opacity: 0; }
+  50% { transform: translate(-50vw, 0); opacity: 1;}
+  100% { transform: translate(-100vw, 0); opacity: 0;}
+}
+
+// Fog Animated Text Color Change
+@keyframes fog-textcolorchange {
+  0% { color: rgba(255,255,255,.75);}
+  50% { color: rgba(255,255,255,.25);}
+  100% { color: rgba(255,255,255,.75);}
+}

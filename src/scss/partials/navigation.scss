@@ -1,19 +1,17 @@
 nav {
 	position: fixed;
-	top: 10vh;
+	bottom: 1em;
 	right: 0;
+	z-index: 1000;
 
 	button {
-		padding: 3rem;
+		padding: 1rem;
+		padding-left: 2rem;
+		padding-right:2rem;
 		border: none;
-		background: yellow;
-		color: black;
+		background: $color-background-teal;
+		color:white;
 	}
 
-	.chris_hero{
-		top: 20vh;
-		padding: 3rem;
-		border: none;
-		background: red;
-	}
+
 }

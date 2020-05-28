@@ -142,3 +142,4 @@ export const interfaceStudents = [
         time: '5:00–5:20 | 6:00–6:20',
     }
 ]
+
