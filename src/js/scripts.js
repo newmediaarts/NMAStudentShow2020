@@ -19,7 +19,7 @@ function makeStudentElement({ name, website = '', room = '', time }, isAnimation
 
 
     return `<div class="student">
-                    <img class="profile" src="${initialImage}" />
+                    <img class="profile" src="${initialImage}" alt="${name}" />
                     <h3 class="name">${name}</h3>
                     <a href="${website}"><p>${website}</p></a>
                     ${isAnimation ? `<a href="google.com"><p>demo reel</p></a>` : ''}
