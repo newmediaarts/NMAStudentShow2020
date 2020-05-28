@@ -255,38 +255,38 @@ Object.defineProperty(exports, "__esModule", {
 exports.interfaceStudents = exports.animationStudents = void 0;
 var animationStudents = [{
   name: 'Evan Costa',
+  website: 'https://sites.google.com/view/evancostademoreelwebsite/home',
   demoreel: 'demoreel',
-  website: 'website portfolio',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Calvin Gacuya',
-  demoreel: 'demoreel',
-  website: 'website portfolio',
+  website: 'https://sites.google.com/view/ckdemoreel/home',
+  demoreel: 'https://youtu.be/xH23zxUDNuA',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Tina Gonzalez',
-  demoreel: 'demoreel',
-  website: 'website portfolio',
+  website: 'https://tinamg6.wixsite.com/website',
+  demoreel: 'https://youtu.be/SyKhokuIv9U',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Raleigh Harris',
-  demoreel: 'demoreel',
-  website: 'website portfolio',
+  website: 'https://raleharris.wixsite.com/portfolio',
+  demoreel: 'https://youtu.be/ffFkt6LtQpE',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Vivien Liu',
+  website: 'https://liuw5vi.wixsite.com/website',
   demoreel: 'demoreel',
-  website: 'website portfolio',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Nao Minegishi',
-  demoreel: 'demoreel',
-  website: 'website portfolio',
+  website: 'https://minegishinaoo.wixsite.com/netaro',
+  demoreel: 'https://youtu.be/Vw6f6Vol2l0',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, // {
@@ -298,32 +298,32 @@ var animationStudents = [{
 // },
 {
   name: 'Kyle Moy',
-  demoreel: 'demoreel',
   website: 'website portfolio',
+  demoreel: 'demoreel',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Joshua Richards',
+  website: 'https://sites.google.com/view/richardsart/home',
   demoreel: 'demoreel',
-  website: 'website portfolio',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Schyler Lai Shinde',
-  demoreel: 'demoreel',
-  website: 'website portfolio',
+  website: 'http://umiiishi.wixsite.com/schylerlaishindekcc',
+  demoreel: 'https://youtu.be/F5UGdC5P0ds',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Annika Quinn',
-  demoreel: 'demoreel',
-  website: 'website portfolio',
+  website: 'https://annikaq.wixsite.com/2020portfolio',
+  demoreel: 'https://www.youtube.com/watch?v=JLK65i4ubiU&feature=youtu.be',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }, {
   name: 'Hannah Woodward',
-  demoreel: 'demoreel',
-  website: 'website portfolio',
+  website: 'https://ammagok.wixsite.com/mysite',
+  demoreel: 'https://youtu.be/JamD9F_kc0E',
   room: 'Room No. 1',
   time: '5:00–5:20 | 6:00–6:20'
 }];
@@ -395,6 +395,8 @@ function makeStudentElement(_ref, isAnimation) {
       website = _ref$website === void 0 ? '' : _ref$website,
       _ref$room = _ref.room,
       room = _ref$room === void 0 ? '' : _ref$room,
+      _ref$demoreel = _ref.demoreel,
+      demoreel = _ref$demoreel === void 0 ? '' : _ref$demoreel,
       time = _ref.time;
   var firstName = name.split(' ')[0].toLowerCase();
   var initialImage;
@@ -403,7 +405,7 @@ function makeStudentElement(_ref, isAnimation) {
       initialImage = Object.values(_.default)[i];
     }
   });
-  return "<div class=\"student\">\n                    <img class=\"profile\" src=\"".concat(initialImage, "\" alt=\"").concat(name, "\" />\n                    <h3 class=\"name\">").concat(name, "</h3>\n                    <a href=\"").concat(website, "\"><p>").concat(website, "</p></a>\n                    ").concat(isAnimation ? "<a href=\"google.com\"><p>demo reel</p></a>" : '', "\n                    ").concat(!isAnimation ? "<p><strong>".concat(room, "</strong></p>") : "", "\n                    ").concat(!isAnimation ? "<p><strong>".concat(time, "</strong></p>") : "", "\n            </div>");
+  return "<div class=\"student\">\n                    <img class=\"profile\" src=\"".concat(initialImage, "\" alt=\"").concat(name, "\" />\n                    <h3 class=\"name\">").concat(name, "</h3>\n                    <a href=\"").concat(website, "\"><p>View Portfolio Site</p></a>\n                    ").concat(isAnimation ? "\n                    <a href=\"".concat(demoreel, "\"><p>Demo Reel</p></a>") : '', "\n                    ").concat(!isAnimation ? "<p><strong>".concat(room, "</strong></p>") : "", "\n                    ").concat(!isAnimation ? "<p><strong>".concat(time, "</strong></p>") : "", "\n            </div>");
 }
 
 ;
