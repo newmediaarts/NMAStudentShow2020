@@ -73,57 +73,71 @@ nav button {
 
 #hero {
   position: relative;
-  height: 100vh;
+}
+#hero .container {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+#hero .upper {
+  text-transform: uppercase;
 }
 #hero .hero-content {
   position: relative;
   z-index: 400;
   padding-top: 30vh;
 }
+#hero .hero-content h1,
+#hero .hero-content h2 {
+  width: fit-content;
+}
 #hero .hero-content h1 {
-  font-size: 12.5vw;
   margin-bottom: 0;
-  text-align: center;
   margin-top: 0;
 }
 #hero .hero-content h2 {
   margin-top: 0;
-  font-size: 3.3vw;
   font-family: "Cormorant Garamond", "Lora", serif;
   color: white;
   text-transform: none;
   font-weight: 300;
   margin-bottom: 4rem;
-  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.15em;
 }
 #hero .container {
-  display: grid;
   margin: 0 auto;
-  place-items: center;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-areas: ". hero-content hero-content hero-content hero-content .";
 }
-#hero .container .hero-content {
-  grid-area: hero-content;
+#hero .container .sightings_about {
+  position: relative;
+  z-index: 400;
+}
+#hero .container .sightings_about h4 {
+  font-family: "Cormorant Garamond", "Lora", serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-style: normal;
+  line-height: 1.2em;
+  margin-bottom: 0;
 }
 
 @media (min-width: 1200px) {
-  .hero-content {
-    text-align: center;
-  }
   .hero-content h1 {
-    font-size: 12.5vw;
+    font-size: 33ch;
   }
   .hero-content h2 {
-    font-size: 3.3vw;
+    font-size: 8.9ch;
+  }
+
+  .sightings_about .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
   }
 }
 @media (max-width: 768px) {
   #hero {
     padding-top: 3vh;
-    height: 50vh;
   }
 
   .container {
@@ -137,14 +151,12 @@ nav button {
     padding: 15vh 0;
   }
   .hero-content h1 {
-    font-size: 15vw;
     margin-bottom: 0;
     text-align: center;
     margin-top: 0;
   }
   .hero-content h2 {
     margin-top: 0;
-    font-size: 2.8vw;
   }
 }
 .fog {
@@ -263,9 +275,6 @@ nav button {
 #about .id_event h2, #about .anim_event h2 {
   margin-top: 0;
   line-height: 1.1;
-}
-#about .upper {
-  text-transform: uppercase;
 }
 #about .tickets, #about .rsvp {
   text-align: center;
@@ -631,7 +640,7 @@ nav button {
 #cave .container .thank_you {
   z-index: 100;
   grid-area: thank_you;
-  margin-top: -36vh;
+  margin-top: -50vh;
 }
 #cave .container .thank_you p {
   margin-bottom: 1.5em;
@@ -650,7 +659,10 @@ nav button {
   height: auto;
   bottom: 0;
 }
-#cave .cave_bottom_mobile, #cave .cave-bird, #cave .fuzzy, #cave .lizard {
+#cave .cave_bottom_mobile,
+#cave .cave-bird,
+#cave .fuzzy,
+#cave .lizard {
   display: none;
 }
 
@@ -701,7 +713,10 @@ nav button {
   }
 }
 @media (min-width: 1550px) {
-  .cave_bottom_mobile, .cave-bird, .fuzzy, .lizard {
+  .cave_bottom_mobile,
+.cave-bird,
+.fuzzy,
+.lizard {
     display: none;
   }
 
@@ -712,17 +727,20 @@ nav button {
 }
 @media (min-width: 1200px) {
   .cave_bottom_med {
-    padding-top: 0vh;
+    margin-top: -100vh;
   }
 
-  .cave_bottom_mobile, .cave-bird, .fuzzy, .lizard {
+  .cave_bottom_mobile,
+.cave-bird,
+.fuzzy,
+.lizard {
     display: none;
   }
 
   .thank_you {
     z-index: 100;
     grid-area: thank_you;
-    margin-top: -10vh;
+    margin-top: -120vh;
   }
 }
 @media (max-width: 1050px) {
@@ -898,7 +916,7 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
-h4, p {
+h4 {
   font-family: "Cormorant Garamond", "Lora", serif;
 }
 
@@ -946,11 +964,11 @@ h4 {
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: 1rem;
   line-height: 1.5;
   font-weight: 100;
   font-style: normal;
-  font-family: "Cormorant Garamond", "Lora", serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .caption {

@@ -1,76 +1,78 @@
 #cave {
-position: relative;
-	.container{
+	position: relative;
+	.container {
 		display: grid;
 		place-items: center;
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-areas: ". thank_you thank_you .";
 		grid-row-gap: 50px;
-	
-		.thank_you{
+
+		.thank_you {
 			z-index: 100;
 			grid-area: thank_you;
-			margin-top: -36vh;
+			margin-top: -50vh;
 
-			p{
+			p {
 				margin-bottom: 1.5em;
 			}
 		}
 	}
 
-	.cave_top{
-		margin-top: -.5em;
+	.cave_top {
+		margin-top: -0.5em;
 		width: 100%;
 		height: auto;
 		top: 0;
 		z-index: 200;
 	}
-	.cave_bottom_med{
+	.cave_bottom_med {
 		z-index: -100;
-		margin-top:-35vh;
+		margin-top: -35vh;
 		width: 100%;
 		height: auto;
 		bottom: 0;
 	}
 
-	.cave_bottom_mobile, .cave-bird, .fuzzy, .lizard{
+	.cave_bottom_mobile,
+	.cave-bird,
+	.fuzzy,
+	.lizard {
 		display: none;
 	}
 }
 
-@media (min-width: 2000px){
-	#cave{
-		.container{
+@media (min-width: 2000px) {
+	#cave {
+		.container {
 			display: grid;
 			place-items: center;
 			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 
-			". thank_you thank_you .";
+			grid-template-areas: ". thank_you thank_you .";
 			grid-row-gap: 50px;
 
-			.thank_you{
+			.thank_you {
 				text-align: center;
 				z-index: 100;
 				grid-area: thank_you;
 				margin-top: -40em;
 
-				p{
+				p {
 					text-align: center;
 				}
 
-				.fuzzy{
+				.fuzzy {
 					margin-top: -10vh;
 					margin-bottom: -2em;
 					z-index: 100;
 					display: inline-block;
-					left:0;
+					left: 0;
 					width: 25vh;
 				}
 
-				.lizard{
+				.lizard {
 					display: inline-block;
 					width: 35vh;
-					left:50%;
+					left: 50%;
 					transform: translateX(-50%);
 					z-index: 200;
 					bottom: 4vh;
@@ -78,83 +80,87 @@ position: relative;
 				}
 			}
 		}
-		
-		.cave_bottom_mobile{
+
+		.cave_bottom_mobile {
 			display: inline-block;
 			padding-top: 0vh;
-			margin-top:-80vh;
+			margin-top: -80vh;
 			z-index: -100%;
 			width: 100%;
 			height: auto;
-		}	
+		}
 
-		.cave_bottom_med{
+		.cave_bottom_med {
 			display: none;
 		}
-	}	
+	}
 }
 
-@media (min-width: $breakpoint-large){
-
-	.cave_bottom_mobile, .cave-bird, .fuzzy, .lizard{
+@media (min-width: $breakpoint-large) {
+	.cave_bottom_mobile,
+	.cave-bird,
+	.fuzzy,
+	.lizard {
 		display: none;
 	}
 
-	.thank_you{
+	.thank_you {
 		z-index: 100;
 		margin-top: -50vh;
 	}
 }
 
-@media (min-width: $breakpoint-medium){
-	.cave_bottom_med{
-		padding-top: 0vh;
+@media (min-width: $breakpoint-medium) {
+	.cave_bottom_med {
+		margin-top: -100vh;
 	}
 
-	.cave_bottom_mobile, .cave-bird, .fuzzy, .lizard{
+	.cave_bottom_mobile,
+	.cave-bird,
+	.fuzzy,
+	.lizard {
 		display: none;
 	}
 
-	.thank_you{
+	.thank_you {
 		z-index: 100;
 		grid-area: thank_you;
-		margin-top: -10vh;
+		margin-top: -120vh;
 	}
 }
 
-@media (max-width: 1050px){
-	#cave{
-		.container{
+@media (max-width: 1050px) {
+	#cave {
+		.container {
 			display: grid;
 			place-items: center;
 			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 
-			"thank_you thank_you thank_you thank_you";
+			grid-template-areas: "thank_you thank_you thank_you thank_you";
 			grid-row-gap: 50px;
-		
-			.thank_you{
+
+			.thank_you {
 				text-align: center;
 				z-index: 100;
 				grid-area: thank_you;
 				margin-top: -3em;
 
-				p{
+				p {
 					text-align: center;
 				}
 
-				.fuzzy{
+				.fuzzy {
 					margin-top: -10vh;
 					margin-bottom: -2em;
 					z-index: 100;
 					display: inline-block;
-					left:0;
+					left: 0;
 					width: 25vh;
 				}
 
-				.lizard{
+				.lizard {
 					display: inline-block;
 					width: 35vh;
-					left:50%;
+					left: 50%;
 					transform: translateX(-50%);
 					z-index: 200;
 					bottom: 4vh;
@@ -162,38 +168,37 @@ position: relative;
 				}
 			}
 		}
-		
-		.cave_bottom_mobile{
+
+		.cave_bottom_mobile {
 			display: inline-block;
 			padding-top: 0vh;
-			margin-top:-10vh;
+			margin-top: -10vh;
 			z-index: -100%;
 			width: 100%;
 			height: auto;
-		}	
+		}
 
-		.cave_bottom_med{
+		.cave_bottom_med {
 			display: none;
 		}
 	}
 }
 
-@media (max-width: $breakpoint-small){
-	.thank_you{
-		.fuzzy{
+@media (max-width: $breakpoint-small) {
+	.thank_you {
+		.fuzzy {
 			visibility: visible;
 			padding-bottom: 2em;
 		}
 
-		img{
+		img {
 			max-width: 35%;
 		}
-		
 	}
 }
 
-@media (max-width: 400px){
-	.illustrators{
+@media (max-width: 400px) {
+	.illustrators {
 		text-align: center;
 		max-width: 220px;
 		margin: 0 auto;
@@ -202,7 +207,7 @@ position: relative;
 }
 // FOOTER______________
 
-footer{
+footer {
 	display: grid;
 	place-items: center;
 	margin-top: -5em;
@@ -210,114 +215,111 @@ footer{
 	background-color: $color-footer;
 	padding-bottom: 8em;
 
-	.container{
+	.container {
 		background-color: $color-footer;
 		z-index: 100;
 		margin-top: 5em;
 		display: grid;
-			place-items: center;
-			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 
+		place-items: center;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas:
 			". cave-red cave-red ."
 			". learn_more learn_more .";
-			grid-row-gap: 50px;
+		grid-row-gap: 50px;
 
-		.cave-red{
+		.cave-red {
 			margin-top: 3em;
 			width: 25vw;
 			grid-area: cave-red;
 		}
 
-		.learn_more{
+		.learn_more {
 			margin-top: 1em;
 			grid-area: learn_more;
 		}
 
-		button{
+		button {
 			margin-top: 1em;
 		}
-		.cave-bird{
-		display: none;
-	}
+		.cave-bird {
+			display: none;
+		}
 	}
 
-
-	@media (min-width: 2000px){
-		.container{
+	@media (min-width: 2000px) {
+		.container {
 			text-align: center;
 			margin-top: 5em;
 			z-index: 100;
 			display: grid;
 			place-items: center;
 			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 
-			". cave-red cave-red ."
-			"learn_more learn_more learn_more learn_more";
+			grid-template-areas:
+				". cave-red cave-red ."
+				"learn_more learn_more learn_more learn_more";
 			grid-row-gap: 50px;
-	
 
-			.cave-red{
+			.cave-red {
 				margin-left: 0;
 				width: 15vw;
 				grid-area: cave-red;
-				
 			}
 
-		.learn_more{
-			grid-area: learn_more;
-		}
-		.cave-bird{
-			width: 10vw;
-			display: inline-block;
-		}
+			.learn_more {
+				grid-area: learn_more;
+			}
 
-		.learn_more_button{
-			grid-area: learn_more_button;
-		}
+			.cave-bird {
+				width: 10vw;
+				display: inline-block;
+			}
 
-		button{
-			margin-top: 1em;
-			margin-bottom: 2em;
+			.learn_more_button {
+				grid-area: learn_more_button;
+			}
+
+			button {
+				margin-top: 1em;
+				margin-bottom: 2em;
+			}
 		}
 	}
-	}
 
-	@media (max-width: 1050px){
-		.container{
+	@media (max-width: 1050px) {
+		.container {
 			text-align: center;
 			margin-top: 5em;
 			z-index: 100;
 			display: grid;
 			place-items: center;
 			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 
-			". cave-red cave-red ."
-			"learn_more learn_more learn_more learn_more";
+			grid-template-areas:
+				". cave-red cave-red ."
+				"learn_more learn_more learn_more learn_more";
 			grid-row-gap: 50px;
-	
 
-			.cave-red{
+			.cave-red {
 				width: 30vw;
 				grid-area: cave-red;
-				
 			}
 
-		.learn_more{
-			grid-area: learn_more;
-		}
-		.cave-bird{
-			width: 20vw;
-			display: inline-block;
-		}
+			.learn_more {
+				grid-area: learn_more;
+			}
 
-		.learn_more_button{
-			grid-area: learn_more_button;
-		}
+			.cave-bird {
+				width: 20vw;
+				display: inline-block;
+			}
 
-		button{
-			margin-top: 1em;
-			margin-bottom: 2em;
+			.learn_more_button {
+				grid-area: learn_more_button;
+			}
+
+			button {
+				margin-top: 1em;
+				margin-bottom: 2em;
+			}
 		}
-	}
 	}
 }

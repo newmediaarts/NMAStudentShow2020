@@ -3,86 +3,52 @@ export const animationStudents = [
         name: 'Evan Costa',
         website: 'https://sites.google.com/view/evancostademoreelwebsite/home',
         demoreel: 'https://youtu.be/wjRJw4Utf9c',
-        // room: 'Room No. 1',
-        // time: '5:00–5:20 | 6:00–6:20',
 
     },
     {
         name: 'Calvin Gacuya',
         website: 'https://sites.google.com/view/ckdemoreel/home',
         demoreel: 'https://youtu.be/334iELe2ix8',
-        // room: 'Room No. 1',
-        // time: '5:00–5:20 | 6:00–6:20',
     },
     {
         name: 'Tina Gonzalez',
         website: 'https://tinamg6.wixsite.com/website',
         demoreel: '	https://youtu.be/TSmpnd0XK_w',
-        // room: 'Room No. 1',
-        // time: '5:00–5:20 | 6:00–6:20',
     },
     {
         name: 'Raleigh Harris',
         website: 'https://raleharris.wixsite.com/portfolio',
         demoreel: 'https://youtu.be/ffFkt6LtQpE',
-        // room: 'Room No. 1',
-        // time: '5:00–5:20 | 6:00–6:20'
     },
     {
         name: 'Vivien Liu',
         website: 'https://liuw5vi.wixsite.com/website',
         demoreel: '	https://youtu.be/3iW5TwhxRrA',
-        // room: 'Room No. 1',
-        // time: '5:00–5:20 | 6:00–6:20',
     },
     {
         name: 'Nao Minegishi',
         website: 'https://noshishi.com/#post-36',
         demoreel: 'https://youtu.be/Vw6f6Vol2l0',
-        // room: 'Room No. 1',
-        // time: '5:00–5:20 | 6:00–6:20',
     },
-    // {
-    //     name: 'Andruw Penera',
-    //     //     demoreel: 'demoreel',
-    //     //     website: 'website portfolio',
-    //     //     room: 'Room No. 1',
-    //     //     time: '5:00–5:20 | 6:00–6:20',
-    // },
-    // {
-    //     name: 'Kyle Moy',
-    //     website: 'https://sites.google.com/view/kylemoydemoreel/',
-    //     //     // demoreel: 'demoreel',
-    //     //     room: 'Room No. 1',
-    //     //     time: '5:00–5:20 | 6:00–6:20',
-    // },
     {
         name: 'Joshua Richards',
         website: 'https://sites.google.com/view/richardsart/home',
         demoreel: 'https://youtu.be/F5UGdC5P0ds',
-        // room: 'Room No. 1',
-        // time: '5:00–5:20 | 6:00–6:20',
     },
     {
         name: 'Schyler Lai Shinde',
         website: 'http://umiiishi.wixsite.com/schylerlaishindekcc',
         demoreel: '	https://youtu.be/I1boIn-PtdM',
-        // room: 'Room No. 1',
-        // time: '5:00–5:20 | 6:00–6:20',
     },
     {
         name: 'Annika Quinn',
         website: 'https://annikaq.wixsite.com/2020portfolio',
         demoreel: '	https://www.youtube.com/watch?v=JLK65i4ubiU&feature=youtu.be',
-        // room: 'Room No. 1',
-        // time: '5:00–5:20 | 6:00–6:20',
     },
     {
         name: 'Hannah Woodward',
         website: '	https://ammagok.wixsite.com/mysite',
         demoreel: '	https://youtu.be/8dI5jHKTEZM',
-        // room: 'Room No. 1',
-        // time: '5:00–5:20 | 6:00–6:20',
     }
 ]
 
@@ -126,7 +92,6 @@ export const interfaceStudents = [
     {
         name: 'Miyuki Sekiguchi',
         website: 'https://miyukings.github.io/myportfolio-v3_2020/',
-        // 'https://miyukings.github.io/myportfolio-v2_2020/',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
     },

@@ -29,9 +29,6 @@ z-index: 300;
 		line-height: 1.1;
 	}
 
-	.upper{
-		text-transform: uppercase;
-	}
 // BUTTON WIDTH 
 	.tickets, .rsvp{
 		text-align: center;
@@ -149,6 +146,7 @@ z-index: 300;
 					margin-bottom: 3em;
 					width: 100%;
 				}
+				
 				p{
 					font-weight: 500;
 					width:100%;
@@ -161,7 +159,7 @@ z-index: 300;
 				margin-bottom: 1.5rem;
 			}
 
-			 .id_event, .anim_event{
+			.id_event, .anim_event{
 				margin-bottom: 1rem;
 
 				h2{
