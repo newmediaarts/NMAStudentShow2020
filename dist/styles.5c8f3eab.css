@@ -133,6 +133,7 @@ nav button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
+    align-items: start;
   }
 }
 @media (max-width: 768px) {

@@ -71,6 +71,7 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 50px;
+		align-items: start;
 	}
 }
 
@@ -118,6 +119,7 @@
 	place-items: center;
 	position: absolute;
 }
+
 .fog__container::before,
 .fog__container::after {
 	content: "";
@@ -146,7 +148,6 @@
 	animation: fog-cloud-marquee 6s linear 3s infinite;
 	opacity: 0;
 }
-// }
 
 .fog::after {
 	content: "";
