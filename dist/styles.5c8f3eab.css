@@ -85,7 +85,7 @@ nav button {
 #hero .hero-content {
   position: relative;
   z-index: 400;
-  padding-top: 30vh;
+  padding-top: 10vh;
 }
 #hero .hero-content h1,
 #hero .hero-content h2 {
@@ -133,7 +133,6 @@ nav button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
-    align-items: start;
   }
 }
 @media (max-width: 768px) {
@@ -148,16 +147,20 @@ nav button {
     padding-bottom: 0;
   }
 
-  .hero-content {
-    padding: 15vh 0;
-  }
   .hero-content h1 {
     margin-bottom: 0;
     text-align: center;
     margin-top: 0;
+    font-size: 8ch;
   }
   .hero-content h2 {
     margin-top: 0;
+    font-size: 2.2ch;
+  }
+}
+@media (max-width: 768px) {
+  #hero .container .sightings_about h4 {
+    font-size: 2.5ch;
   }
 }
 .fog {
@@ -273,11 +276,13 @@ nav button {
   display: grid;
   grid-gap: 50px;
 }
-#about .id_event h2, #about .anim_event h2 {
+#about .id_event h2,
+#about .anim_event h2 {
   margin-top: 0;
   line-height: 1.1;
 }
-#about .tickets, #about .rsvp {
+#about .tickets,
+#about .rsvp {
   text-align: center;
 }
 #about .container {
@@ -376,16 +381,19 @@ nav button {
     margin-top: 3rem;
     margin-bottom: 1.5rem;
   }
-  #about .container .id_event, #about .container .anim_event {
+  #about .container .id_event,
+#about .container .anim_event {
     margin-bottom: 1rem;
   }
-  #about .container .id_event h2, #about .container .anim_event h2 {
+  #about .container .id_event h2,
+#about .container .anim_event h2 {
     margin-bottom: 0;
   }
   #about .container .anim_event {
     margin-top: 3rem;
   }
-  #about .container .tickets, #about .container .rsvp {
+  #about .container .tickets,
+#about .container .rsvp {
     margin-top: 1em;
     margin-bottom: 2em;
   }

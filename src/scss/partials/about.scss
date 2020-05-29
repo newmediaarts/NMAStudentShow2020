@@ -1,54 +1,56 @@
 #about {
-position: relative;
-z-index: 300;
+	position: relative;
+	z-index: 300;
 
-	.clouds{
+	.clouds {
 		position: absolute;
 		width: 100%;
 		height: auto;
 		top: -25em;
 	}
 
-	.clouds-low{
+	.clouds-low {
 		position: bottom;
 		height: auto;
 		width: 100%;
 		position: absolute;
 		bottom: 0;
 		z-index: -1;
-		opacity: .6;
+		opacity: 0.6;
 	}
 	.container {
 		display: grid;
 		grid-gap: 50px;
 	}
 
-// TYPE
-	.id_event h2, .anim_event h2{
+	// TYPE
+	.id_event h2,
+	.anim_event h2 {
 		margin-top: 0;
 		line-height: 1.1;
 	}
 
-// BUTTON WIDTH 
-	.tickets, .rsvp{
+	// BUTTON WIDTH
+	.tickets,
+	.rsvp {
 		text-align: center;
 	}
 
-// GRID_____
+	// GRID_____
 
 	.container {
 		display: grid;
-		grid-template-columns: repeat(6, 1fr );
+		grid-template-columns: repeat(6, 1fr);
 		grid-template-areas:
 			"fairy fairy fairy fairy fairy fairy"
 			". about_title about_title about_title about_title ."
 			". sightings_about sightings_about sightings_about sightings_about ."
-			". event_about event_about event_about event_about ." 
+			". event_about event_about event_about event_about ."
 			". details details . . ."
 			". id_event id_event anim_event anim_event ."
 			". tickets . rsvp . .";
 
-		.fairy{
+		.fairy {
 			grid-area: fairy;
 			margin: 0 auto;
 			width: 14vw;
@@ -66,12 +68,12 @@ z-index: 300;
 			grid-area: sightings_about;
 			margin: 0 auto;
 
-			hr{
+			hr {
 				margin-top: 4em;
 				width: 85%;
 			}
 
-			p{
+			p {
 				font-weight: 500;
 				width: 85%;
 				padding-bottom: 1em;
@@ -100,39 +102,39 @@ z-index: 300;
 		.tickets {
 			grid-area: tickets;
 		}
-		
+
 		.rsvp {
 			grid-area: rsvp;
 		}
 	}
 }
 
-@media (min-width: $breakpoint-medium){
-	#about{
+@media (min-width: $breakpoint-medium) {
+	#about {
 		padding-top: 30vh;
 	}
 }
 
-@media (max-width: $breakpoint-small){
-	#about{
+@media (max-width: $breakpoint-small) {
+	#about {
 		padding-top: 0;
 
-		.clouds{
+		.clouds {
 			top: -25vh;
 		}
 
-		.container{
+		.container {
 			padding-top: -150em;
 			display: block;
 			grid-gap: 10px;
 			text-align: center;
-		
-			.fairy{
+
+			.fairy {
 				width: 20vw;
 				padding-bottom: 2em;
 			}
 
-			.about_title{
+			.about_title {
 				width: 100%;
 				margin-bottom: 1.5rem;
 			}
@@ -141,37 +143,39 @@ z-index: 300;
 				grid-area: sightings_about;
 				margin: 0 auto;
 
-				hr{
+				hr {
 					margin-top: 2em;
 					margin-bottom: 3em;
 					width: 100%;
 				}
-				
-				p{
+
+				p {
 					font-weight: 500;
-					width:100%;
+					width: 100%;
 					padding-bottom: 1em;
 				}
 			}
-			
-			#details{
+
+			#details {
 				margin-top: 3rem;
 				margin-bottom: 1.5rem;
 			}
 
-			.id_event, .anim_event{
+			.id_event,
+			.anim_event {
 				margin-bottom: 1rem;
 
-				h2{
-					margin-bottom:0;
+				h2 {
+					margin-bottom: 0;
 				}
 			}
 
-			.anim_event{
+			.anim_event {
 				margin-top: 3rem;
 			}
 
-			.tickets, .rsvp{
+			.tickets,
+			.rsvp {
 				margin-top: 1em;
 				margin-bottom: 2em;
 			}

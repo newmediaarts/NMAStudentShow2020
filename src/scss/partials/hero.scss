@@ -13,7 +13,7 @@
 	.hero-content {
 		position: relative;
 		z-index: 400;
-		padding-top: 30vh;
+		padding-top: 10vh;
 
 		h1,
 		h2 {
@@ -71,7 +71,6 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 50px;
-		align-items: start;
 	}
 }
 
@@ -88,19 +87,25 @@
 	}
 
 	.hero-content {
-		padding: $section-padding;
 		h1 {
 			margin-bottom: 0;
 			text-align: center;
 			margin-top: 0;
+			font-size: 8ch;
 		}
 
 		h2 {
 			margin-top: 0;
+			font-size: 2.2ch;
 		}
 	}
 }
 
+@media (max-width: $breakpoint-small) {
+	#hero .container .sightings_about h4 {
+		font-size: 2.5ch;
+	}
+}
 // FOG ANIMATION__________________________
 .fog {
 	position: absolute;
