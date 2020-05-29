@@ -117,10 +117,10 @@
 
 @media (max-width: $breakpoint-small) {
 	#about {
-		padding-top: 0;
+		padding-top: 5em;
 
 		.clouds {
-			top: -25vh;
+			top: 0;
 		}
 
 		.container {
