@@ -7,7 +7,7 @@ const interfaceParent = document.querySelector('.interface .students-container')
 
 const imagesArr = Object.keys(images);
 
-function makeStudentElement({ name, website = '', room = '', demoreel = '', time }, isAnimation) {
+function makeStudentElement({ name, website = '', demoreel = '' }, isAnimation) {
     const firstName = name.split(' ')[0].toLowerCase();
     let initialImage;
 
@@ -24,8 +24,6 @@ function makeStudentElement({ name, website = '', room = '', demoreel = '', time
                     <a href="${website}"><p>View Portfolio Site</p></a>
                     ${isAnimation ? `
                     <a href="${demoreel}"><p>Demo Reel</p></a>` : ''}
-                    ${!isAnimation ? `<p><strong>${room}</strong></p>` : ""}
-                    ${!isAnimation ? `<p><strong>${time}</strong></p>` : ""}
             </div>`
 };
 

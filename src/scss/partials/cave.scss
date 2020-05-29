@@ -38,6 +38,62 @@ position: relative;
 	}
 }
 
+@media (min-width: 2000px){
+	#cave{
+		.container{
+			display: grid;
+			place-items: center;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-areas: 
+			". thank_you thank_you .";
+			grid-row-gap: 50px;
+
+			.thank_you{
+				text-align: center;
+				z-index: 100;
+				grid-area: thank_you;
+				margin-top: -40em;
+
+				p{
+					text-align: center;
+				}
+
+				.fuzzy{
+					margin-top: -10vh;
+					margin-bottom: -2em;
+					z-index: 100;
+					display: inline-block;
+					left:0;
+					width: 25vh;
+				}
+
+				.lizard{
+					display: inline-block;
+					width: 35vh;
+					left:50%;
+					transform: translateX(-50%);
+					z-index: 200;
+					bottom: 4vh;
+					position: absolute;
+				}
+			}
+		}
+		
+		.cave_bottom_mobile{
+			display: inline-block;
+			padding-top: 0vh;
+			margin-top:-80vh;
+			z-index: -100%;
+			width: 100%;
+			height: auto;
+		}	
+
+		.cave_bottom_med{
+			display: none;
+		}
+	}	
+}
+
 @media (min-width: $breakpoint-large){
 
 	.cave_bottom_mobile, .cave-bird, .fuzzy, .lizard{
@@ -161,11 +217,20 @@ footer{
 		display: grid;
 			place-items: center;
 			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: ". learn_more learn_more .";
+			grid-template-areas: 
+			". cave-red cave-red ."
+			". learn_more learn_more .";
 			grid-row-gap: 50px;
 
-		.learn_more{
+		.cave-red{
 			margin-top: 3em;
+			margin-left: 5em;
+			width: 25vw;
+			grid-area: cave-red;
+		}
+
+		.learn_more{
+			margin-top: 1em;
 			grid-area: learn_more;
 		}
 
@@ -174,6 +239,46 @@ footer{
 		}
 		.cave-bird{
 		display: none;
+	}
+	}
+
+
+	@media (min-width: 2000px){
+		.container{
+			text-align: center;
+			margin-top: 5em;
+			z-index: 100;
+			display: grid;
+			place-items: center;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-areas: 
+			". cave-red cave-red ."
+			"learn_more learn_more learn_more learn_more";
+			grid-row-gap: 50px;
+	
+
+			.cave-red{
+				width: 15vw;
+				grid-area: cave-red;
+				
+			}
+
+		.learn_more{
+			grid-area: learn_more;
+		}
+		.cave-bird{
+			width: 10vw;
+			display: inline-block;
+		}
+
+		.learn_more_button{
+			grid-area: learn_more_button;
+		}
+
+		button{
+			margin-top: 1em;
+			margin-bottom: 2em;
+		}
 	}
 	}
 
@@ -186,9 +291,16 @@ footer{
 			place-items: center;
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-areas: 
+			". cave-red cave-red ."
 			"learn_more learn_more learn_more learn_more";
 			grid-row-gap: 50px;
 	
+
+			.cave-red{
+				width: 30vw;
+				grid-area: cave-red;
+				
+			}
 
 		.learn_more{
 			grid-area: learn_more;

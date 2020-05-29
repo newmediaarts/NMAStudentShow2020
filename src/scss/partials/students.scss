@@ -208,7 +208,7 @@
 				.rock-mer_container{
 					margin-top: 0;
 					margin-bottom: .5em;
-					margin-left: -2em;
+					margin-left: -2em;	
 
 					.rock_monster{
 						width: 40vw;
@@ -223,4 +223,88 @@
 			}
 		}
 	}	
+}
+
+@media (min-width: 2000px){
+	#students{
+		padding-bottom: 0;
+
+		.forest-large, .forest-med{
+			display: none;
+		}
+
+		.forest-mobile{
+			width: 100%;
+			height: auto;
+			z-index: 10;
+			bottom: 0;
+			position: absolute;
+			left: 0;	
+			display: inline-block;
+		}
+
+		.container{
+			text-align: center;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 50px;
+			grid-template-areas:
+				"animation animation animation animation"
+				"fairy-sit fairy-sit fairy-sit fairy-sit"
+				"interface interface interface interface"
+				;
+			grid-row-gap: 0px;
+
+			.anim-title-button{
+				display: block;
+				color: 3px solid $color-light-accent;
+			}
+
+			button{
+				margin-top: .5rem;
+			}
+
+			.animation{
+				margin-bottom: 0em; 
+			}
+
+			.fairy-container {
+			
+				margin-top: 3vh;
+
+				.fairy-sit{
+					display: inline-block;
+					grid-area: fairy-sit;
+					width: 11vw;
+				}
+			}
+
+			.interface{
+
+				.nessy{
+					width: 14vw;
+					margin-left: 5vw;
+					margin-top: 3vh;
+					margin-bottom: 0;
+					display: inline-block;
+				}
+
+				.rock-mer_container{
+					margin-top: 0;
+					margin-bottom: 2em;
+					margin-left: -2em;	
+
+					.rock_monster{
+						width: 14vw;
+						display:inline-block;	
+					}
+
+					.mer-skull{
+						width: 14vw;
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}	
+
 }
