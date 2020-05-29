@@ -224,7 +224,6 @@ footer{
 
 		.cave-red{
 			margin-top: 3em;
-			margin-left: 5em;
 			width: 25vw;
 			grid-area: cave-red;
 		}
@@ -258,6 +257,7 @@ footer{
 	
 
 			.cave-red{
+				margin-left: 0;
 				width: 15vw;
 				grid-area: cave-red;
 				

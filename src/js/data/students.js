@@ -42,20 +42,20 @@ export const animationStudents = [
         // room: 'Room No. 1',
         // time: '5:00–5:20 | 6:00–6:20',
     },
-    {
-        name: 'Andruw Penera',
-        //     demoreel: 'demoreel',
-        //     website: 'website portfolio',
-        //     room: 'Room No. 1',
-        //     time: '5:00–5:20 | 6:00–6:20',
-    },
-    {
-        name: 'Kyle Moy',
-        website: 'https://sites.google.com/view/kylemoydemoreel/',
-        //     // demoreel: 'demoreel',
-        //     room: 'Room No. 1',
-        //     time: '5:00–5:20 | 6:00–6:20',
-    },
+    // {
+    //     name: 'Andruw Penera',
+    //     //     demoreel: 'demoreel',
+    //     //     website: 'website portfolio',
+    //     //     room: 'Room No. 1',
+    //     //     time: '5:00–5:20 | 6:00–6:20',
+    // },
+    // {
+    //     name: 'Kyle Moy',
+    //     website: 'https://sites.google.com/view/kylemoydemoreel/',
+    //     //     // demoreel: 'demoreel',
+    //     //     room: 'Room No. 1',
+    //     //     time: '5:00–5:20 | 6:00–6:20',
+    // },
     {
         name: 'Joshua Richards',
         website: 'https://sites.google.com/view/richardsart/home',
@@ -126,6 +126,7 @@ export const interfaceStudents = [
     {
         name: 'Miyuki Sekiguchi',
         website: 'https://miyukings.github.io/myportfolio-v3_2020/',
+        // 'https://miyukings.github.io/myportfolio-v2_2020/',
         room: 'Room No. 1',
         time: '5:00–5:20 | 6:00–6:20',
     },
