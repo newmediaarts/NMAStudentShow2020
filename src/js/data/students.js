@@ -18,7 +18,7 @@ export const animationStudents = [
     {
         name: 'Raleigh Harris',
         website: 'https://raleharris.wixsite.com/portfolio',
-        demoreel: 'https://youtu.be/ffFkt6LtQpE',
+        demoreel: 'https://youtu.be/A672oXaDmzo',
     },
     {
         name: 'Vivien Liu',
